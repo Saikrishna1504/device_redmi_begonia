@@ -88,6 +88,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     FMRadio
 
+# Fastbootd
+PRODUCT_PACKAGES += \
+    fastbootd
+
 # Gatekeeper
 PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-service \
