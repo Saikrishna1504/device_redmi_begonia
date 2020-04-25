@@ -16,6 +16,9 @@ ro.camera.sound.forced=0
 ro.charger.enable_suspend=true
 persist.vendor.quick.charge=1
 
+# Dalvik
+dalvik.vm.dex2oat64.enabled=true
+
 # Graphics
 ro.opengles.version=196610
 
