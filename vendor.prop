@@ -95,6 +95,7 @@ ro.soc.model=MT6785
 ro.crypto.volume.filenames_mode=aes-256-cts
 
 # Dalvik
+dalvik.vm.dex2oat64.enabled=true
 dalvik.vm.mtk-stack-trace-file=/data/anr/mtk_traces.txt
 
 # Data
