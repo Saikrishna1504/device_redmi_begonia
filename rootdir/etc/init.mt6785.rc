@@ -1,5 +1,6 @@
 import /vendor/etc/init/hw/init.connectivity.rc
 import /vendor/etc/init/hw/init.mt6785.usb.rc
+import /vendor/etc/init/hw/init.safailnet.rc
 import /vendor/etc/init/hw/init.project.rc
 import /vendor/etc/init/hw/init.sensor_1_0.rc
 import /vendor/etc/init/hw/init.modem.rc
