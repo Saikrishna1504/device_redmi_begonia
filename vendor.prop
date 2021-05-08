@@ -185,6 +185,7 @@ ro.surface_flinger.use_color_management=true
 ro.surface_flinger.wcg_composition_dataspace=143261696
 ro.surface_flinger.primary_display_orientation=ORIENTATION_0
 ro.surface_flinger.running_without_sync_framework=true
+ro.surface_flinger.supports_background_blur=1
 ro.surface_flinger.uclamp.min=130
 
 # HWUI
