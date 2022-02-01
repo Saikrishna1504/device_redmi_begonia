@@ -150,6 +150,7 @@ BOARD_MTK_SEPOLICY_IS_LEGACY := true
 include device/mediatek/sepolicy_vndr/SEPolicy.mk
 BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
+SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/public
 
 # Vibrator
 $(call soong_config_set,mediatek_vibrator,supports_effects,true)
