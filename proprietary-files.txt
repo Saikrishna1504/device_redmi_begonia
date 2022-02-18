@@ -603,6 +603,9 @@ vendor/etc/camera/sceneDetection.xml
 vendor/etc/camera/vidhance_calibration
 vendor/etc/camera/visidon_clearshot_params_algoup.xml
 
+# Charger - From Redmi/begonia/begonia:11/RP1A.200720.011/V12.5.7.0.RGGMIXM:user/release-keys
+bin/charger:|63810658f6a992375f20f90d97f23543f0f61b14
+
 # Consumerir
 vendor/lib/hw/consumerir.mt6785.so
 vendor/lib64/hw/consumerir.mt6785.so
