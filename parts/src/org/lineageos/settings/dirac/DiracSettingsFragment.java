@@ -37,12 +37,16 @@ public class DiracSettingsFragment extends PreferenceFragment implements
     private static final String TAG = "DiracSettingsFragment";
     private static final String PREF_ENABLE = "dirac_enable";
     private static final String PREF_HEADSET = "dirac_headset_pref";
+    private static final String PREF_HIFI = "dirac_hifi_pref";
     private static final String PREF_PRESET = "dirac_preset_pref";
+    private static final String PREF_SCENE = "scenario_selection";
 
     private MainSwitchPreference mSwitchBar;
 
     private ListPreference mHeadsetType;
     private ListPreference mPreset;
+    private ListPreference mScenes;
+    private SwitchPreference mHifi;
     private DiracUtils mDiracUtils;
 
     @Override
@@ -91,8 +95,8 @@ public class DiracSettingsFragment extends PreferenceFragment implements
             case PREF_PRESET:
                 mDiracUtils.setLevel((String) newValue);
                 return true;
-            case PREF_PRESET:
-                DiracUtils.setLevel((String) newValue);
+            case PREF_SCENE:
+                mDiracUtils.setScenario(Integer.parseInt(newValue.toString()));
                 return true;
             default:
                 return false;
@@ -105,6 +109,7 @@ public class DiracSettingsFragment extends PreferenceFragment implements
 
         if (mDiracUtils == null) return;
         mDiracUtils.setEnabled(isChecked);
+        mHifi.setEnabled(isChecked);
         mHeadsetType.setEnabled(isChecked);
         mPreset.setEnabled(isChecked);
         mScenes.setEnabled(isChecked);
