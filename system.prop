@@ -15,6 +15,8 @@ ro.camera.sound.forced=0
 # Charger
 ro.charger.enable_suspend=true
 persist.vendor.quick.charge=1
+ro.charger.disable_init_blank=1
+ro.product.charger.unplugged_shutdown_time=1000
 
 # Graphics
 ro.opengles.version=196610
