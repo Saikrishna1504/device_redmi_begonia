@@ -80,5 +80,7 @@
         <item>org.telegram.messenger</item>
         <item>com.microsoft.teams</item>
         <item>com.discord</item>
-    </string-array>    
+        <item>org.thunderdog.challegram</item>
+        <item>tw.nekomimi.nekogram</item>
+    </string-array>
 </resources>
