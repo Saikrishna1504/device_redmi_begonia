@@ -19,6 +19,9 @@ persist.vendor.quick.charge=1
 # Dalvik
 dalvik.vm.dex2oat64.enabled=true
 
+# Display
+debug.cpurend.vsync=false
+
 # Graphics
 ro.opengles.version=196610
 
