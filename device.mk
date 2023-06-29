@@ -79,6 +79,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_DEXPREOPT_SPEED_APPS += \
     SystemUI
 
+# Debloat
+PRODUCT_PACKAGES += \
+    Debloat
+
 # Device-specific settings
 PRODUCT_PACKAGES += \
     XiaomiParts
