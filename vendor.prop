@@ -88,7 +88,8 @@ ro.crypto.volume.filenames_mode=aes-256-cts
 # Dalvik
 dalvik.vm.dexopt.secondary=true
 dalvik.vm.dex2oat-cpu-set=0,1,2,3,4,5
-dalvik.vm.dex2oat64.enabled=true
+dalvik.vm.image-dex2oat-filter=speed
+dalvik.vm.dex2oat-filter=speed
 dalvik.vm.dex2oat-threads=6
 dalvik.vm.dex2oat64.enabled=true
 dalvik.vm.mtk-stack-trace-file=/data/anr/mtk_traces.txt
