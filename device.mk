@@ -113,7 +113,7 @@ PRODUCT_PACKAGES += \
 
 # FM Radio
 PRODUCT_PACKAGES += \
-    RevampedFMRadio
+    MtkFMRadio
 
 # Gatekeeper
 PRODUCT_PACKAGES += \
