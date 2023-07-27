@@ -3,6 +3,30 @@
     <carrier_config gid1="6230" mcc="310" mnc="240">
         <boolean name="mtk_key_roaming_bar_guard_bool" value="true" />
     </carrier_config>
+
+    <carrier_config mcc="334" mnc="020">
+        <boolean name="carrier_volte_available_bool" value="true" />
+        <boolean name="carrier_wfc_ims_available_bool" value="true" />
+    </carrier_config>
+
+    <carrier_config mcc="250" mnc="99">
+        <boolean name="carrier_volte_available_bool" value="true" />
+    </carrier_config>
+
+    <carrier_config mcc="413" mnc="01">
+        <boolean name="carrier_volte_available_bool" value="true" />
+        <boolean name="carrier_vt_available_bool" value="true" />
+        <boolean name="carrier_wfc_ims_available_bool" value="true" />
+        <boolean name="carrier_wfc_supports_ims_preferred_bool" value="true" />
+    </carrier_config>
+
+    <carrier_config mcc="413" mnc="02">
+        <boolean name="carrier_volte_available_bool" value="true" />
+        <boolean name="carrier_vt_available_bool" value="true" />
+        <boolean name="carrier_wfc_ims_available_bool" value="true" />
+        <boolean name="carrier_wfc_supports_ims_preferred_bool" value="true" />
+    </carrier_config>
+
     <carrier_config>
         <!-- Allow VoLTE and WFC by default -->
         <boolean name="carrier_volte_available_bool" value="true" />
