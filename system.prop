@@ -56,6 +56,7 @@ ro.sys.usb.bicr=no
 ro.sys.usb.charging.only=yes
 
 # Wifi
+persist.data.iwlan.enable=true
 ro.mediatek.wlan.wsc=1
 ro.mediatek.wlan.p2p=1
 ro.vendor.net.enable_dual_wifi=1
