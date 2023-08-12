@@ -11,10 +11,10 @@
         <boolean name="carrier_fiveg_power_saving_available_bool" value="true" />
         <boolean name="carrier_sa_mode_available_bool" value="false" />
         <boolean name="carrier_disable_sa_mode_bool" value="true" />
-        <boolean name="carrier_wfc_supports_ims_preferred_bool" value="false" />
+        <boolean name="carrier_wfc_supports_ims_preferred_bool" value="true" />
         <boolean name="hide_xcap_apn_bool" value="true" />
         <string-array name="read_only_apn_types_string_array" num="0" />
-        <int name="carrier_default_wfc_ims_mode_int" value="1" />
+        <int name="carrier_default_wfc_ims_mode_int" value="2" />
         <map name="apn_default_values_strings_array">
             <string name="protocol">IPV4V6</string>
             <string name="roaming_protocol">IPV4V6</string>
@@ -28,7 +28,7 @@
         <boolean name="config_ecc_notification_for_wifi_calling" value="false" />
         <boolean name="config_editable_wfc_when_calling" value="true" />
         <boolean name="config_show_cf_type_when_mmi" value="false" />
-        <boolean name="config_wifi_disconnect_delay_for_vowifi_detach" value="false" />
+        <boolean name="config_wifi_disconnect_delay_for_vowifi_detach" value="true" />
         <boolean name="config_support_secret_code_for_volte_and_wfc" value="true" />
         <boolean name="config_disable_ss_over_wfc_when_airplane_enabled" value="false" />
         <boolean name="config_callbarring_over_ims_no_need_password" value="false" />
