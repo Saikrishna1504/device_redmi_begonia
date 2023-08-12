@@ -71,6 +71,10 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.5.vendor \
     android.hardware.camera.provider@2.6.vendor
 
+#FlashCam
+PRODUCT_PACKAGES += \
+    FlashOverlay
+
 # Dex
 PRODUCT_DEXPREOPT_SPEED_APPS += \
     SystemUI

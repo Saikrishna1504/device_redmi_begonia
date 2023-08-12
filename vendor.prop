@@ -43,6 +43,7 @@ ro.vendor.mtk.bt_sap_enable=true
 vendor.bluetooth.ldac.abr=true
 
 # Camera
+vendor.camera.aux.packagelist=com.android.camera,org.lineageos.aperture.dev,com.voltage.flash
 persist.camera.HAL3.enabled=1
 persist.camera.eis.enabled=1
 persist.vendor.camera.privapp.list=org.codeaurora.snapcam,com.android.camera,com.google.camera
