@@ -25,4 +25,7 @@
 
     <!-- the padding on the start of the statusbar -->
     <dimen name="status_bar_padding_start">15dp</dimen>
+
+    <!-- Starting padding for a left-aligned quick status bar clock -->
+    <dimen name="status_bar_left_clock_starting_padding">0dp</dimen>
 </resources>
