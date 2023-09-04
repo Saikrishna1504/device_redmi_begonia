@@ -78,8 +78,7 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('libalsautils.so', 'libalsautils-v30.so')
         .add_needed('libshim_audio.so'),
 
-    ('vendor/lib64/hw/android.hardware.thermal@2.0-impl.so',
-     'vendor/lib64/hw/dfps.mt6785.so',
+    ('vendor/lib64/hw/dfps.mt6785.so',
      'vendor/lib64/hw/vendor.mediatek.hardware.pq@2.6-impl.so'): blob_fixup()
         .replace_needed('libutils.so', 'libutils-v32.so'),
 
