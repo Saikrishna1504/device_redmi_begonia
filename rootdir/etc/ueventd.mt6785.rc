@@ -145,3 +145,6 @@
 
 # MTK TEE
 /dev/ttyACM0              0660   radio      radio
+
+# Charger
+/sys/class/power_supply/battery  charging_enabled    0660    system  system
