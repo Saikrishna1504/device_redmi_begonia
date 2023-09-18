@@ -11,7 +11,7 @@
      limitations under the License.
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.voltage.flash.overlay.X00T">
+    package="com.voltage.flash.overlay.begonia">
 
     <overlay
         android:isStatic="true"
