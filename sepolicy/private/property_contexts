@@ -18,3 +18,6 @@ ro.miui.                u:object_r:exported_system_prop:s0
 
 # SettingsLib
 settingsdebug.instant.packages u:object_r:settingslib_prop:s0
+
+# Bluetooth
+bluetooth.hci.erroneous_data_reporting.enabled        u:object_r:bluetooth_config_prop:s0
