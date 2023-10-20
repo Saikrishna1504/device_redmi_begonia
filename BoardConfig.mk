@@ -163,3 +163,8 @@ TARGET_VIBRATOR_SUPPORTS_EFFECTS := true
 
 # Inherit from the proprietary version
 include vendor/redmi/begonia/BoardConfigVendor.mk
+
+# Wifi
+WPA_SUPPLICANT_VERSION := VER_0_8_X
+BOARD_HOSTAPD_DRIVER := NL80211
+WIFI_HIDL_FEATURE_DUAL_INTERFACE := true
