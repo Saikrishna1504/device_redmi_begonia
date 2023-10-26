@@ -147,6 +147,7 @@ PRODUCT_VENDOR_MOVE_ENABLED := true
 
 # Sepolicy
 include device/mediatek/sepolicy_vndr/SEPolicy.mk
+BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 
 # Vibrator
 $(call soong_config_set,mediatek_vibrator,supports_effects,true)
