@@ -1,0 +1,11 @@
+allow hal_fingerprint_default vendor_fingerprint_data_file:{file chr_file} rw_file_perms;
+allow hal_fingerprint_default vendor_fingerprint_data_file:dir r_dir_perms;
+
+# Allow fingerprint HAL to read battery info
+allow hal_fingerprint_default sysfs_batteryinfo:dir { search };
+allow hal_fingerprint_default sysfs_batteryinfo:file r_file_perms;
+allow hal_fingerprint_default sysfs_pmu:dir { search };
+allow hal_fingerprint_default sysfs_pmu:file r_file_perms;
+
+get_prop(hal_fingerprint_default, vendor_fingerprint_prop)
+set_prop(hal_fingerprint_default, vendor_fingerprint_prop)

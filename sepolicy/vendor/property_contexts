@@ -4,3 +4,6 @@ vendor.camera.sensor.                          u:object_r:vendor_mtk_camera_prop
 
 # Thermal
 vendor.sys.thermal.                            u:object_r:vendor_thermal_engine_prop:s0
+
+# Fingerprint
+persist.vendor.sys.fp.                         u:object_r:vendor_fingerprint_prop:s0

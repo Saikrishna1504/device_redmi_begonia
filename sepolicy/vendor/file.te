@@ -1,0 +1,2 @@
+# Fingerprint
+type vendor_fingerprint_data_file, fs_type, sysfs_type;
