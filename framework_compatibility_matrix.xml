@@ -1,5 +1,13 @@
 <compatibility-matrix version="4.0" type="framework">
 <hal format="hidl" optional="true">
+    <name>android.frameworks.sensorservice</name>
+    <version>1.0</version>
+    <interface>
+        <name>ISensorManager</name>
+        <instance>default</instance>
+    </interface>
+</hal>
+<hal format="hidl" optional="true">
     <name>android.hardware.audio.effect</name>
     <version>6.0</version>
     <interface>
