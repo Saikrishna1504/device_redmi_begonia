@@ -152,5 +152,9 @@ SYSTEM_EXT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/private
 # Vibrator
 TARGET_VIBRATOR_SUPPORTS_EFFECTS := true
 
+# Wifi
+WPA_SUPPLICANT_VERSION := VER_0_8_X
+BOARD_HOSTAPD_DRIVER := NL80211
+
 # Inherit from the proprietary version
 include vendor/redmi/begonia/BoardConfigVendor.mk
