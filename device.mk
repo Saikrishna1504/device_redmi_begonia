@@ -75,6 +75,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     FlashOverlay
 
+# Lineage Health
+PRODUCT_PACKAGES += \
+    vendor.lineage.health-service.default
+
 # Dex
 PRODUCT_DEXPREOPT_SPEED_APPS += \
     SystemUI
