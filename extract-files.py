@@ -41,9 +41,6 @@ lib_fixups: lib_fixups_user_type = {
 
 
 blob_fixups: blob_fixups_user_type = {
-    'system/lib/libsink-mtk.so': blob_fixup()
-        .add_needed('libshim_vtservice.so'),
-
     'vendor/lib/hw/audio.primary.mt6785.so': blob_fixup()
         .replace_needed('libalsautils.so', 'libalsautils-v30.so')
         .add_needed('libshim_audio.so'),
@@ -69,7 +66,7 @@ blob_fixups: blob_fixups_user_type = {
     'vendor/bin/hw/android.hardware.keymaster@4.0-service.beanpod': blob_fixup()
         .add_needed('libshim_beanpod.so'),
 
-    ('system/lib/libsource.so',
+    ('system/lib64/libsource.so',
      'vendor/lib/libMtkOmxVdecEx.so'): blob_fixup()
         .add_needed('libui_shim.so'),
 
@@ -93,7 +90,7 @@ blob_fixups: blob_fixups_user_type = {
     'system/lib/libmtk_vt_service.so': blob_fixup()
         .add_needed('libgui_shim.so'),
 
-    'system/lib/libimsma.so': blob_fixup()
+    'system/lib64/libimsma.so': blob_fixup()
         .replace_needed('libsink.so', 'libsink-mtk.so'),
 
     'system/priv-app/ImsService/ImsService.apk': blob_fixup()

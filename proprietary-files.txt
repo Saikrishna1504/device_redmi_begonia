@@ -950,38 +950,36 @@ vendor/lib64/libvia-ril.so
 vendor/lib64/libwo.so
 vendor/lib64/vendor.mediatek.hardware.mtkradioex@2.0.so
 
-# Radio (IMS)
-system/bin/vtservice
-system/etc/init/init.vtservice.rc
-system/framework/mediatek-common.jar
+# IMS - from TECNO-U-64-ARMV82-230626V601DevT
+system_ext/bin/vtservice:system/bin/vtservice|59adc81ee1ad1f3fb4942cd6e8e7100325002eb2
+system_ext/etc/init/init.vtservice.rc:system/etc/init/init.vtservice.rc|50a2249906edc06059b443513db47a2ddc0490dc
+system_ext/lib64/libcomutils.so:system/lib64/libcomutils.so|6d9cd979f33ef01cb26861a38a59e76e1c2a3acb
+system_ext/lib64/libimsma.so:system/lib64/libimsma.so|932cbe88083fae23b159bf0e3fe17d7efb93495b|981ade90e42a9945390dbef0b68daa85357253ae
+system_ext/lib64/libimsma_adapt.so:system/lib64/libimsma_adapt.so|754ad1c39fb4dba9d3eb69ac00112e7600d68580
+system_ext/lib64/libimsma_rtp.so:system/lib64/libimsma_rtp.so|20ee91f090661fb26e6625ad2fef828441956b82
+system_ext/lib64/libimsma_socketwrapper.so:system/lib64/libimsma_socketwrapper.so|1f9b83322c41e5b0a7b3130f74a38ddb14f578d8
+system_ext/lib64/libmtk_vt_service.so:system/lib64/libmtk_vt_service.so|302d3ab3c5b3fa0107520fe36098b32cd0a8dd96
+system_ext/lib64/libmtk_vt_wrapper.so:system/lib64/libmtk_vt_wrapper.so|af4d486c516c920ea99c362aebbf04180e96035c
+system_ext/lib64/libsignal.so:system/lib64/libsignal.so|0f55bb64c660fe4cda2b695121580b054f026e73
+system_ext/lib64/libsink.so:system/lib64/libsink-mtk.so;FIX_SONAME|6bd8c55847116a9a37e223ea2a6e5ce1379e53f7|e4c6bf7dca30d5de2a4f7521a97aca51c0f85cfe
+system_ext/lib64/libsource.so:system/lib64/libsource.so|66a481fd2e260a820899d60cf9190fb986d36768|50505bc4dd711cceb2d77b0531cb32a8be3651ef
+system_ext/lib64/libvcodec_cap.so:system/lib64/libvcodec_cap.so|6973253cb2e4ddf365451ed2ac8db9d04085bc4a
+system_ext/lib64/libvcodec_capenc.so:system/lib64/libvcodec_capenc.so|5527525dfcd25169bc380ac53d8181ffa1429c6f
+system_ext/lib64/libvt_avsync.so:system/lib64/libvt_avsync.so|632cb05532ef2e022072d91bff3c1ae47c888b7e
+system_ext/lib64/vendor.mediatek.hardware.videotelephony-V1-ndk.so:system/lib64/vendor.mediatek.hardware.videotelephony-V1-ndk.so|fc3f645734d4e37fa50b77233d63c7b2eb166014
+system_ext/lib64/vendor.mediatek.hardware.videotelephony@1.0.so:system/lib64/vendor.mediatek.hardware.videotelephony@1.0.so|aee568e770a3835af2df2262c9dc8bb2911da324
+
+# IMS (Boot-Jars)
+system/priv-app/ImsService/ImsService.apk
+system/framework/mediatek-common.jar|2d76dac9118fcad456ab432ce17ed9d7a5ce1932
 system/framework/mediatek-framework.jar
-system/framework/mediatek-ims-base.jar
+system/framework/mediatek-ims-base.jar|4a9c6343e905b731564e8b344af20f0bb64b47f7
 system/framework/mediatek-ims-common.jar
 system/framework/mediatek-ims-extension-plugin.jar
 system/framework/mediatek-ims-legacy.jar
 system/framework/mediatek-telecom-common.jar
 system/framework/mediatek-telephony-base.jar|be405f248a416a15364c976f60ec912eeb75df5d
-system/framework/mediatek-telephony-common.jar
-system/lib/libsink.so:system/lib/libsink-mtk.so;FIX_SONAME
-system/lib/libcomutils.so
-system/lib/libimsma.so
-system/lib/libimsma_adapt.so
-system/lib/libimsma_rtp.so
-system/lib/libimsma_socketwrapper.so
-system/lib/libmtk_vt_service.so
-system/lib/libmtk_vt_wrapper.so
-system/lib/libmtkavenhancements.so;DISABLE_CHECKELF
-system/lib/libsignal.so
-system/lib/libsource.so
-system/lib/libvcodec_cap.so
-system/lib/libvcodec_capenc.so
-system/lib/libvt_avsync.so
-system/priv-app/ImsService/ImsService.apk
-system_ext/lib/vendor.mediatek.hardware.videotelephony@1.0.so
-vendor/bin/hw/vtservice_hidl
-vendor/etc/init/init.vtservice_hidl.rc
-vendor/lib/hw/vendor.mediatek.hardware.videotelephony@1.0-impl.so
-vendor/lib/vendor.mediatek.hardware.videotelephony@1.0.so;MODULE_SUFFIX=-vendor
+system/framework/mediatek-telephony-common.jar|b0f42c4e40301cf9a2b297a31c8ce315e52ad306
 
 # Sensors
 vendor/bin/hw/android.hardware.sensors@1.0-service-mediatek
