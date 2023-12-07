@@ -163,7 +163,8 @@ PRODUCT_PACKAGES += \
     libkeymaster_portable.vendor:64 \
     libkeymaster_messages.vendor:64 \
     libsoft_attestation_cert.vendor:64 \
-    libpuresoftkeymasterdevice.vendor:64
+    libpuresoftkeymasterdevice.vendor:64 \
+    libshim_beanpod.vendor
 
 # Lights
 PRODUCT_PACKAGES += \
