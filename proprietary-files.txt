@@ -1223,7 +1223,6 @@ vendor/etc/init/microtrust.bp_kmsetkey_ca.rc
 vendor/etc/init/microtrust_begonia.rc
 vendor/etc/init/mtk_agpsd_p.rc
 vendor/etc/init/mtkrild.rc
-vendor/etc/init/muxreport.rc
 vendor/etc/init/netdagent.rc
 vendor/etc/init/networksetting.rc
 vendor/etc/init/vpud.rc
