@@ -97,7 +97,7 @@ function blob_fixup {
         vendor/lib64/libaalservice.so)
             ;&
         vendor/lib64/libcam.utils.sensorprovider.so)
-            "${PATCHELF}" --replace-needed "libsensorndkbridge.so" "libsensorndkbridge-v30.so" "${2}"
+            grep -q "libshim_sensors.so" "$2" || "$PATCHELF" --add-needed "libshim_sensors.so" "$2"
             ;;
         vendor/bin/hw/android.hardware.keymaster@4.0-service.beanpod)
             "${PATCHELF}" --add-needed "libshim_beanpod.so" "${2}"
