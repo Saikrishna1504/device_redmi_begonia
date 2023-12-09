@@ -158,6 +158,7 @@ ro.opengles.version=196610
 ro.vendor.perf.scroll_opt=true
 ro.sf.lcd_density=440
 ro.hwui.render_ahead=2
+ro.surface_flinger.enable_frame_rate_override=false
 ro.surface_flinger.enable_layer_caching=true
 ro.surface_flinger.force_hwc_copy_for_virtual_displays=true
 ro.surface_flinger.has_HDR_display=true
