@@ -40,6 +40,7 @@ TARGET_BOOT_ANIMATION_RES := 1080
 
 # Official-ify
 VOLTAGE_BUILD_TYPE := OFFICIAL
+TARGET_USES_AOSP_RECOVERY := true
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := begonia
