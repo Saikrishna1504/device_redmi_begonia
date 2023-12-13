@@ -600,6 +600,32 @@ vendor/lib64/vendor.mediatek.hardware.dfps@1.0.so
 vendor/lib/libladder.so
 vendor/lib64/libladder.so
 
+# Dolby
+vendor/bin/hw/vendor.dolby.hardware.dms@2.0-service|2412363dfaeded2fd363457421a1931a7b8417ff
+vendor/etc/dolby/dax-default.xml|d9e6c5995eb6bf903333c7d6362ecd159cc9a2af
+vendor/etc/init/vendor.dolby.hardware.dms@2.0-service.rc|29296ebfe89b2697fec573be73cc3757fd97bed6
+vendor/etc/vintf/manifest/manifest_vendor.dolby.hardware.dms.xml|c8095f649de19b80271fb429b4b6b439297a0678
+vendor/lib/libdapparamstorage.so|deae2cc2ad539cc0ec842c94bb2658084352bb57
+vendor/lib/libdeccfg.so|a19cbb5dd92e031e7cce45810ef8746ab9132afd
+vendor/lib/libstagefright_soft_ac4dec.so|ca9e73a1940e5ac75c4e01e0855a3ba862b48e6c
+vendor/lib/libstagefright_soft_ddpdec.so|792b6eb461ebe8751032e3fc2d1f98573b16874e
+vendor/lib/libstagefrightdolby.so|505ffac2d86812362f753c8d73fd455c086c6fb4
+vendor/lib/soundfx/libswdap.so|9b8bf725194057b1b17a464cf0fff2290124da66
+vendor/lib/soundfx/libswgamedap.so|9511f406d87546a9a7a301f6875a145e3e607178
+vendor/lib/soundfx/libswvqe.so|f7b4b03cb4079e6e4ee1444dd53b94fdbcede4f2
+vendor/lib/vendor.dolby.hardware.dms@2.0.so|f396f196101d38575b79bee06403018acb6d23b6
+vendor/lib64/libdapparamstorage.so|783eb2b76ea43de6db979f1e0c427a5d6049c42f
+vendor/lib64/libdeccfg.so|fe61431f8625b29f508437eaf8f4d7a0c6ca83bf
+vendor/lib64/libdlbdsservice.so|6b70c1405eb26d6a8c242b8ba972abb918b2e1d5
+vendor/lib64/libstagefright_soft_ac4dec.so|d722e5670c30b6cd87c03fd1d00b4c015aae6aad
+vendor/lib64/libstagefright_soft_ddpdec.so|024ec0e2bec8186030231410fe4d4b2a56d86776
+vendor/lib64/libstagefrightdolby.so|336c7208d5fe64eb0cf0646c6e806608b33f1238
+vendor/lib64/soundfx/libswdap.so|d4df07021705541a218693c0ba8e5f379107f1cd
+vendor/lib64/soundfx/libswgamedap.so|6e9cebd690492b3d48ae0d357267c50503bc988c
+vendor/lib64/soundfx/libswvqe.so|a4448bce863a8332b2fbd202d83665269d5eca26
+vendor/lib64/vendor.dolby.hardware.dms@2.0-impl.so|d7bf2ec3f40d12b407780730a3ac2d22bd580d76
+vendor/lib64/vendor.dolby.hardware.dms@2.0.so|9384291b27935dc6caad7a9206a16def21825e68
+
 # DRM
 vendor/bin/hw/android.hardware.drm@1.3-service.widevine
 vendor/etc/init/android.hardware.drm@1.3-service.widevine.rc
