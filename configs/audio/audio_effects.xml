@@ -21,6 +21,9 @@
         <library name="downmix" path="libdownmix.so"/>
         <library name="loudness_enhancer" path="libldnhncr.so"/>
         <library name="dynamics_processing" path="libdynproc.so"/>
+        <library name="dap" path="libswdap.so"/>
+        <library name="gamedap" path="libswgamedap.so"/>
+        <library name="vqe" path="libswvqe.so"/>
     </libraries>
 
     <!-- list of effects to load.
@@ -58,5 +61,42 @@
         <effect name="downmix" library="downmix" uuid="93f04452-e4fe-41cc-91f9-e475b6d1d69f"/>
         <effect name="loudness_enhancer" library="loudness_enhancer" uuid="fa415329-2034-4bea-b5dc-5b381c8d1e2c"/>
         <effect name="dynamics_processing" library="dynamics_processing" uuid="e0e6539b-1781-7261-676f-6d7573696340"/>
+        <effect name="dap" library="dap" uuid="9d4921da-8225-4f29-aefa-39537a04bcaa"/>
+        <effect name="gamedap" library="gamedap" uuid="3783c334-d3a0-4d13-874f-0032e5fb80e2"/>
+        <effect name="vqe" library="vqe" uuid="64a0f614-7fa4-48b8-b081-d59dc954616f"/>
     </effects>
+    <postprocess>
+        <stream type="music">
+        </stream>
+        <stream type="ring">
+        </stream>
+        <stream type="alarm">
+        </stream>
+        <stream type="system">
+        </stream>
+        <stream type="voice_call">
+        </stream>
+        <stream type="notification">
+        </stream>
+        <stream type="bluetooth_sco">
+        </stream>
+        <stream type="dtmf">
+        </stream>
+        <stream type="enforced_audible">
+        </stream>
+        <stream type="accessibility">
+        </stream>
+        <stream type="tts">
+        </stream>
+        <stream type="assistant">
+        </stream>
+        <stream type="call_assistant">
+        </stream>
+        <stream type="patch">
+            <apply effect="gamedap"/>
+        </stream>
+        <stream type="rerouting">
+            <apply effect="gamedap"/>
+        </stream>
+    </postprocess>
 </audio_effects_conf>
