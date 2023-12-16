@@ -105,6 +105,9 @@ function blob_fixup {
         lib64/libem_support_jni.so)
             "${PATCHELF}" --add-needed "libjni_shim.so" "${2}"
             ;;
+        vendor/etc/seccomp_policy/vendor.qti.hardware.dsp.policy)
+            echo 'madvise: 1' >> ${2}
+            ;;
     esac
 }
 

@@ -21,6 +21,16 @@
         <library name="downmix" path="libdownmix.so"/>
         <library name="loudness_enhancer" path="libldnhncr.so"/>
         <library name="dynamics_processing" path="libdynproc.so"/>
+    <!--DOLBY START-->
+    <!--DOLBY GAME-->
+        <library name="gamedap" path="libswgamedap.so"/>
+    <!--DOLBY DAP (dvl)-->
+        <library name="dvl" path="libdlbvol.so"/>
+    <!--DOLBY VQE-->
+        <library name="vqe" path="libswvqe.so"/>
+    <!--DOLBY DAP-->
+        <library name="dap" path="libswdap.so"/>
+    <!--DOLBY END-->
     </libraries>
 
     <!-- list of effects to load.
@@ -58,5 +68,20 @@
         <effect name="downmix" library="downmix" uuid="93f04452-e4fe-41cc-91f9-e475b6d1d69f"/>
         <effect name="loudness_enhancer" library="loudness_enhancer" uuid="fa415329-2034-4bea-b5dc-5b381c8d1e2c"/>
         <effect name="dynamics_processing" library="dynamics_processing" uuid="e0e6539b-1781-7261-676f-6d7573696340"/>
+    <!--DOLBY START-->
+        <effect name="gamedap" library="gamedap" uuid="3783c334-d3a0-4d13-874f-0032e5fb80e2"/>
+    <!--DOLBY VQE-->
+        <effect name="vqe" library="vqe" uuid="64a0f614-7fa4-48b8-b081-d59dc954616f"/>
+    <!--DOLBY DAP-->
+        <effect name="dap" library="dap" uuid="9d4921da-8225-4f29-aefa-39537a04bcaa"/>
+    <!--DOLBY DAP (dvl)-->
+        <effect name="dlb_music_listener" library="dvl" uuid="40f66c8b-5aa5-4345-8919-53ec431aaa98"/>
+        <effect name="dlb_ring_listener" library="dvl" uuid="21d14087-558a-4f21-94a9-5002dce64bce"/>
+        <effect name="dlb_alarm_listener" library="dvl" uuid="6aff229c-30c6-4cc8-9957-dbfe5c1bd7f6"/>
+        <effect name="dlb_system_listener" library="dvl" uuid="874db4d8-051d-4b7b-bd95-a3bebc837e9e"/>
+        <effect name="dlb_notification_listener" library="dvl" uuid="1f0091e3-6ad8-40fe-9b09-5948f9a26e7e"/>
+    <!--DOLBY GAME-->
+        <effect name="gamedap" library="gamedap" uuid="3783c334-d3a0-4d13-874f-0032e5fb80e2"/>
+    <!--DOLBY END-->
     </effects>
 </audio_effects_conf>

@@ -107,6 +107,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     disable_configstore
 
+# Dolby
+$(call inherit-product, hardware/Motorola/Dolby/dolby-setup.mk)
+
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.0.vendor \
