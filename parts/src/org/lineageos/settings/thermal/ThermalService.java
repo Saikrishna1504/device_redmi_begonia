@@ -26,6 +26,7 @@ import android.app.TaskStackListener;
 import android.content.BroadcastReceiver;
 import android.content.ComponentName;
 import android.content.Context;
+import android.content.res.Configuration;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.IBinder;
@@ -47,6 +48,7 @@ public class ThermalService extends Service {
         public void onReceive(Context context, Intent intent) {
             mPreviousApp = "";
             mThermalUtils.setDefaultThermalProfile();
+            mThermalUtils.resetTouchModes();
         }
     };
 
