@@ -1,0 +1,6 @@
+device/redmi
+device/mediatek
+vendor/redmi
+kernel/xiaomi
+hardware/mediatek
+
