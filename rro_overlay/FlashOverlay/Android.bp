@@ -1,4 +1,0 @@
-runtime_resource_overlay {
-    name: "FlashOverlay",
-    system_ext_specific: true,
-}

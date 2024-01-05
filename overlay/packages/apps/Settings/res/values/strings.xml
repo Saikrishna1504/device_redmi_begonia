@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2019 The Android Open Source Project
+<!--
+     Copyright (C) 2021-2023 Project Elixir
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
      You may obtain a copy of the License at
@@ -10,11 +11,8 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.voltage.flash.overlay.begonia">
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
-    <overlay
-        android:isStatic="true"
-        android:priority="800"
-        android:targetPackage="com.voltage.flash" />
-</manifest>
+    <string name="elixir_maintainer">Sai Krishna</string>
+
+</resources>

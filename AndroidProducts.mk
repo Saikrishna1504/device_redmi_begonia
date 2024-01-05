@@ -15,4 +15,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/voltage_begonia.mk
+    $(LOCAL_DIR)/aosp_begonia.mk
