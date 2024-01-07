@@ -1,0 +1,7 @@
+device/redmi
+device/mediatek
+vendor/redmi
+kernel/xiaomi
+hardware/mediatek
+hardware/lineage/compat
+packages/apps/MtkFMRadio
