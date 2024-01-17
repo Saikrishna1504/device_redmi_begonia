@@ -109,6 +109,12 @@ drm.service.enabled=true
 ro.vendor.mtk_widevine_drm_l1_support=1
 ro.vendor.mtk_sec_video_path_support=1
 
+# Dolby
+persist.vendor.audio_fx.current=dolby
+vendor.audio.dolby.ds2.enabled=true
+vendor.audio.dolby.ds2.hardbypass=true
+ro.vendor.dolby.dax.version=DAX3_3.6.0.12_r1
+
 # Display
 ro.hardware.egl=meow
 ro.vendor.all_modes.colorpick_adjust=true

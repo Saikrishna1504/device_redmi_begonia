@@ -25,3 +25,6 @@ get_prop(hal_audio_default, tel_switch_prop)
 get_prop(hal_audio_default, vendor_audio_prop)
 set_prop(hal_audio_default, vendor_audio_prop)
 get_prop(hal_audio_default, wmt_prop)
+
+allow hal_audio_default hal_dms_hwservice:hwservice_manager find;
+binder_call(hal_audio_default, hal_dms_default)
