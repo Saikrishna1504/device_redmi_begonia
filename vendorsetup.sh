@@ -21,4 +21,5 @@ git clone --depth=1 -b lineage-21.0 https://github.com/LineageOS/android_hardwar
 rm -rf packages/apps/MtkFMRadio
 git clone --depth=1 https://github.com/begonia-dev/android_packages_apps_MtkFMRadio packages/apps/MtkFMRadio
 
-
+rm -rf vendor/MiuiCameraLeica
+git clone --depth=1 https://bitbucket.org/saikrishna1504/vendor_miuicameraleica vendor/MiuiCameraLeica

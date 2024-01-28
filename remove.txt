@@ -5,3 +5,4 @@ kernel/xiaomi
 hardware/mediatek
 hardware/lineage/compat
 packages/apps/MtkFMRadio
+vendor/MiuiCameraLeica
