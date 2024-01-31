@@ -102,6 +102,9 @@ function blob_fixup {
         vendor/bin/hw/android.hardware.keymaster@4.0-service.beanpod)
             "${PATCHELF}" --add-needed "libshim_beanpod.so" "${2}"
             ;;
+        lib64/libem_support_jni.so)
+            "${PATCHELF}" --add-needed "libjni_shim.so" "${2}"
+            ;;
     esac
 }
 
