@@ -295,6 +295,10 @@ PRODUCT_ENABLE_UFFD_GC := true
 AB_OTA_UPDATER := false
 PRODUCT_SOONG_NAMESPACES += bootable/deprecated-ota
 
+# USB
+PRODUCT_PACKAGES += \
+    android.hardware.usb-service.mediatek
+
 # Vibrator
 PRODUCT_PACKAGES += \
     android.hardware.vibrator-service.mediatek
