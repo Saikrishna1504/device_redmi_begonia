@@ -1,4 +1,3 @@
-vendor_internal_prop(deviceid_prop)
 vendor_restricted_prop(vendor_fp_prop)
 vendor_internal_prop(persist_recovery_update_prop)
 vendor_internal_prop(vendor_mi_camera_prop)
