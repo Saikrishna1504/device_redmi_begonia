@@ -1195,11 +1195,7 @@ system/framework/mediatek-telephony-base.jar|be405f248a416a15364c976f60ec912eeb7
 system/framework/mediatek-telephony-common.jar|b0f42c4e40301cf9a2b297a31c8ce315e52ad306
 
 # Sensors
-vendor/bin/hw/android.hardware.sensors@1.0-service-mediatek
-vendor/etc/init/android.hardware.sensors@1.0-service-mediatek.rc
-vendor/lib64/hw/android.hardware.sensors@1.0-impl-mediatek.so
 vendor/lib64/hw/sensors.mt6785.so
-vendor/lib64/hw/sensors.touch.so
 vendor/lib64/libksensor.so
 vendor/lib64/libsensor_custom.so
 
