@@ -1191,7 +1191,7 @@ vendor/lib64/libwlparser.so|211ecad772588451bcaf3e66d1b582d92c66e1dd
 vendor/lib64/libwlservice.so|5e44d3cd4f5d0912e4829444af58d7bff51fc43a
 
 # Media OMX - from begonia V12.5.8.0.RGGMIXM
-vendor/lib/libMtkOmxVdecEx.so|d5c8bede3ab2718bd4d910de3aa1d9ef453ae169
+vendor/lib/libMtkOmxVdecEx.so
 
 # Misc
 system_ext/bin/mdlogger
