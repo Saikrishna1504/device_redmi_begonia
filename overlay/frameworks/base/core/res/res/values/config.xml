@@ -307,13 +307,6 @@
         <item>/system_ext/priv-app/SystemUIGoogle/SystemUIGoogle.apk</item>
         <item>/system_ext/priv-app/SystemUIGoogle/oat/arm64/SystemUIGoogle.odex</item>
         <item>/system/bin/surfaceflinger</item>
-        <item>/system/lib64/libRS.so</item>
-        <item>/system/lib64/libRSCpuRef.so</item>
-        <item>/system/lib64/libRSDriver.so</item>
-        <item>/system/lib64/libRS_internal.so</item>
-        <item>/system/lib64/libRScpp.so</item>
-        <item>/system/lib64/libbcinfo.so</item>
-        <item>/system/lib64/libblas.so</item>
     </string-array>
 
     <!-- Enable Zram writeback feature to allow unused pages in zram be written to flash. -->
