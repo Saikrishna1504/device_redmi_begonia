@@ -751,6 +751,11 @@ vendor/lib64/hw/lights.mt6785.so
 vendor/lib/hw/sound_trigger.primary.mt6785.so
 vendor/lib64/hw/sound_trigger.primary.mt6785.so
 
+# Perf
+vendor/lib/vendor.mediatek.hardware.power@2.0.so
+vendor/lib64/vendor.mediatek.hardware.power@1.1.so
+vendor/lib64/vendor.mediatek.hardware.power@2.0.so
+
 # Mediatek
 vendor/bin/hw/android.hardware.media.omx@1.0-service
 vendor/bin/hw/android.hardware.sensors@1.0-service-mediatek
@@ -824,7 +829,6 @@ vendor/lib/vendor.mediatek.hardware.netdagent@1.0.so
 vendor/lib/vendor.mediatek.hardware.nvram@1.0.so
 vendor/lib/vendor.mediatek.hardware.nvram@1.1.so
 vendor/lib/vendor.mediatek.hardware.nwk_opt@1.0.so
-vendor/lib/vendor.mediatek.hardware.power@2.0.so
 vendor/lib/vendor.mediatek.hardware.pq@2.0.so
 vendor/lib/vendor.mediatek.hardware.pq@2.1.so
 vendor/lib/vendor.mediatek.hardware.pq@2.2.so
@@ -840,7 +844,6 @@ vendor/lib64/hw/vendor.mediatek.hardware.mtkcodecservice@1.1-impl.so
 vendor/lib64/hw/vendor.mediatek.hardware.nvram@1.1-impl.so
 vendor/lib64/hw/vendor.mediatek.hardware.pq@2.6-impl.so
 vendor/lib64/hw/vendor.mediatek.hardware.videotelephony@1.0-impl.so
-vendor/lib64/android.hardware.power-service-mediatek.so
 vendor/lib64/libMtkSpeechEnh.so
 vendor/lib64/libmtk-ril.so
 vendor/lib64/libmtk_drvb.so
@@ -935,8 +938,6 @@ vendor/lib64/vendor.mediatek.hardware.netdagent@1.0.so
 vendor/lib64/vendor.mediatek.hardware.nvram@1.0.so
 vendor/lib64/vendor.mediatek.hardware.nvram@1.1.so
 vendor/lib64/vendor.mediatek.hardware.nwk_opt@1.0.so
-vendor/lib64/vendor.mediatek.hardware.power@1.1.so
-vendor/lib64/vendor.mediatek.hardware.power@2.0.so
 vendor/lib64/vendor.mediatek.hardware.pq@2.0.so
 vendor/lib64/vendor.mediatek.hardware.pq@2.1.so
 vendor/lib64/vendor.mediatek.hardware.pq@2.2.so
@@ -1059,15 +1060,6 @@ vendor/lib64/secure_element-impl.so
 vendor/bin/hw/android.hardware.neuralnetworks@1.3-service-mtk-neuron
 vendor/etc/init/android.hardware.neuralnetworks@1.3-service-mtk-neuron.rc
 -vendor/etc/vintf/manifest/android.hardware.neuralnetworks@1.3-service-mtk-dsp-gpu.xml
-
-# Power
-lib/libpowerhalwrap.so
-lib/libpowerhalwrap_jni.so
-lib/libpowerkeeper_jni.so
-lib64/libperfctl.so
-lib64/libpowerhalwrap.so
-lib64/libpowerhalwrap_jni.so
-lib64/libpowerkeeper_jni.so
 
 # Radio
 vendor/lib/libvsim.so
