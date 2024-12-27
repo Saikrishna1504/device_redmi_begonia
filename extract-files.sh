@@ -115,10 +115,6 @@ function blob_fixup {
 	    [ "$2" = "" ] && return 0
             "${PATCHELF}" --set-soname "libwifi-hal-mtk.so" "${2}"
             ;;
-        lib64/libem_support_jni.so)
-  	    [ "$2" = "" ] && return 0
-            "${PATCHELF}" --add-needed "libjni_shim.so" "${2}"
-            ;;
         vendor/lib/libMtkOmxVdecEx.so|\
         lib/libsource.so)
 	    [ "$2" = "" ] && return 0

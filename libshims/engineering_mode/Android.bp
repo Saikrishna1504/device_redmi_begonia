@@ -1,4 +1,0 @@
-cc_library_shared {
-    name: "libjni_shim",
-    srcs: ["libjni_shim.c"]
-}
