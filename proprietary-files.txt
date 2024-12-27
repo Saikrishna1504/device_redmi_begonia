@@ -1115,7 +1115,6 @@ vendor/bin/stp_dump3
 vendor/bin/wlan_assistant
 vendor/etc/init/wlan_assistant.rc
 vendor/lib64/libwifi-hal.so:vendor/lib64/libwifi-hal-mtk.so
-vendor/lib64/libwpa_client.so
 
 # Xiaomi
 vendor/lib64/vendor.xiaomi.hardware.citsensorservice@1.0.so
