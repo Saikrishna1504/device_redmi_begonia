@@ -1155,7 +1155,6 @@ vendor/bin/mrdump_tool
 vendor/bin/mtk_agpsd
 vendor/bin/muxreport
 vendor/bin/netdagent
-vendor/bin/netdc
 vendor/bin/pnscr
 vendor/bin/rttv
 vendor/bin/starter
