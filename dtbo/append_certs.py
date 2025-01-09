@@ -1,37 +1,40 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 import argparse
-from os import stat
+import os
 
 
-def padding_file(input_file, align_num):
-    """Fill 0 to make input_file's size a multiple of align_num."""
-    filesize = stat(input_file).st_size
-    file1 = open(input_file, 'ab+')
-    padding = filesize % align_num
-    if padding != 0:
-        padding = align_num - padding
-        for _ in range(padding):
-            file1.write(b"\x00")
-    file1.close()
+def padding_file(input_file: str, align_num: int) -> None:
+    """
+    Add padding to make the file size a multiple of align_num.
+    """
+    filesize = os.stat(input_file).st_size
+    padding = align_num - (filesize % align_num) if filesize % align_num != 0 else 0
+
+    if padding > 0:
+        with open(input_file, 'ab') as file:
+            file.write(b"\x00" * padding)
 
 
-def append_file(img_file, cert_file, alignment):
-    """Append provided cert_file to the end of target img_file."""
+def append_file(img_file: str, cert_file: str, alignment: int) -> None:
+    """
+    Append the contents of cert_file to img_file with alignment padding.
+    """
     padding_file(img_file, alignment)
-    file1 = open(img_file, 'ab+')
-    file2 = open(cert_file, 'rb')
-    file1.write(file2.read())
-    file1.close()
-    file2.close()
+    with open(img_file, 'ab') as img, open(cert_file, 'rb') as cert:
+        img.write(cert.read())
 
 
-def main():
-    parser = argparse.ArgumentParser(description='Sign an image with provided der certs')
-    parser.add_argument('--alignment', type=int, help='Alignment for calculating padding')
-    parser.add_argument('--cert1', type=str, help='Certificate - cert1.der')
-    parser.add_argument('--cert2', type=str, help='Certificate - cert2.der')
-    parser.add_argument('--dtbo', type=str, help='Path to the DTBO img')
+def main() -> None:
+    """
+    Parse arguments and execute the file appending process.
+    """
+    parser = argparse.ArgumentParser(description='Sign an image with provided DER certificates.')
+    parser.add_argument('--alignment', type=int, required=True, help='Alignment for calculating padding.')
+    parser.add_argument('--cert1', type=str, required=True, help='Path to the first certificate (cert1.der).')
+    parser.add_argument('--cert2', type=str, required=True, help='Path to the second certificate (cert2.der).')
+    parser.add_argument('--dtbo', type=str, required=True, help='Path to the DTBO image file.')
+
     args = parser.parse_args()
 
     append_file(args.dtbo, args.cert1, args.alignment)
