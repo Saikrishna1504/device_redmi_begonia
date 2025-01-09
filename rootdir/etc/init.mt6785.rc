@@ -915,6 +915,9 @@ on property:sys.boot_completed=1
 # initialize powerHAL when boot is completed
 on property:sys.boot_completed=1
     setprop vendor.powerhal.init 1
+    
+    chown system system /sys/devices/system/cpu/cpufreq/mtk/lcluster_min_freq
+    chmod 0664 /sys/devices/system/cpu/cpufreq/mtk/lcluster_min_freq
 
 # reset mdmode when modem crash happens in ATM
 on property:vendor.mtk.md1.status=reset
