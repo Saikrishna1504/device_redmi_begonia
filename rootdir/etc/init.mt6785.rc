@@ -879,6 +879,10 @@ on property:vold.decrypt=trigger_shutdown_framework
 on property:sys.boot_completed=1
     write /proc/bootprof "0"
 
+# Stop statsd
+on property:sys.boot_completed=1
+    stop statsd
+
 # end boot time fs tune
 on property:sys.boot_completed=1
     write /sys/block/mmcblk0/queue/iostats 1
