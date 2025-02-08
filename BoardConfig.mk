@@ -42,7 +42,6 @@ TARGET_SCREEN_DENSITY := 440
 
 # Platform
 TARGET_BOARD_PLATFORM := mt6785
-BOARD_HAVE_MTK_FM := true
 
 # Kernel
 BOARD_KERNEL_CMDLINE := bootopt=64S3,32N2,64N2 androidboot.init_fatal_reboot_target=recovery
