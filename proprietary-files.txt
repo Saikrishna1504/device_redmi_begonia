@@ -673,9 +673,6 @@ vendor/firmware/wifi.cfg
 # Firmware - from A055FXXS5CXG1
 vendor/firmware/soc1_0_ram_bt_1a_1_hdr.bin|8c5d8e93ad8a03c6de5aaaad8ef58d53e75c8378
 
-# FmRadio
--system_ext/lib64/libfmjni.so:system/lib64/libfmjni.so
-
 # GPS
 vendor/bin/hw/android.hardware.gnss@2.1-service-mediatek
 vendor/etc/init/android.hardware.gnss@2.1-service-mediatek.rc
