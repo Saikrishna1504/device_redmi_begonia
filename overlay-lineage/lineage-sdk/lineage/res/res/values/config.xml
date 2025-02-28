@@ -61,9 +61,12 @@
          // RGB color values.
          LIGHTS_ADJUSTABLE_BATTERY_LED_BRIGHTNESS = 128
 
+         // The notification light has non-adjustable pulsing capability.
+         LIGHTS_BREATHING_LED = 256
+
          For example, a device with notification and battery lights that supports
          pulsating and RGB control would set this config to 75. -->
-    <integer name="config_deviceLightCapabilities">72</integer>
+    <integer name="config_deviceLightCapabilities">320</integer>
 
     <!-- The list of package IDs that are allowed to use aux cameras.
          NOTE: If this list is empty then all apps will be able to use aux cameras. -->
