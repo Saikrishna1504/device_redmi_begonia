@@ -93,10 +93,10 @@ function blob_fixup {
             "${PATCHELF}" --replace-needed "libprotobuf-cpp-lite-3.9.1.so" "libprotobuf-cpp-full-3.9.1.so" "${2}"
             ;;
         vendor/bin/mnld|\
-        vendor/lib64/libaalservice.so|\
-        vendor/lib64/libcam.utils.sensorprovider.so)
+        vendor/lib*/libaalservice.so|\
+        vendor/lib*/libcam.utils.sensorprovider.so)
 	    [ "$2" = "" ] && return 0
-            grep -q "libshim_sensors.so" "$2" || "$PATCHELF" --add-needed "libshim_sensors.so" "$2"
+            grep -q "android.hardware.sensors@1.0-convert-shared.so" "$2" || "$PATCHELF" --add-needed "android.hardware.sensors@1.0-convert-shared.so" "$2"
             ;;
         vendor/bin/hw/android.hardware.keymaster@4.0-service.beanpod)
 	    [ "$2" = "" ] && return 0
@@ -106,7 +106,7 @@ function blob_fixup {
 	    [ "$2" = "" ] && return 0
             grep -q "libui_shim.so" "$2" || "$PATCHELF" --add-needed "libui_shim.so" "$2"
             ;;
-        vendor/lib/libwvhidl.so)
+        vendor/lib*/libwvhidl.so)
 	    [ "$2" = "" ] && return 0
             "${PATCHELF}" --replace-needed "libcrypto.so" "libcrypto-v33.so" "${2}"
             ;;
