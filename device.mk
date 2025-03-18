@@ -460,6 +460,7 @@ PRODUCT_PACKAGES += \
 
 # Libui shim
 PRODUCT_PACKAGES += \
+    libbase_shim \
     libui_shim \
     libui_shim.vendor
 
