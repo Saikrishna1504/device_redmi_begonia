@@ -64,10 +64,6 @@ function blob_fixup {
 	    [ "$2" = "" ] && return 0
             "${PATCHELF}" --replace-needed "libunwindstack.so" "libunwindstack-v30.so" "${2}"
             ;;
-        vendor/lib64/libmtkcam_stdutils.so)
-            [ "$2" = "" ] && return 0
-            "${PATCHELF}" --replace-needed "libutils.so" "libutils-v30.so" "${2}"
-            ;;
         vendor/lib/hw/audio.primary.mt6785.so|\
         vendor/lib64/hw/audio.primary.mt6785.so)
 	    [ "$2" = "" ] && return 0
@@ -79,17 +75,17 @@ function blob_fixup {
 	    [ "$2" = "" ] && return 0
             "${PATCHELF}" --replace-needed "libalsautils.so" "libalsautils-v30.so" "${2}"
             ;;
-        vendor/lib64/hw/dfps.mt6785.so)
-  	    [ "$2" = "" ] && return 0
-            "${PATCHELF}" --replace-needed "libutils.so" "libutils-v30.so" "${2}"
-            ;;
+        vendor/lib64/hw/dfps.mt6785.so|\
+        vendor/lib64/libmtkcam_stdutils.so|\
         vendor/lib64/hw/vendor.mediatek.hardware.pq@2.6-impl.so)
 	    [ "$2" = "" ] && return 0
             "${PATCHELF}" --replace-needed "libutils.so" "libutils-v30.so" "${2}"
+            "${PATCHELF}" --add-needed "libprocessgroup_shim.so" "${2}"
             ;;
         vendor/lib64/hw/android.hardware.thermal@2.0-impl.so)
 	    [ "$2" = "" ] && return 0
             "${PATCHELF}" --replace-needed "libutils.so" "libutils-v32.so" "${2}"
+            "${PATCHELF}" --add-needed "libprocessgroup_shim.so" "${2}"
             ;;
         vendor/lib64/libwvhidl.so|\
         vendor/lib64/mediadrm/libwvdrmengine.so)
@@ -108,7 +104,7 @@ function blob_fixup {
             ;;
         lib/libsource.so)
 	    [ "$2" = "" ] && return 0
-            grep -q libui_shim.so "$2" || "$PATCHELF" --add-needed libui_shim.so "$2"
+            grep -q "libui_shim.so" "$2" || "$PATCHELF" --add-needed "libui_shim.so" "$2"
             ;;
         vendor/lib/libwvhidl.so)
 	    [ "$2" = "" ] && return 0
