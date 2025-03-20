@@ -915,6 +915,25 @@ vendor/lib64/vendor.mediatek.hardware.pq@2.5.so
 vendor/lib64/vendor.mediatek.hardware.pq@2.6.so
 vendor/lib64/vendor.mediatek.hardware.videotelephony@1.0.so
 
+# MTK Engineering Mode
+app/LocationEM2/LocationEM2.apk
+app/YGPS/YGPS.apk
+lib/libaudio_param_parser-sys.so
+lib/libaudiotoolkit.so
+lib/libaudioutilmtk.so;DISABLE_DEPS
+lib/libem_audio_jni.so
+lib/libem_support_jni.so;DISABLE_CHECKELF;SYMLINK=system/priv-app/EngineerMode/lib/arm/libem_support_jni.so
+lib/libem_usb_jni.so
+lib/libem_wifi_jni.so
+lib64/libaudio_param_parser-sys.so
+lib64/libaudiotoolkit.so
+lib64/libaudioutilmtk.so;DISABLE_DEPS
+lib64/libem_audio_jni.so
+lib64/libem_support_jni.so;DISABLE_CHECKELF;SYMLINK=system/priv-app/EngineerMode/lib64/arm64/libem_support_jni.so
+lib64/libem_usb_jni.so
+lib64/libem_wifi_jni.so
+priv-app/EngineerMode/EngineerMode.apk
+
 # MTK-IMS
 bin/vtservice
 etc/init/init.vtservice.rc

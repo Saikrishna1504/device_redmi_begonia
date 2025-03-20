@@ -456,6 +456,10 @@ PRODUCT_PACKAGES += \
     PresencePolling \
     RcsService
 
+# Engineering mode
+PRODUCT_PACKAGES += \
+    libjni_shim
+
 # Libui shim
 PRODUCT_PACKAGES += \
     libbase_shim \
