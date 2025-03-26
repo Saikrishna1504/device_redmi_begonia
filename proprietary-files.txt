@@ -916,58 +916,58 @@ vendor/lib64/vendor.mediatek.hardware.pq@2.6.so
 vendor/lib64/vendor.mediatek.hardware.videotelephony@1.0.so
 
 # MTK Engineering Mode
-app/LocationEM2/LocationEM2.apk
-app/YGPS/YGPS.apk
-lib/libaudio_param_parser-sys.so
-lib/libaudiotoolkit.so
-lib/libaudioutilmtk.so;DISABLE_DEPS
-lib/libem_audio_jni.so
-lib/libem_support_jni.so;DISABLE_CHECKELF;SYMLINK=system/priv-app/EngineerMode/lib/arm/libem_support_jni.so
-lib/libem_usb_jni.so
-lib/libem_wifi_jni.so
-lib64/libaudio_param_parser-sys.so
-lib64/libaudiotoolkit.so
-lib64/libaudioutilmtk.so;DISABLE_DEPS
-lib64/libem_audio_jni.so
-lib64/libem_support_jni.so;DISABLE_CHECKELF;SYMLINK=system/priv-app/EngineerMode/lib64/arm64/libem_support_jni.so
-lib64/libem_usb_jni.so
-lib64/libem_wifi_jni.so
-priv-app/EngineerMode/EngineerMode.apk
+system/app/LocationEM2/LocationEM2.apk
+system/app/YGPS/YGPS.apk
+system/lib/libaudio_param_parser-sys.so
+system/lib/libaudiotoolkit.so
+system/lib/libaudioutilmtk.so;DISABLE_DEPS
+system/lib/libem_audio_jni.so
+system/lib/libem_support_jni.so;DISABLE_CHECKELF;SYMLINK=system/priv-app/EngineerMode/lib/arm/libem_support_jni.so
+system/lib/libem_usb_jni.so
+system/lib/libem_wifi_jni.so
+system/lib64/libaudio_param_parser-sys.so
+system/lib64/libaudiotoolkit.so
+system/lib64/libaudioutilmtk.so;DISABLE_DEPS
+system/lib64/libem_audio_jni.so
+system/lib64/libem_support_jni.so;DISABLE_CHECKELF;SYMLINK=system/priv-app/EngineerMode/lib64/arm64/libem_support_jni.so
+system/lib64/libem_usb_jni.so
+system/lib64/libem_wifi_jni.so
+system/priv-app/EngineerMode/EngineerMode.apk
 
 # MTK-IMS
-bin/vtservice
-etc/init/init.vtservice.rc
-lib/libcomutils.so
-lib/libimsma.so;DISABLE_DEPS
-lib/libimsma_adapt.so
-lib/libimsma_rtp.so
-lib/libimsma_socketwrapper.so
-lib/libmtk_vt_service.so;DISABLE_DEPS
-lib/libmtk_vt_wrapper.so;DISABLE_DEPS
-lib/libmtkavenhancements.so;DISABLE_DEPS
-lib/libsignal.so
-lib/libsink.so
-lib/libsource.so
-lib/libvcodec_cap.so
-lib/libvcodec_capenc.so
-lib/libvt_avsync.so
-lib64/libmtk_vt_wrapper.so;DISABLE_DEPS
-lib64/libmtkavenhancements.so;DISABLE_DEPS
-lib64/libvcodec_cap.so
-lib64/libvcodec_capenc.so
-priv-app/ImsService/ImsService.apk|6b231d957c36f212ba25195b7ef4a48c65e969d6
+system/bin/vtservice
+system/etc/init/init.vtservice.rc
+system/lib/libcomutils.so
+system/lib/libimsma.so;DISABLE_DEPS
+system/lib/libimsma_adapt.so
+system/lib/libimsma_rtp.so
+system/lib/libimsma_socketwrapper.so
+system/lib/libmtk_vt_service.so;DISABLE_DEPS
+system/lib/libmtk_vt_wrapper.so;DISABLE_DEPS
+system/lib/libmtkavenhancements.so;DISABLE_DEPS
+system/lib/libsignal.so
+system/lib/libsink.so
+system/lib/libsource.so
+system/lib/libvcodec_cap.so
+system/lib/libvcodec_capenc.so
+system/lib/libvt_avsync.so
+system/lib64/libmtk_vt_wrapper.so;DISABLE_DEPS
+system/lib64/libmtkavenhancements.so;DISABLE_DEPS
+system/lib64/libvcodec_cap.so
+system/lib64/libvcodec_capenc.so
+system/priv-app/ImsService/ImsService.apk|6b231d957c36f212ba25195b7ef4a48c65e969d6
 system_ext/lib/vendor.mediatek.hardware.videotelephony@1.0.so;MODULE_SUFFIX=_vendor
 system_ext/lib64/vendor.mediatek.hardware.videotelephony@1.0.so;MODULE_SUFFIX=_vendor
 
 # MTK Media Extractors
-lib64/extractors/libmtkadpcmextractor.so
-lib64/extractors/libmtkalacextractor.so
-lib64/extractors/libmtkapeextractor.so
-lib64/extractors/libmtkasfextractor.so
-lib64/extractors/libmtkaviextractor.so
-lib64/extractors/libmtkflvextractor.so
-lib64/extractors/libmtkmp3extractor.so
-lib64/extractors/libmtkmpeg2extractor.so
+system/lib64/extractors/libmtkadpcmextractor.so
+system/lib64/extractors/libmtkalacextractor.so
+system/lib64/extractors/libmtkapeextractor.so
+system/lib64/extractors/libmtkasfextractor.so
+system/lib64/extractors/libmtkaviextractor.so
+system/lib64/extractors/libmtkflvextractor.so
+system/lib64/extractors/libmtkmp3extractor.so
+system/lib64/extractors/libmtkmpeg2extractor.so
 
 # NFC
 vendor/etc/nxp/Phone_bt_bt.bin
@@ -1034,7 +1034,7 @@ vendor/lib64/libsensor_custom.so
 vendor/lib64/libssccalapi.so
 
 # Soter
-app/SoterService/SoterService.apk:vendor/app/SoterService/SoterService.apk
+system/app/SoterService/SoterService.apk:vendor/app/SoterService/SoterService.apk
 vendor/bin/hw/vendor.microtrust.hardware.soter@1.0-service
 vendor/bin/SoterProvisioningTool
 vendor/etc/init/vendor.microtrust.hardware.soter@1.0-service.rc
