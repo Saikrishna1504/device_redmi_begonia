@@ -13,6 +13,7 @@ Build.BRAND=MTK
 ro.camera.sound.forced=0
 
 # Charger
+ro.charger.enable_suspend=true
 persist.vendor.quick.charge=1
 
 # Dalvik
