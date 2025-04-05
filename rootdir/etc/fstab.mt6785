@@ -20,8 +20,11 @@
 /dev/block/platform/bootdevice/by-name/persist    /mnt/vendor/persist   ext4    noatime,nosuid,nodev,noauto_da_alloc,commit=1,nodelalloc               wait,check,formattable
 
 # External-Devices (SDCARD | OTG)
-/devices/platform/externdevice*                   auto                  auto    defaults                                                               voldmanaged=sdcard1:auto,encryptable=userdata
-/devices/platform/usb3_xhci*                      auto                  auto    defaults                                                               voldmanaged=usbotg:auto
+/devices/platform/externdevice*                      auto                  auto    defaults                                                               voldmanaged=sdcard1:auto,encryptable=userdata
+/devices/platform/11230000.mmc*                      auto                  auto    defaults                                                               voldmanaged=sdcard1:auto,encryptable=userdata
+/devices/platform/usb3_xhci*                         auto                  auto    defaults                                                               voldmanaged=usbotg:auto
+/devices/platform/soc/11201000.usb0/11200000.xhci*   auto                  auto    defaults                                                               voldmanaged=usbotg:auto
+/devices/platform/usb0/11200000.xhci*                auto                  auto    defaults                                                               voldmanaged=usbotg:auto
 
 # Factory Reset Protection (FRP)
 /dev/block/platform/bootdevice/by-name/frp        /persistent           emmc    defaults                                                               defaults
