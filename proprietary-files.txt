@@ -937,6 +937,15 @@ system/priv-app/EngineerMode/EngineerMode.apk
 # MTK-IMS
 system/bin/vtservice
 system/etc/init/init.vtservice.rc
+system/framework/mediatek-common.jar|2d76dac9118fcad456ab432ce17ed9d7a5ce1932
+system/framework/mediatek-framework.jar
+system/framework/mediatek-ims-base.jar|4a9c6343e905b731564e8b344af20f0bb64b47f7
+system/framework/mediatek-ims-common.jar
+system/framework/mediatek-ims-extension-plugin.jar
+system/framework/mediatek-ims-legacy.jar
+system/framework/mediatek-telecom-common.jar
+system/framework/mediatek-telephony-base.jar|be405f248a416a15364c976f60ec912eeb75df5d
+system/framework/mediatek-telephony-common.jar|b0f42c4e40301cf9a2b297a31c8ce315e52ad306
 system/lib/libcomutils.so
 system/lib/libimsma.so;DISABLE_DEPS
 system/lib/libimsma_adapt.so

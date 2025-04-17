@@ -441,8 +441,6 @@ PRODUCT_PACKAGES += \
     libunwindstack.vendor
 
 # MTK Jars (for IMS)
-include vendor/redmi/begonia-ims/begonia-ims-vendor.mk
-
 PRODUCT_BOOT_JARS += \
     mediatek-common \
     mediatek-framework \

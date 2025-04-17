@@ -12,10 +12,6 @@
     "target_path": "vendor/redmi/begonia"
   },
   {
-    "repository" : "android_vendor_redmi_begonia-ims",
-    "target_path": "vendor/redmi/begonia-ims"
-  },
-  {
     "repository" : "android_packages_apps_RevampedFMRadio",
     "target_path": "packages/apps/RevampedFMRadio",
   }
