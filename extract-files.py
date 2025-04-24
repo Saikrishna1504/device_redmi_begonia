@@ -79,7 +79,11 @@ blob_fixups: blob_fixups_user_type = {
      'vendor/lib/mediadrm/libwvdrmengine.so'): blob_fixup()
         .replace_needed('libcrypto.so', 'libcrypto-v33.so'),
 
-    'vendor/bin/hw/android.hardware.neuralnetworks@1.3-service-mtk-neuron': blob_fixup()
+    ('vendor/lib/libnvram.so',
+    'vendor/lib/libsysenv.so',
+    'vendor/lib64/libnvram.so',
+    'vendor/lib64/libsysenv.so',
+    'vendor/bin/hw/android.hardware.neuralnetworks@1.3-service-mtk-neuron'): blob_fixup()
         .add_needed('libbase_shim.so'),
 
     'vendor/lib/libmnl.so': blob_fixup()
