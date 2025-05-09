@@ -128,10 +128,6 @@ PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey \
     libcrypto-v33
 
-# FM Radio
-PRODUCT_PACKAGES += \
-    MtkFMRadio
-
 # Gatekeeper
 PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-service \
@@ -150,6 +146,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libcurl.vendor \
     libjsoncpp.vendor
+
+# FM Radio
+PRODUCT_PACKAGES += \
+    FMRadio
 
 # DT2W
 PRODUCT_PACKAGES += \
