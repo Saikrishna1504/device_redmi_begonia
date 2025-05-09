@@ -749,6 +749,23 @@ vendor/etc/init/vendor.mediatek.hardware.mtkcodecservice@1.1-service.rc
 vendor/lib/hw/vendor.mediatek.hardware.mtkcodecservice@1.1-impl.so
 vendor/lib/vendor.mediatek.hardware.mtkcodecservice@1.1.so
 
+# Media (Configs)
+vendor/etc/mtk_omx_core.cfg
+
+# Media (OMX)
+vendor/bin/hw/android.hardware.media.omx@1.0-service
+vendor/etc/init/android.hardware.media.omx@1.0-service.rc
+vendor/lib/libMtkOmxGsmDec.so
+vendor/lib/libMtkOmxApeDec.so
+vendor/lib/libMtkOmxCore.so
+vendor/lib/libMtkOmxAlacDec.so
+vendor/lib/libMtkOmxMp3Dec.so
+vendor/lib/libMtkOmxVdecEx.so
+vendor/lib/libMtkOmxAdpcmDec.so
+vendor/lib/libMtkOmxVenc.so
+vendor/lib/libstagefrighthw.so
+vendor/lib64/libstagefrighthw.so
+
 # Media (MMS)
 vendor/bin/hw/vendor.mediatek.hardware.mms@1.5-service
 vendor/etc/init/vendor.mediatek.hardware.mms@1.5-service.rc

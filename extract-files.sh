@@ -85,7 +85,8 @@ function blob_fixup {
 	    [ "$2" = "" ] && return 0
             "${PATCHELF}" --add-needed "libshim_beanpod.so" "${2}"
             ;;
-        system/lib/libsource.so)
+        system/lib/libsource.so|\
+        vendor/lib/libMtkOmxVdecEx.so)
 	    [ "$2" = "" ] && return 0
             grep -q "libui_shim.so" "$2" || "$PATCHELF" --add-needed "libui_shim.so" "$2"
             ;;
