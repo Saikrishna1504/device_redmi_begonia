@@ -27,9 +27,24 @@ function vendor_imports() {
 	cat <<EOF >>"$1"
 		"device/redmi/begonia",
 		"hardware/mediatek",
-		"hardware/mediatek/libmtkperf_client"
+		"hardware/mediatek/libmtkperf_client",
+		"hardware/xiaomi"
 EOF
 }
+
+function lib_to_package_fixup_system_variants() {
+     if [ "$2" != "system" ]; then
+         return 1
+     fi
+
+     case "$1" in
+         libsink)
+             ;;
+         *)
+             return 1
+             ;;
+     esac
+ }
 
 function lib_to_package_fixup_vendor_variants() {
     if [ "$2" != "vendor" ]; then
@@ -37,6 +52,7 @@ function lib_to_package_fixup_vendor_variants() {
     fi
 
     case "$1" in
+	libarmnn |\
 	vendor.mediatek.hardware.videotelephony@1.0)
             echo "${1}_vendor"
             ;;
@@ -49,6 +65,7 @@ function lib_to_package_fixup_vendor_variants() {
 function lib_to_package_fixup() {
     lib_to_package_fixup_clang_rt_ubsan_standalone "$1" ||
         lib_to_package_fixup_proto_3_9_1 "$1" ||
+        lib_to_package_fixup_system_variants "$@" ||
         lib_to_package_fixup_vendor_variants "$@"
 }
 
