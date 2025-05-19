@@ -1,5 +1,0 @@
-# IMEI
-system_internal_prop(deviceid_prop)
-
-# SettingsLib
-system_public_prop(settingslib_prop)
