@@ -85,10 +85,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     FMRadio
 
-# DT2W
-PRODUCT_PACKAGES += \
-    DT2W-Service-Begonia
-
 # Health
 PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl \
