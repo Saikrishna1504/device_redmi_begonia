@@ -146,6 +146,7 @@ ODM_MANIFEST_BEGONIA_FILES := $(DEVICE_PATH)/manifest_begonia.xml
 PRODUCT_VENDOR_MOVE_ENABLED := true
 
 # Sepolicy
+BOARD_MTK_SEPOLICY_IS_LEGACY := true
 include device/mediatek/sepolicy_vndr/SEPolicy.mk
 BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 
