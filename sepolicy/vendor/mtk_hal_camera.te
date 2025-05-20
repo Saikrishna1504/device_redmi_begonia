@@ -1,0 +1,7 @@
+type camera_persist_file, file_type;
+type camera_vendor_data_file, data_file_type, file_type;
+
+rw_dir_file(mtk_hal_camera, camera_vendor_data_file)
+r_dir_file(mtk_hal_camera, camera_persist_file)
+
+allow mtk_hal_camera camera_vendor_data_file:file rw_file_perms;

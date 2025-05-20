@@ -1,2 +1,6 @@
+# Camera
+persist.vendor.camera.mi.                      u:object_r:vendor_mtk_camera_prop:s0
+vendor.camera.sensor.                          u:object_r:vendor_mtk_camera_prop:s0
+
 # Thermal
 vendor.sys.thermal.                            u:object_r:vendor_thermal_engine_prop:s0

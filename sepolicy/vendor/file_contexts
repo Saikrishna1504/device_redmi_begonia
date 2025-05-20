@@ -1,2 +1,7 @@
+# Camera
+/data/vendor/camera(/.*)?              u:object_r:camera_vendor_data_file:s0
+/persist/camera(/.*)?                  u:object_r:camera_persist_file:s0
+/mnt/vendor/persist/camera(/.*)?       u:object_r:camera_persist_file:s0
+
 # Thermal
 /(vendor|system/vendor)/bin/mi_thermald                                                              u:object_r:mi_thermald_exec:s0
