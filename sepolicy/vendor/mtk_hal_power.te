@@ -1,0 +1,1 @@
+allow mtk_hal_power vendor_touchfeature_device:chr_file rw_file_perms;

@@ -3,5 +3,8 @@
 /persist/camera(/.*)?                  u:object_r:camera_persist_file:s0
 /mnt/vendor/persist/camera(/.*)?       u:object_r:camera_persist_file:s0
 
+# Power
+/dev/xiaomi-touch u:object_r:vendor_touchfeature_device:s0
+
 # Thermal
 /(vendor|system/vendor)/bin/mi_thermald                                                              u:object_r:mi_thermald_exec:s0
