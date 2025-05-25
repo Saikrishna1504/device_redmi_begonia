@@ -22,6 +22,7 @@
 /data/vendor/thermal(/.*)?    u:object_r:thermal_data_file:s0
 
 # Power
+/dev/xiaomi-touch             u:object_r:vendor_touchfeature_device:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.power-service\.begonia-libperfmgr                      u:object_r:hal_power_default_exec:s0
 
 # Health
