@@ -459,6 +459,7 @@ vendor/lib64/ov02a10beta_mipi_raw_tuning.so
 vendor/lib64/ov8856ofilm_mipi_raw_IdxMgr.so
 vendor/lib64/ov8856ofilm_mipi_raw_tuning.so
 vendor/lib64/ov8856sunny_mipi_raw_IdxMgr.so
+vendor/lib64/ov8856sunny_mipi_raw_tuning.so
 vendor/lib64/s5k3t1ofilm_mipi_raw_IdxMgr.so
 vendor/lib64/s5k3t1ofilm_mipi_raw_tuning.so
 vendor/lib64/s5k3t1sunny_mipi_raw_IdxMgr.so
