@@ -56,7 +56,7 @@ fi
 
 function blob_fixup {
     case "${1}" in
-        system/lib/libsink.so)
+        system/lib/libsink-mtk.so)
             [ "$2" = "" ] && return 0
             "${PATCHELF}" --add-needed "libshim_vtservice.so" "${2}"
             ;;
@@ -109,6 +109,10 @@ function blob_fixup {
         system/lib/libmtk_vt_service.so)
             [ "$2" = "" ] && return 0
             "${PATCHELF}" --add-needed "libgui_shim.so" "${2}"
+            ;;
+        system/lib/libimsma.so)
+            [ "$2" = "" ] && return 0
+            "${PATCHELF}" --replace-needed "libsink.so" "libsink-mtk.so" "${2}"
             ;;
         *)
             return 1
