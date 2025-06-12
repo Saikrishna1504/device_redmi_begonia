@@ -962,7 +962,7 @@ system/framework/mediatek-telecom-common.jar
 system/framework/mediatek-telephony-base.jar|be405f248a416a15364c976f60ec912eeb75df5d
 system/framework/mediatek-telephony-common.jar|b0f42c4e40301cf9a2b297a31c8ce315e52ad306
 system/lib/libcomutils.so
-system/lib/libimsma.so;DISABLE_CHECKELF
+system/lib/libimsma.so
 system/lib/libimsma_adapt.so
 system/lib/libimsma_rtp.so
 system/lib/libimsma_socketwrapper.so
@@ -970,7 +970,7 @@ system/lib/libmtk_vt_service.so
 system/lib/libmtk_vt_wrapper.so
 system/lib/libmtkavenhancements.so;DISABLE_CHECKELF
 system/lib/libsignal.so
-system/lib/libsink.so
+system/lib/libsink.so:system/lib/libsink-mtk.so;FIX_SONAME
 system/lib/libsource.so
 system/lib/libvcodec_cap.so
 system/lib/libvcodec_capenc.so
