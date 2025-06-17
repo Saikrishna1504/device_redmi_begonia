@@ -28,6 +28,7 @@ PRODUCT_VENDOR_PROPERTIES +=  \
     persist.log.tag.GsmCallTkrHlpr=$(VENDOR_LOG_LEVEL) \
     persist.log.tag.GsmCdmaConn=$(VENDOR_LOG_LEVEL) \
     persist.log.tag.GsmCdmaPhone=$(VENDOR_LOG_LEVEL) \
+    persist.log.tag.hwcomposer=$(VENDOR_LOG_LEVEL) \
     persist.log.tag.IMSRILRequest=$(VENDOR_LOG_LEVEL) \
     persist.log.tag.IMS_RILA=$(VENDOR_LOG_LEVEL) \
     persist.log.tag.IccCardProxy=$(VENDOR_LOG_LEVEL) \
