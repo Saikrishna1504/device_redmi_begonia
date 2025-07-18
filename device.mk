@@ -397,13 +397,13 @@ PRODUCT_PACKAGES += \
 # VNDK
 PRODUCT_COPY_FILES += \
     prebuilts/vndk/v30/arm64/arch-arm-armv8-a/shared/vndk-core/libmedia_helper.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmedia_helper-v30.so \
-    prebuilts/vndk/v30/arm64/arch-arm-armv8-a/shared/vndk-sp/libutils.so:$(TARGET_COPY_OUT_VENDOR)/lib/libutils-v30.so \
+    hardware/lineage/compat/vndk/v30/arm/libutils-v30.so:$(TARGET_COPY_OUT_VENDOR)/lib/libutils-v30.so \
     prebuilts/vndk/v30/arm64/arch-arm-armv8-a/shared/vndk-sp/libunwindstack.so:$(TARGET_COPY_OUT_VENDOR)/lib/libunwindstack-v30.so \
     prebuilts/vndk/v30/arm64/arch-arm64-armv8-a/shared/vndk-core/libmedia_helper.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmedia_helper-v30.so \
-    prebuilts/vndk/v30/arm64/arch-arm64-armv8-a/shared/vndk-sp/libutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libutils-v30.so \
+    hardware/lineage/compat/vndk/v30/arm64/libutils-v30.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libutils-v30.so \
     prebuilts/vndk/v30/arm64/arch-arm64-armv8-a/shared/vndk-sp/libunwindstack.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libunwindstack-v30.so \
-    prebuilts/vndk/v32/arm64/arch-arm-armv8-a/shared/vndk-sp/libutils.so:$(TARGET_COPY_OUT_VENDOR)/lib/libutils-v32.so \
-    prebuilts/vndk/v32/arm64/arch-arm64-armv8-a/shared/vndk-sp/libutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libutils-v32.so
+    hardware/lineage/compat/vndk/v32/arm/libutils-v32.so:$(TARGET_COPY_OUT_VENDOR)/lib/libutils-v32.so \
+    hardware/lineage/compat/vndk/v32/arm64/libutils-v32.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libutils-v32.so
 
 PRODUCT_PACKAGES += \
     libunwindstack.vendor \
