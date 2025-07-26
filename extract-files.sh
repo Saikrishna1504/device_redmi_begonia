@@ -60,6 +60,10 @@ function blob_fixup {
             [ "$2" = "" ] && return 0
             "${PATCHELF}" --add-needed "libshim_vtservice.so" "${2}"
             ;;
+        vendor/lib/hw/audio.primary.mt6785.so)
+            [ "$2" = "" ] && return 0
+            "${PATCHELF}" --add-needed "libshim_audio.so" "${2}"
+            ;;
         vendor/lib/hw/audio.primary.mt6785.so|\
         vendor/lib/hw/audio.usb.mt6785.so)
 	    [ "$2" = "" ] && return 0
