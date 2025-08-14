@@ -21,7 +21,6 @@ PRODUCT_PACKAGES += \
     android.hardware.audio@6.0-impl \
     android.hardware.audio.effect@6.0-impl \
     android.hardware.soundtrigger@2.3-impl \
-    android.hardware.bluetooth.audio-impl \
 
 PRODUCT_PACKAGES += \
     audio.bluetooth.default \
@@ -44,6 +43,11 @@ PRODUCT_COPY_FILES += \
 # BesLoudness
 PRODUCT_PACKAGES += \
     BesLoudness
+
+# Bluetooth
+PRODUCT_PACKAGES += \
+    android.hardware.bluetooth-service.mediatek \
+    android.hardware.bluetooth.audio-impl
 
 # Lineage Health
 $(call soong_config_set,lineage_health,charging_control_supports_bypass,false)
