@@ -128,6 +128,14 @@ function blob_fixup {
              [ "$2" = "" ] && return 0
              "${PATCHELF}" --add-needed "libutils-v32.so" "${2}"
              ;;
+        vendor/lib64/libalRnBRT_GL_GBWRAPPER.so|\
+        vendor/lib64/libcam.hal3a.v3.so|\
+        vendor/lib64/libeffecthal.base.so|\
+        vendor/lib64/libmtkcam_grallocutils.so|\
+        vendor/lib64/libmtkcam_3rdparty.vidhance.so)
+            [ "$2" = "" ] && return 0
+            "${PATCHELF}" --replace-needed "libui.so" "libui-v34.so" "${2}"
+            ;;
         *)
             return 1
             ;;
