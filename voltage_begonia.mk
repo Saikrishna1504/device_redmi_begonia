@@ -29,6 +29,15 @@ TARGET_BOOT_ANIMATION_RES := 1920
 # Official-ify
 VOLTAGE_BUILD_TYPE := UNOFFICIAL
 
+# VoltageOS CPUsets configuration.
+VOLTAGE_CPU_SMALL_CORES := 0,1,2,3,4,5
+VOLTAGE_CPU_BIG_CORES := 6,7
+VOLTAGE_CPU_UNLIMIT_UI := 0-7
+VOLTAGE_CPU_BG := 0-3
+VOLTAGE_CPU_FG := 0-7
+VOLTAGE_CPU_LIMIT_BG := 0-2
+VOLTAGE_CPU_LIMIT_UI := 0-5
+
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := begonia
 PRODUCT_NAME := voltage_begonia
