@@ -848,8 +848,6 @@ on boot
     chown system system /sys/class/power_supply/battery/input_suspend
     chmod 0666 /sys/class/power_supply/battery/input_suspend
 
-    stop console
-
 on property:vold.decrypt=trigger_reset_main
     write /proc/bootprof "INIT:vold.decrypt=trigger_reset_main"
     setprop sys.boot_completed 0
@@ -964,6 +962,3 @@ on property:sys.boot_completed=1
 on boot
     # SELinux
     write /sys/fs/selinux/enforce 1
-
-    # Disable serial console
-    stop console
