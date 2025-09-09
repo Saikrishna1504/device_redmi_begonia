@@ -197,6 +197,9 @@ PRODUCT_PACKAGES += \
     libnetutils.vendor \
     libdumpstateutil.vendor
 
+# UFFD GC
+PRODUCT_ENABLE_UFFD_GC := true
+
 # Lights
 PRODUCT_PACKAGES += \
     android.hardware.light-service.lineage
