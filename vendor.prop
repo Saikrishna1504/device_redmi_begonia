@@ -149,7 +149,8 @@ ro.vendor.mtk_log_hide_gps=1
 ro.vendor.mtk_wappush_support=1
 
 # Graphics
-debug.hwui.skia_atrace_enabled=false
+debug.hwui.skia_tracing_enabled=false
+debug.hwui.skia_use_perfetto_track_events=false
 debug.sf.auto_latch_unsignaled=0
 debug.sf.early.app.duration=16500000
 debug.sf.early.sf.duration=16000000
