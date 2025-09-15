@@ -242,6 +242,7 @@ PRODUCT_SOONG_NAMESPACES += \
 
 # Tethering
 PRODUCT_PACKAGES += \
+    NcmTetheringOverlay \
     TetheringConfigOverlay
 
 # Update
