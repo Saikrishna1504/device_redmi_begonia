@@ -1,9 +1,5 @@
 import /vendor/etc/init/init.batteryd.rc
 
-on init
-    mkdir /mnt/media_rw/usbotg 0700 media_rw media_rw
-    mkdir /storage/usbotg 0700 root root
-
 on post-fs-data
     #thermal
     mkdir /data/vendor/thermal 0771 root system
@@ -79,10 +75,6 @@ on init
     #Torch_light
     chown system system /sys/devices/platform/flashlights_mt6360/leds/torch-light0/brightness
     chown system system /sys/devices/platform/flashlights_mt6360/leds/torch-light1/brightness
-
-service fuse_usbotg /system/bin/sdcard -u 1023 -g 1023 -w 1023 -d /mnt/media_rw/usbotg /storage/usbotg
-    class late_start
-    disabled
 
 service panel-info-sh /vendor/bin/init.panel_info.sh
     class core
