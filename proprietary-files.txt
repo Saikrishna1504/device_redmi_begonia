@@ -575,7 +575,6 @@ vendor/lib64/libgralloctypes_mtk.so
 vendor/lib64/libhdrvideo.so
 vendor/lib64/libion_mtk.so
 vendor/lib64/libion_ulit.so
-vendor/lib64/libmtk_drvb.so
 vendor/lib64/libpq_cust_base.so
 vendor/lib64/libpq_prot.so
 vendor/lib64/libudf.so;DISABLE_CHECKELF
@@ -781,7 +780,7 @@ vendor/lib64/libapu-apuwarexrp.mtk.so;FIX_SONAME
 vendor/lib64/libapu-frontend.so
 vendor/lib64/libapu-platform.so
 vendor/lib64/libapusys.so
-vendor/lib64/libarmnn.so;MODULE_SUFFIX=_vendor
+vendor/lib64/libarmnn.so;MODULE_SUFFIX=-vendor
 vendor/lib64/libarmnn_ndk.mtk.so
 vendor/lib64/libcmdl.so
 vendor/lib64/libcmdl_ndk.mtk.so
@@ -976,7 +975,7 @@ system_ext/lib/vendor.mediatek.hardware.videotelephony@1.0.so
 vendor/bin/hw/vtservice_hidl
 vendor/etc/init/init.vtservice_hidl.rc
 vendor/lib/hw/vendor.mediatek.hardware.videotelephony@1.0-impl.so
-vendor/lib/vendor.mediatek.hardware.videotelephony@1.0.so;MODULE_SUFFIX=_vendor
+vendor/lib/vendor.mediatek.hardware.videotelephony@1.0.so;MODULE_SUFFIX=-vendor
 
 # Sensors
 vendor/bin/hw/android.hardware.sensors@1.0-service-mediatek
