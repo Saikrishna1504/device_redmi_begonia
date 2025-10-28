@@ -7,11 +7,11 @@ vendor/lib64/libaedv.so
 # Audio
 vendor/firmware/tfa98xx.cnt
 vendor/lib/hw/sound_trigger.primary.mt6785.so
+vendor/lib/libalsautils.so:vendor/lib/libalsautils-v30.so;FIX_SONAME
 vendor/lib/libMtkSpeechEnh.so
 vendor/lib/lib_iir.so
 vendor/lib/lib_smartpa_nxp_ap.so;FIX_SONAME
 vendor/lib/lib_speech_enh.so
-vendor/lib/libalsautils.so:vendor/lib/libalsautils-v30.so;FIX_SONAME
 vendor/lib/libaudio_param_parser-vnd.so
 vendor/lib/libaudiocompensationfilter_vendor.so
 vendor/lib/libaudiocompensationfilterc.so
@@ -80,6 +80,12 @@ vendor/bin/libccu_s5k3t2_mipi_raw.ddr
 vendor/bin/libccu_s5kgw1ofilm_mipi_raw.ddr
 vendor/bin/libccu_s5kgw1sunny_mipi_raw.ddr
 vendor/etc/init/camerahalserver.rc
+vendor/lib64/hw/android.hardware.camera.provider@2.4-impl-mediatek.so
+vendor/lib64/hw/vendor.mediatek.hardware.camera.atms@1.0-impl.so
+vendor/lib64/hw/vendor.mediatek.hardware.camera.bgservice@1.1-impl.so
+vendor/lib64/hw/vendor.mediatek.hardware.camera.ccap@1.0-impl.so
+vendor/lib64/hw/vendor.mediatek.hardware.camera.lomoeffect@1.0-impl.so
+vendor/lib64/hw/vendor.mediatek.hardware.camera.postproc@1.0-impl.so
 vendor/lib64/gc2375af_mipi_raw_IdxMgr.so
 vendor/lib64/gc2375af_mipi_raw_tuning.so
 vendor/lib64/gc2375alpha_mipi_raw_IdxMgr.so
@@ -88,12 +94,6 @@ vendor/lib64/gc2375beta_mipi_raw_IdxMgr.so
 vendor/lib64/gc2375beta_mipi_raw_tuning.so
 vendor/lib64/gc5035_mipi_raw_IdxMgr.so
 vendor/lib64/gc5035_mipi_raw_tuning.so
-vendor/lib64/hw/android.hardware.camera.provider@2.4-impl-mediatek.so
-vendor/lib64/hw/vendor.mediatek.hardware.camera.atms@1.0-impl.so
-vendor/lib64/hw/vendor.mediatek.hardware.camera.bgservice@1.1-impl.so
-vendor/lib64/hw/vendor.mediatek.hardware.camera.ccap@1.0-impl.so
-vendor/lib64/hw/vendor.mediatek.hardware.camera.lomoeffect@1.0-impl.so
-vendor/lib64/hw/vendor.mediatek.hardware.camera.postproc@1.0-impl.so
 vendor/lib64/lib3a.ae.core.so
 vendor/lib64/lib3a.ae.so
 vendor/lib64/lib3a.af.core.so
@@ -507,15 +507,15 @@ vendor/etc/init/vendor.mediatek.hardware.gpu@1.0-service.rc
 vendor/etc/init/vendor.mediatek.hardware.pq@2.2-service.rc
 vendor/etc/init/vendor.xiaomi.hardware.displayfeature@1.0-service.rc
 vendor/etc/vintf/manifest/android.hardware.gpu@1.0-service.xml
-vendor/lib/arm.graphics-V1-ndk_platform.so
-vendor/lib/egl/egl.cfg
 vendor/lib/egl/libGLES_mali.so;SYMLINK=vendor/lib/hw/vulkan.mt6785.so
+vendor/lib/egl/egl.cfg
 vendor/lib/egl/libGLES_meow.so
 vendor/lib/egl/libMEOW_gift.so
 vendor/lib/egl/libMEOW_trace.so
 vendor/lib/hw/displayfeature.default.so
 vendor/lib/hw/vendor.mediatek.hardware.pq@2.6-impl.so
 vendor/lib/hw/vendor.xiaomi.hardware.displayfeature@1.0-impl.so
+vendor/lib/arm.graphics-V1-ndk_platform.so
 vendor/lib/libDefaultFpsActor.so
 vendor/lib/libFrameRecord.so
 vendor/lib/libNoFpsActor.so
@@ -547,7 +547,6 @@ vendor/lib/vendor.mediatek.hardware.pq@2.3.so
 vendor/lib/vendor.mediatek.hardware.pq@2.4.so
 vendor/lib/vendor.mediatek.hardware.pq@2.5.so
 vendor/lib/vendor.mediatek.hardware.pq@2.6.so
-vendor/lib64/arm.graphics-V1-ndk_platform.so
 vendor/lib64/egl/libGLES_mali.so;SYMLINK=vendor/lib64/hw/vulkan.mt6785.so
 vendor/lib64/egl/libGLES_meow.so
 vendor/lib64/egl/libMEOW_gift.so
@@ -556,6 +555,7 @@ vendor/lib64/hw/displayfeature.default.so
 vendor/lib64/hw/hwcomposer.mt6785.so
 vendor/lib64/hw/vendor.mediatek.hardware.pq@2.6-impl.so
 vendor/lib64/hw/vendor.xiaomi.hardware.displayfeature@1.0-impl.so
+vendor/lib64/arm.graphics-V1-ndk_platform.so
 vendor/lib64/libDefaultFpsActor.so
 vendor/lib64/libFrameRecord.so
 vendor/lib64/libNoFpsActor.so
@@ -617,10 +617,10 @@ vendor/lib64/libladder.so
 vendor/bin/hw/android.hardware.drm@1.3-service.widevine
 vendor/etc/init/android.hardware.drm@1.3-service.widevine.rc
 vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.3-service.widevine.xml
+vendor/lib/mediadrm/libwvdrmengine.so
 vendor/lib/liboemcrypto.so
 vendor/lib/libtlcWidevineModularDrm.so
 vendor/lib/libwvhidl.so
-vendor/lib/mediadrm/libwvdrmengine.so
 
 # Engineering Mode
 system/lib/libem_support_jni.so;DISABLE_CHECKELF
@@ -686,8 +686,6 @@ vendor/lib64/hw/gatekeeper.beanpod.so
 vendor/bin/hw/android.hardware.gnss@2.1-service-mediatek
 vendor/bin/mnld
 vendor/bin/mtk_agpsd
-vendor/etc/MNL_Config.xml
-vendor/etc/gnss/agps_profiles_conf2.xml
 vendor/etc/gnss/carrier/agps_profiles_conf2_carrier_ATnT_Mexico.xml
 vendor/etc/gnss/carrier/agps_profiles_conf2_carrier_ATnT_US.xml
 vendor/etc/gnss/carrier/agps_profiles_conf2_carrier_CT.xml
@@ -701,8 +699,10 @@ vendor/etc/gnss/carrier/agps_profiles_conf2_carrier_T-Mobile_US.xml
 vendor/etc/gnss/carrier/agps_profiles_conf2_carrier_Test_SIM1.xml
 vendor/etc/gnss/carrier/agps_profiles_conf2_carrier_Test_SIM2.xml
 vendor/etc/gnss/carrier/agps_profiles_conf2_carrier_Verizon_Wireless.xml
+vendor/etc/gnss/agps_profiles_conf2.xml
 vendor/etc/init/android.hardware.gnss@2.1-service-mediatek.rc
 vendor/etc/init/mtk_agpsd_p.rc
+vendor/etc/MNL_Config.xml
 vendor/etc/mpe.conf
 vendor/etc/slp_conf
 vendor/lib/libDR.so
@@ -713,8 +713,8 @@ vendor/lib64/hw/android.hardware.gnss@2.1-impl-mediatek.so
 vendor/lib64/hw/gps.default.so
 
 # Keymaster
-vendor/bin/bp_kmsetkey_ca
 vendor/bin/hw/android.hardware.keymaster@4.0-service.beanpod
+vendor/bin/bp_kmsetkey_ca
 vendor/etc/init/android.hardware.keymaster@4.0-service.beanpod.rc
 vendor/etc/init/microtrust.bp_kmsetkey_ca.rc
 vendor/lib64/hw/kmsetkey.beanpod.so
@@ -836,12 +836,12 @@ vendor/lib64/vendor.mediatek.hardware.power@1.1.so
 vendor/lib64/vendor.mediatek.hardware.power@2.0.so
 
 # Radio
+vendor/bin/hw/mtkfusionrild
 vendor/bin/ccci_fsd
 vendor/bin/ccci_mdinit
 vendor/bin/ccci_rpcd
 vendor/bin/epdg_wod
 vendor/bin/gsm0710muxd
-vendor/bin/hw/mtkfusionrild
 vendor/bin/muxreport
 vendor/bin/rttv
 vendor/bin/starter
@@ -852,15 +852,6 @@ vendor/bin/volte_md_status
 vendor/bin/volte_stack
 vendor/bin/volte_ua
 vendor/bin/xcap
-vendor/etc/ecc_list.xml
-vendor/etc/ecc_list_OP01.xml
-vendor/etc/ecc_list_OP02.xml
-vendor/etc/ecc_list_OP09.xml
-vendor/etc/ecc_list_OP12.xml
-vendor/etc/ecc_list_OP17.xml
-vendor/etc/ecc_list_OP18.xml
-vendor/etc/ecc_list_OP20.xml
-vendor/etc/ecc_list_preference.xml
 vendor/etc/init/gsm0710muxd.rc
 vendor/etc/init/init.cccifsd.rc
 vendor/etc/init/init.cccimdinit.rc
@@ -873,6 +864,15 @@ vendor/etc/init/init.volte_ua.rc
 vendor/etc/init/init.wod.rc
 vendor/etc/init/init.xcap.rc
 vendor/etc/init/mtkrild.rc
+vendor/etc/ecc_list.xml
+vendor/etc/ecc_list_OP01.xml
+vendor/etc/ecc_list_OP02.xml
+vendor/etc/ecc_list_OP09.xml
+vendor/etc/ecc_list_OP12.xml
+vendor/etc/ecc_list_OP17.xml
+vendor/etc/ecc_list_OP18.xml
+vendor/etc/ecc_list_OP20.xml
+vendor/etc/ecc_list_preference.xml
 vendor/etc/special_pws_channel.xml
 vendor/etc/spn-conf-op09.xml
 vendor/etc/vendor-apns-conf.xml
@@ -956,6 +956,7 @@ system/framework/mediatek-ims-legacy.jar
 system/framework/mediatek-telecom-common.jar
 system/framework/mediatek-telephony-base.jar|be405f248a416a15364c976f60ec912eeb75df5d
 system/framework/mediatek-telephony-common.jar|b0f42c4e40301cf9a2b297a31c8ce315e52ad306
+system/lib/libsink.so:system/lib/libsink-mtk.so;FIX_SONAME
 system/lib/libcomutils.so
 system/lib/libimsma.so
 system/lib/libimsma_adapt.so
@@ -965,7 +966,6 @@ system/lib/libmtk_vt_service.so
 system/lib/libmtk_vt_wrapper.so
 system/lib/libmtkavenhancements.so;DISABLE_CHECKELF
 system/lib/libsignal.so
-system/lib/libsink.so:system/lib/libsink-mtk.so;FIX_SONAME
 system/lib/libsource.so
 system/lib/libvcodec_cap.so
 system/lib/libvcodec_capenc.so

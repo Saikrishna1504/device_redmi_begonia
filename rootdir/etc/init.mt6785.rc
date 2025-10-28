@@ -949,10 +949,6 @@ on property:persist.sys.begonia.dt2w=0
 on property:persist.sys.begonia.dt2w=1
     exec /system/bin/sendevent /dev/input/event2 0 1 5
 
-# Restart C2 service after boot completed
-on property:sys.boot_completed=1
-    restart android-hardware-media-c2-hal-1-2
-
 on property:sys.boot_completed=1
     # Restrict permissions to socket file
     # to hide Magisk & co.

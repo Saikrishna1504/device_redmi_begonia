@@ -49,17 +49,6 @@ PRODUCT_PACKAGES += \
     android.hardware.bluetooth-service.mediatek \
     android.hardware.bluetooth.audio-impl
 
-# Lineage Health
-$(call soong_config_set,lineage_health,charging_control_supports_bypass,false)
-
-PRODUCT_PACKAGES += \
-    vendor.lineage.health-service.default
-
-# Dex
-PRODUCT_DEXPREOPT_SPEED_APPS += \
-    SystemUI
-PRODUCT_DEX_PREOPT_DEFAULT_COMPILER_FILTER := verify
-
 # Debloat
 PRODUCT_PACKAGES += \
     Debloat
@@ -67,6 +56,11 @@ PRODUCT_PACKAGES += \
 # Device-specific settings
 PRODUCT_PACKAGES += \
     XiaomiParts
+
+# Dex
+PRODUCT_DEXPREOPT_SPEED_APPS += \
+    SystemUI
+PRODUCT_DEX_PREOPT_DEFAULT_COMPILER_FILTER := verify
 
 # Display
 PRODUCT_PACKAGES += \
@@ -80,18 +74,24 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey
 
-# Gatekeeper
+# Dolby
 PRODUCT_PACKAGES += \
-    android.hardware.gatekeeper@1.0-service \
-    android.hardware.gatekeeper@1.0-impl
+    libstagefright_softomx.vendor \
+    libstagefright_softomx_plugin.vendor \
+    libsqlite.vendor
+
+# DT2W
+PRODUCT_PACKAGES += \
+    DT2W-Service-Begonia
 
 # FM Radio
 PRODUCT_PACKAGES += \
     FMRadio
 
-# DT2W
+# Gatekeeper
 PRODUCT_PACKAGES += \
-    DT2W-Service-Begonia
+    android.hardware.gatekeeper@1.0-service \
+    android.hardware.gatekeeper@1.0-impl
 
 # Health
 PRODUCT_PACKAGES += \
@@ -111,18 +111,50 @@ PRODUCT_PACKAGES += \
     android.hardware.ir@1.0-impl \
     android.hardware.ir@1.0-service
 
-# UFFD GC
-PRODUCT_ENABLE_UFFD_GC := true
-
 # Lights
 PRODUCT_PACKAGES += \
     android.hardware.light-service.lineage
+
+# Lineage Health
+$(call soong_config_set,lineage_health,charging_control_supports_bypass,false)
+
+PRODUCT_PACKAGES += \
+    vendor.lineage.health-service.default
 
 # Media
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/media/media_codecs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml \
     $(DEVICE_PATH)/configs/media/media_codecs_performance.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance.xml \
     $(DEVICE_PATH)/configs/media/media_profiles_V1_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_V1_0.xml
+
+# MTK In-Call volumes adjusting service
+PRODUCT_PACKAGES += \
+    MtkInCallService
+
+# MTK Jars (for IMS)
+PRODUCT_BOOT_JARS += \
+    mediatek-common \
+    mediatek-framework \
+    mediatek-ims-base \
+    mediatek-ims-common \
+    mediatek-telecom-common \
+    mediatek-telephony-base \
+    mediatek-telephony-common
+
+# NFC
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.nfc.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_begonia/android.hardware.nfc.xml \
+    frameworks/native/data/etc/android.hardware.nfc.ese.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_begonia/android.hardware.nfc.ese.xml \
+    frameworks/native/data/etc/android.hardware.nfc.hce.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_begonia/android.hardware.nfc.hce.xml \
+    frameworks/native/data/etc/android.hardware.nfc.hcef.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_begonia/android.hardware.nfc.hcef.xml \
+    frameworks/native/data/etc/android.hardware.nfc.uicc.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_begonia/android.hardware.nfc.uicc.xml \
+    frameworks/native/data/etc/com.android.nfc_extras.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_begonia/com.android.nfc_extras.xml \
+    frameworks/native/data/etc/com.nxp.mifare.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_begonia/com.nxp.mifare.xml
+
+PRODUCT_PACKAGES += \
+    android.hardware.nfc@1.2-service \
+    com.android.nfc_extras \
+    Tag
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
@@ -200,10 +232,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
 
-# MTK In-Call volumes adjusting service
-PRODUCT_PACKAGES += \
-    MtkInCallService
-
 # Ramdisk
 PRODUCT_PACKAGES += \
     init.connectivity.rc \
@@ -239,6 +267,9 @@ PRODUCT_SOONG_NAMESPACES += \
 PRODUCT_PACKAGES += \
     TetheringConfigOverlay
 
+# UFFD GC
+PRODUCT_ENABLE_UFFD_GC := true
+
 # Update
 AB_OTA_UPDATER := false
 PRODUCT_SOONG_NAMESPACES += bootable/deprecated-ota
@@ -261,37 +292,6 @@ PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
     $(DEVICE_PATH)/configs/wifi/wpa_supplicant.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant.conf \
     $(DEVICE_PATH)/configs/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf
-
-# NFC
-PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.hardware.nfc.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_begonia/android.hardware.nfc.xml \
-    frameworks/native/data/etc/android.hardware.nfc.ese.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_begonia/android.hardware.nfc.ese.xml \
-    frameworks/native/data/etc/android.hardware.nfc.hce.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_begonia/android.hardware.nfc.hce.xml \
-    frameworks/native/data/etc/android.hardware.nfc.hcef.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_begonia/android.hardware.nfc.hcef.xml \
-    frameworks/native/data/etc/android.hardware.nfc.uicc.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_begonia/android.hardware.nfc.uicc.xml \
-    frameworks/native/data/etc/com.android.nfc_extras.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_begonia/com.android.nfc_extras.xml \
-    frameworks/native/data/etc/com.nxp.mifare.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_begonia/com.nxp.mifare.xml
-
-PRODUCT_PACKAGES += \
-    android.hardware.nfc@1.2-service \
-    com.android.nfc_extras \
-    Tag
-
-# MTK Jars (for IMS)
-PRODUCT_BOOT_JARS += \
-    mediatek-common \
-    mediatek-framework \
-    mediatek-ims-base \
-    mediatek-ims-common \
-    mediatek-telecom-common \
-    mediatek-telephony-base \
-    mediatek-telephony-common
-
-# Dolby
-PRODUCT_PACKAGES += \
-    libstagefright_softomx.vendor \
-    libstagefright_softomx_plugin.vendor \
-    libsqlite.vendor
 
 # Inherit vendor
 $(call inherit-product, vendor/redmi/begonia/begonia-vendor.mk)
