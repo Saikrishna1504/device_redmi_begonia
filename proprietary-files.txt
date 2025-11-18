@@ -589,14 +589,12 @@ vendor/lib64/hw/android.hardware.graphics.mapper@4.0-impl-mediatek.so|54b3be4070
 vendor/lib/libladder.so
 vendor/lib64/libladder.so
 
-# DRM
-vendor/bin/hw/android.hardware.drm@1.3-service.widevine
-vendor/etc/init/android.hardware.drm@1.3-service.widevine.rc
-vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.3-service.widevine.xml
-vendor/lib/mediadrm/libwvdrmengine.so
-vendor/lib/liboemcrypto.so
-vendor/lib/libtlcWidevineModularDrm.so
-vendor/lib/libwvhidl.so
+# DRM (Widevine) - from malachite OS2.0.206.0.VOOMIXM
+vendor/apex/com.google.android.widevine.nonupdatable.apex|522c687fc5fdcff4ff89ca36b57a5c03420448dc
+
+# DRM (Widevine) - stock
+vendor/lib64/liboemcrypto.so
+vendor/lib64/libtlcWidevineModularDrm.so
 
 # Engineering Mode
 system/lib/libem_support_jni.so;DISABLE_CHECKELF
