@@ -54,7 +54,7 @@ fi
 
 function blob_fixup {
     case "${1}" in
-        lib/libsink.so)
+        system/lib/libsink.so)
             [ "$2" = "" ] && return 0
             "${PATCHELF}" --add-needed "libshim_vtservice.so" "${2}"
             ;;
@@ -108,11 +108,11 @@ function blob_fixup {
             "${PATCHELF}" --set-soname "libwifi-hal-mtk.so" "${2}"
             ;;
         vendor/lib/libMtkOmxVdecEx.so|\
-        lib/libsource.so)
+        system/lib/libsource.so)
 	    [ "$2" = "" ] && return 0
             grep -q "libui_shim.so" "$2" || "$PATCHELF" --add-needed "libui_shim.so" "$2"
             ;;
-        lib64/libem_support_jni.so)
+        system/lib64/libem_support_jni.so)
    	    [ "$2" = "" ] && return 0
             "${PATCHELF}" --add-needed "libjni_shim.so" "${2}"
             ;;
