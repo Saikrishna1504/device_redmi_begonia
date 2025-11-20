@@ -24,6 +24,7 @@ namespace_imports = [
     'device/redmi/begonia',
     'hardware/mediatek',
     'hardware/mediatek/libmtkperf_client',
+    'hardware/mediatek/libaedv',
     'hardware/xiaomi',
 ]
 
