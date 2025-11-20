@@ -1,9 +1,5 @@
 # Unpinned blobs from begonia-user 11 RP1A.200720.011 V12.5.8.0.RGGMIXM release-keys
 
-# AEE (Android Exception Enhancement)
-vendor/lib/libaedv.so
-vendor/lib64/libaedv.so
-
 # Audio
 vendor/firmware/tfa98xx.cnt
 vendor/lib/hw/sound_trigger.primary.mt6785.so
