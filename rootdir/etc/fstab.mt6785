@@ -5,11 +5,11 @@
 #<src>                                           <mnt_point>            <type>  <mnt_flags and options>                                                  <fs_mgr_flags>
 
 # Core Partitions
-system                                            /system               ext4    ro                                                                     wait,avb=vbmeta,logical,first_stage_mount
-product                                           /product              ext4    ro                                                                     wait,avb,logical,first_stage_mount
-system_ext                                        /system_ext           ext4    ro                                                                     wait,avb,logical,first_stage_mount
-vendor                                            /vendor               ext4    ro                                                                     wait,avb=vbmeta,logical,first_stage_mount
-odm                                               /odm                  ext4    ro                                                                     wait,avb,logical,first_stage_mount
+system                                            /system               erofs    ro                                                                     wait,avb=vbmeta,logical,first_stage_mount
+product                                           /product              erofs    ro                                                                     wait,avb,logical,first_stage_mount
+system_ext                                        /system_ext           erofs    ro                                                                     wait,avb,logical,first_stage_mount
+vendor                                            /vendor               erofs    ro                                                                     wait,avb=vbmeta,logical,first_stage_mount
+odm                                               /odm                  erofs    ro                                                                     wait,avb,logical,first_stage_mount
 /dev/block/platform/bootdevice/by-name/userdata   /data                 ext4    noatime,nosuid,nodev,noauto_da_alloc,errors=panic,inlinecrypt          wait,check,formattable,quota,latemount,reservedsize=128m,fileencryption=aes-256-xts:aes-256-cts:v1,fsverity
 /dev/block/platform/bootdevice/by-name/userdata   /data                 f2fs    noatime,nosuid,nodev,discard,flush_merge,reserve_root=134217,resgid=1065,alloc_mode=reuse,fsync_mode=nobarrier,inlinecrypt wait,check,formattable,quota,latemount,reservedsize=128m,fileencryption=aes-256-xts:aes-256-cts:v1,fsverity
 /dev/block/platform/bootdevice/by-name/metadata   /metadata             ext4    noatime,nosuid,nodev,discard                                           wait,data=journal,commit=1,check,formattable,first_stage_mount
