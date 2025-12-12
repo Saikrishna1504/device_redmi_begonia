@@ -156,3 +156,6 @@
 # Fingerprint
 /dev/goodix_fp            0660   system     system
 /dev/fpc1020              0660   system     system
+
+# Raw HID devices
+/dev/hidraw*              0660   system     system
