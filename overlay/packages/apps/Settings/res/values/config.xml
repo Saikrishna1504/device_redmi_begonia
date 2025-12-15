@@ -41,4 +41,7 @@
     <!-- Show battery cycle count -->
     <bool name="config_show_battery_cycle_count" translatable="false">true</bool>
 
+    <!-- Default for Settings.Global.DISABLE_WINDOW_BLURS -->
+    <integer name="def_disable_window_blurs">1</integer>
+
 </resources>
