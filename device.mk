@@ -16,6 +16,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/non_ab_device.mk)
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
 # Audio
+$(call soong_config_set_bool,android_hardware_audio,skip_speaker_layout_channel_mask_field,true)
+
 PRODUCT_PACKAGES += \
     android.hardware.audio.service \
     android.hardware.audio@6.0-impl \
