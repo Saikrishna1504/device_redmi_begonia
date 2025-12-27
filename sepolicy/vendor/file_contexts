@@ -15,7 +15,7 @@
 /sys/module/primary_display/parameters/display_framerate_main      u:object_r:sysfs_fpsinfo:s0
 
 # Hals
-/vendor/bin/hw/mfp-daemon                                               u:object_r:hal_fingerprint_default_exec:s0
+/vendor/bin/hw/android\.hardware\.biometrics\.fingerprint-service\.xiaomi u:object_r:hal_fingerprint_default_exec:s0
 
 # Latency
 /dev/cpu_dma_latency                                                                                    u:object_r:latency_device:s0
