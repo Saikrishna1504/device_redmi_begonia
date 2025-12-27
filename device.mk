@@ -88,6 +88,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     DT2W-Service-Begonia
 
+# Fingerprint
+PRODUCT_PACKAGES += \
+    android.hardware.biometrics.fingerprint-service.xiaomi
+
 # FM Radio
 PRODUCT_PACKAGES += \
     FMRadio
