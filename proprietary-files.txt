@@ -684,10 +684,7 @@ vendor/lib64/hw/gps.default.so
 
 # Keymaster
 vendor/bin/hw/android.hardware.keymaster@4.0-service.beanpod
-vendor/bin/bp_kmsetkey_ca
 vendor/etc/init/android.hardware.keymaster@4.0-service.beanpod.rc
-vendor/etc/init/microtrust.bp_kmsetkey_ca.rc
-vendor/lib64/hw/kmsetkey.beanpod.so
 
 # Media
 vendor/bin/vpud
