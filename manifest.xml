@@ -266,16 +266,6 @@
         <fqname>@1.0::IPostDevice/internal/0</fqname>
     </hal>
     <hal format="hidl">
-        <name>vendor.mediatek.hardware.dfps</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IFpsPolicyService</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::IFpsPolicyService/default</fqname>
-    </hal>
-    <hal format="hidl">
         <name>vendor.mediatek.hardware.engineermode</name>
         <transport>hwbinder</transport>
         <version>1.3</version>

@@ -596,16 +596,6 @@ vendor/etc/csot_fhd_nt36672a_dsi_vdo_lcm_drv_mi.xml
 vendor/etc/ebbg_fhd_ft8719_dsi_vdo_lcm_drv_mi.xml
 vendor/etc/tianma_fhd_nt36672a_dsi_vdo_lcm_drv_mi.xml
 
-# Display (Dynamic FPS)
-vendor/bin/hw/vendor.mediatek.hardware.dfps@1.0-service
-vendor/etc/init/vendor.mediatek.hardware.dfps@1.0-service.rc
-vendor/lib/hw/dfps.mt6785.so
-vendor/lib/hw/vendor.mediatek.hardware.dfps@1.0-impl.so
-vendor/lib/vendor.mediatek.hardware.dfps@1.0.so
-vendor/lib64/hw/dfps.mt6785.so
-vendor/lib64/hw/vendor.mediatek.hardware.dfps@1.0-impl.so
-vendor/lib64/vendor.mediatek.hardware.dfps@1.0.so
-
 # Display (Thread unwinding)
 vendor/lib/libladder.so
 vendor/lib64/libladder.so
