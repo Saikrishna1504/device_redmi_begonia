@@ -303,7 +303,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     hostapd \
     wpa_supplicant \
-    libwifi-hal-wrapper \
+    libwifi-hal-wrapper:64 \
     WifiResOverlay
 
 PRODUCT_PACKAGES += \
