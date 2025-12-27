@@ -948,10 +948,10 @@ on property:ro.boot.product.hardware.sku=begonia
 on property:ro.boot.product.hardware.sku=""
     stop vendor.nfc_hal_service
 
-on property:persist.sys.begonia.dt2w=0
+on property:vendor.begonia.dt2w=0
     exec /system/bin/sendevent /dev/input/event2 0 1 4
 
-on property:persist.sys.begonia.dt2w=1
+on property:vendor.begonia.dt2w=1
     exec /system/bin/sendevent /dev/input/event2 0 1 5
 
 on property:sys.boot_completed=1

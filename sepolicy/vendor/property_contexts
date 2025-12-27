@@ -18,6 +18,9 @@ ro.boot.fpsensor           u:object_r:vendor_fp_prop:s0
 ro.hardware.fp.            u:object_r:vendor_fp_prop:s0
 ro.boot.fpsensor.          u:object_r:vendor_fp_prop:s0
 
+# Power
+vendor.begonia.dt2w        u:object_r:mtk_powerhal_prop:s0
+
 # Recovery
 persist.sys.recovery_update  u:object_r:persist_recovery_update_prop:s0
 
