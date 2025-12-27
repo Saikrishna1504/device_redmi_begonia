@@ -945,9 +945,6 @@ vendor/lib/hw/vendor.mediatek.hardware.videotelephony@1.0-impl.so
 vendor/lib/vendor.mediatek.hardware.videotelephony@1.0.so;MODULE_SUFFIX=-vendor
 
 # Sensors
-vendor/bin/hw/android.hardware.sensors@1.0-service-mediatek
-vendor/etc/init/android.hardware.sensors@1.0-service-mediatek.rc
-vendor/lib64/hw/android.hardware.sensors@1.0-impl-mediatek.so
 vendor/lib64/hw/sensors.mt6785.so
 vendor/lib64/hw/sensors.touch.so
 vendor/lib64/libksensor.so
