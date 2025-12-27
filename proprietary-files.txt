@@ -499,19 +499,15 @@ vendor/lib64/hw/consumerir.mt6785.so
 # Display
 vendor/bin/hw/vendor.mediatek.hardware.gpu@1.0-service
 vendor/bin/hw/vendor.mediatek.hardware.pq@2.2-service
-vendor/bin/hw/vendor.xiaomi.hardware.displayfeature@1.0-service
 vendor/etc/init/android.hardware.graphics.allocator@4.0-service-mediatek.rc
 vendor/etc/init/vendor.mediatek.hardware.gpu@1.0-service.rc
 vendor/etc/init/vendor.mediatek.hardware.pq@2.2-service.rc
-vendor/etc/init/vendor.xiaomi.hardware.displayfeature@1.0-service.rc
 vendor/etc/vintf/manifest/android.hardware.gpu@1.0-service.xml
 vendor/lib/egl/libGLES_mali.so
 vendor/lib/egl/libGLES_meow.so
 vendor/lib/egl/libMEOW_gift.so
 vendor/lib/egl/libMEOW_trace.so
-vendor/lib/hw/displayfeature.default.so
 vendor/lib/hw/vendor.mediatek.hardware.pq@2.6-impl.so
-vendor/lib/hw/vendor.xiaomi.hardware.displayfeature@1.0-impl.so
 vendor/lib/arm.graphics-V1-ndk_platform.so
 vendor/lib/libDefaultFpsActor.so
 vendor/lib/libFrameRecord.so
@@ -548,10 +544,8 @@ vendor/lib64/egl/libGLES_mali.so
 vendor/lib64/egl/libGLES_meow.so
 vendor/lib64/egl/libMEOW_gift.so
 vendor/lib64/egl/libMEOW_trace.so
-vendor/lib64/hw/displayfeature.default.so
 vendor/lib64/hw/hwcomposer.mt6785.so
 vendor/lib64/hw/vendor.mediatek.hardware.pq@2.6-impl.so
-vendor/lib64/hw/vendor.xiaomi.hardware.displayfeature@1.0-impl.so
 vendor/lib64/arm.graphics-V1-ndk_platform.so
 vendor/lib64/libDefaultFpsActor.so
 vendor/lib64/libFrameRecord.so
@@ -590,11 +584,6 @@ vendor/lib/hw/android.hardware.graphics.allocator@4.0-impl-mediatek.so|9f896ca7b
 vendor/lib/hw/android.hardware.graphics.mapper@4.0-impl-mediatek.so|30bc6b9fd5abe37f1c0b265b7448441776ee8f13
 vendor/lib64/hw/android.hardware.graphics.allocator@4.0-impl-mediatek.so|20290857ee049b423dd1a8e493bf85a8653c4fea
 vendor/lib64/hw/android.hardware.graphics.mapper@4.0-impl-mediatek.so|54b3be407037e4ac1f64c51ba4d0b96aba75d393
-
-# Display (Configs)
-vendor/etc/csot_fhd_nt36672a_dsi_vdo_lcm_drv_mi.xml
-vendor/etc/ebbg_fhd_ft8719_dsi_vdo_lcm_drv_mi.xml
-vendor/etc/tianma_fhd_nt36672a_dsi_vdo_lcm_drv_mi.xml
 
 # Display (Thread unwinding)
 vendor/lib/libladder.so
