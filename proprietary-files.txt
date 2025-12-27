@@ -1006,16 +1006,6 @@ vendor/lib64/vendor.mediatek.hardware.netdagent@1.0.so
 
 # Thermal
 vendor/bin/mi_thermald
-vendor/bin/thermal
-vendor/bin/thermal_manager
-vendor/bin/thermalloadalgod
-vendor/etc/.tp/.ht120.mtc
-vendor/etc/.tp/.thermal_policy_08
-vendor/etc/.tp/thermal.conf
-vendor/etc/.tp/thermal.off.conf
-vendor/etc/init/init.thermal.rc
-vendor/etc/init/init.thermal_manager.rc
-vendor/etc/init/init.thermalloadalgod.rc
 vendor/etc/thermal-arvr.conf
 vendor/etc/thermal-camera.conf
 vendor/etc/thermal-chg-only.conf
@@ -1026,11 +1016,6 @@ vendor/etc/thermal-phone.conf
 vendor/etc/thermal-tgame.conf
 vendor/etc/thermal-youtube.conf
 vendor/etc/thermald-devices.conf
-vendor/lib/hw/thermal.mt6785.so
-vendor/lib/libmtcloader.so
-vendor/lib/libthermalalgo.so
-vendor/lib64/hw/thermal.mt6785.so
-vendor/lib64/libmtcloader.so
 
 # Trusted Execution Environment (TEE)
 vendor/bin/teei_daemon
