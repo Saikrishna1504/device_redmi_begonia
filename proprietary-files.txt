@@ -913,7 +913,6 @@ vendor/lib/vendor.mediatek.hardware.videotelephony@1.0.so;MODULE_SUFFIX=-vendor
 
 # Sensors
 vendor/lib64/hw/sensors.mt6785.so
-vendor/lib64/hw/sensors.touch.so
 vendor/lib64/libksensor.so
 vendor/lib64/libsensor_custom.so
 
