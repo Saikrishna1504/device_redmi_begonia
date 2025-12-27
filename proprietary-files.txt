@@ -950,12 +950,6 @@ vendor/lib64/hw/sensors.touch.so
 vendor/lib64/libksensor.so
 vendor/lib64/libsensor_custom.so
 
-# Sensors (citsensor)
-vendor/lib/vendor.xiaomi.hardware.citsensorservice@1.0.so
-vendor/lib/vendor.xiaomi.hardware.citsensorservice@1.1.so
-vendor/lib64/vendor.xiaomi.hardware.citsensorservice@1.0.so
-vendor/lib64/vendor.xiaomi.hardware.citsensorservice@1.1.so
-
 # Soter
 system/app/SoterService/SoterService.apk:vendor/app/SoterService/SoterService.apk
 vendor/bin/hw/vendor.microtrust.hardware.soter@1.0-service
