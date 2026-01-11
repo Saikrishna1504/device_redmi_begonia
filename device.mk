@@ -84,10 +84,6 @@ PRODUCT_PACKAGES += \
     libstagefright_softomx_plugin.vendor \
     libsqlite.vendor
 
-# DT2W
-PRODUCT_PACKAGES += \
-    DT2W-Service-Begonia
-
 # FM Radio
 PRODUCT_PACKAGES += \
     FMRadio

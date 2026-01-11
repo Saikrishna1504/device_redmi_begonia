@@ -344,6 +344,15 @@
       "DefaultIndex": 0
     },
     {
+      "Name": "DoubleTapToWakeProp",
+      "Path": "vendor.powerhal.begonia.dt2w",
+      "Values": [
+        "1",
+        "0"
+      ],
+      "Type": "Property"
+    },
+    {
       "Name": "PowerHALMainState",
       "Path": "vendor.powerhal.state",
       "Values": [
@@ -514,6 +523,12 @@
       "PowerHint": "LAUNCH",
       "Node": "DRAMOppMin",
       "Duration": 3000,
+      "Value": "1"
+    },
+    {
+      "PowerHint": "DOUBLE_TAP_TO_WAKE",
+      "Node": "DoubleTapToWakeProp",
+      "Duration": 0,
       "Value": "1"
     },
     {
