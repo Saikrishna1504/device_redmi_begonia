@@ -53,10 +53,6 @@ PRODUCT_PACKAGES += \
     android.hardware.bluetooth-service.mediatek \
     android.hardware.bluetooth.audio-impl
 
-# Debloat
-PRODUCT_PACKAGES += \
-    Debloat
-
 # Device-specific settings
 PRODUCT_PACKAGES += \
     XiaomiParts
