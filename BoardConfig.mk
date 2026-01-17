@@ -167,10 +167,5 @@ WIFI_DRIVER_STATE_OFF := "0"
 WIFI_HIDL_UNIFIED_SUPPLICANT_SERVICE_RC_ENTRY := true
 WIFI_HIDL_FEATURE_DUAL_INTERFACE := true
 
-# Dolby
-USE_CUSTOM_AUDIO_POLICY := 1
-AUDIO_FEATURE_ENABLED_HW_ACCELERATED_EFFECTS := true
-TARGET_PROVIDES_AUDIO_EXTNS := true
-
 # Inherit from the proprietary version
 include vendor/redmi/begonia/BoardConfigVendor.mk
