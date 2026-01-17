@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2023-24 Paranoid Android
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+
+    <!-- Dolby Atmos -->
+    <string-array name="dolby_profile_entries">
+        <item>@string/dolby_profile_dynamic</item>
+        <item>@string/dolby_profile_video</item>
+        <item>@string/dolby_profile_music</item>
+        <item>@string/dolby_profile_game</item>
+        <item>@string/dolby_profile_work</item>
+        <item>@string/dolby_profile_casual</item>
+        <item>@string/dolby_profile_mood</item>
+    </string-array>
+
+    <string-array name="dolby_profile_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+    </string-array>
+
+    <string-array name="dolby_preset_entries" translatable="false">
+        <item>@string/dolby_preset_default</item>
+        <item>@string/dolby_preset_rock</item>
+        <item>@string/dolby_preset_jazz</item>
+        <item>@string/dolby_preset_pop</item>
+        <item>@string/dolby_preset_classical</item>
+        <item>@string/dolby_preset_hiphop</item>
+        <item>@string/dolby_preset_blues</item>
+        <item>@string/dolby_preset_electronic</item>
+        <item>@string/dolby_preset_metal</item>
+        <item>@string/dolby_preset_acoustic</item>
+        <item>@string/dolby_preset_bass</item>
+        <item>@string/dolby_preset_beats</item>
+        <item>@string/dolby_preset_clear</item>
+        <item>@string/dolby_preset_deep</item>
+        <item>@string/dolby_preset_dubstep</item>
+        <item>@string/dolby_preset_hardstyle</item>
+        <item>@string/dolby_preset_movie</item>
+        <item>@string/dolby_preset_rb</item>
+        <item>@string/dolby_preset_vocal</item>
+    </string-array>
+
+     <string-array name="dolby_preset_values">
+        <!--
+        Enhanced preset values with improved ±15dB range for better sound quality
+        Values are now scaled to ±150 range (±15dB) for more precise audio tuning
+        -->
+        <item>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</item>
+        <item>90,54,18,-18,-54,-36,-18,-12,-6,-30,-54,-30,-6,-30,-54,-24,6,48,90,90</item>
+        <item>12,12,12,12,12,0,-12,-12,-12,-36,-60,-30,0,6,12,12,12,12,12,12</item>
+        <item>-20,-2,17,-38,-92,-44,5,17,29,29,29,23,17,-14,-44,-14,17,23,29,29</item>
+        <item>-48,-48,-48,-48,-48,-48,-48,-42,-36,-6,24,0,-24,36,96,48,0,48,96,96</item>
+        <item>78,42,6,-30,-66,-36,-6,-6,-6,-36,-66,-36,-6,0,6,6,6,30,54,54</item>
+        <item>42,42,42,-54,-150,-102,-54,6,66,42,18,6,-6,6,18,6,-6,18,42,42</item>
+        <item>75,51,27,3,-21,-9,3,-3,-9,-39,-69,-39,-9,-3,3,3,3,3,3,3</item>
+        <item>60,36,12,12,12,-6,-24,-18,-12,-48,-84,-36,12,12,12,12,12,12,12,12</item>
+        <item>50,45,40,35,15,10,15,15,20,30,35,40,37,30,30,30,25,20,15,15</item>
+        <item>100,88,85,65,25,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0</item>
+        <item>-55,-50,-45,-42,-35,-30,-19,0,0,0,0,0,0,0,0,0,0,0,0,0</item>
+        <item>35,55,65,95,80,65,35,25,13,50,70,90,100,110,90,85,75,65,55,45</item>
+        <item>120,80,0,-67,-120,-90,-35,-35,-61,0,-30,-50,0,12,30,25,20,15,10,5</item>
+        <item>120,100,5,-10,-30,-50,-50,-48,-45,-25,-10,0,-25,-25,0,0,0,0,0,0</item>
+        <item>61,70,120,61,-50,-120,-25,30,65,0,-22,-45,-61,-92,-100,-95,-90,-85,-80,-75</item>
+        <item>30,30,61,85,90,70,61,61,50,80,35,35,80,100,80,75,70,65,60,55</item>
+        <item>30,30,70,61,45,15,-15,-20,-15,20,25,30,35,38,40,38,35,32,30,28</item>
+        <item>-15,-20,-30,-30,-5,15,35,35,35,30,20,15,0,0,-15,-12,-10,-8,-6,-4</item>
+    </string-array>
+
+    <string-array name="dolby_ieq_entries">
+        <item>@string/dolby_off</item>
+        <item>@string/dolby_detailed</item>
+        <item>@string/dolby_balanced</item>
+        <item>@string/dolby_warm</item>
+    </string-array>
+
+    <string-array name="dolby_ieq_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <string-array name="dolby_bass_curve_entries">
+        <item>@string/dolby_bass_curve_balanced</item>
+        <item>@string/dolby_bass_curve_sub_boost</item>
+        <item>@string/dolby_bass_curve_punch</item>
+    </string-array>
+
+    <string-array name="dolby_bass_curve_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+</resources>

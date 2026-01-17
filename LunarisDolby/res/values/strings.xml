@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2023-25 Paranoid Android
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+
+    <!-- Dolby Atmos -->
+    <string name="dolby_title">Dolby Atmos</string>
+    <string name="dolby_enable">Use Dolby Atmos</string>
+    <string name="dolby_profile_title">Choose a profile</string>
+    <string name="dolby_preset">Equalizer</string>
+    <string name="dolby_off">Off</string>
+    <string name="dolby_on">On</string>
+    <string name="dolby_low">Low</string>
+    <string name="dolby_medium">Medium</string>
+    <string name="dolby_high">High</string>
+    <string name="dolby_max">Max</string>
+    <string name="dolby_unknown">Unknown</string>
+    <string name="dolby_on_with_profile">On (%1$s)</string>
+    <string name="dolby_category_settings">Audio tuning</string>
+    <string name="dolby_category_adv_settings">Advanced settings</string>
+    <string name="dolby_adv_settings_footer">Choose a different profile to show advanced settings.</string>
+    <string name="dolby_bass_enhancer">Bass enhancer</string>
+    <string name="dolby_bass_level">Bass level</string>
+    <string name="dolby_bass_curve">Bass curve</string>
+    <string name="dolby_bass_curve_balanced">Balanced</string>
+    <string name="dolby_bass_curve_sub_boost">Sub boost</string>
+    <string name="dolby_bass_curve_punch">Punch</string>
+    <string name="dolby_treble_enhancer">Treble enhancer</string>
+    <string name="dolby_treble_level">Treble level</string>
+    <string name="dolby_dialogue_enhancer">Dialogue enhancer</string>
+    <string name="dolby_spk_virtualizer">Speaker surround virtualizer</string>
+    <string name="dolby_hp_virtualizer">Headphone surround virtualizer</string>
+    <string name="dolby_volume_leveler">Volume leveler</string>
+    <string name="dolby_bass_enhancer_summary">Enhances low-frequency sounds for deeper bass</string>  
+    <string name="dolby_treble_enhancer_summary">Enhances high-frequency sounds for clearer treble</string>
+    <string name="dolby_dialogue_enhancer_summary">Improves clarity of voices and speech</string>  
+    <string name="dolby_spk_virtualizer_summary">Creates virtual surround sound on speakers</string>  
+    <string name="dolby_hp_virtualizer_summary">Creates virtual surround sound on headphones</string>  
+    <string name="dolby_volume_leveler_summary">Balances volume for a consistent listening experience</string>  
+    <string name="dolby_connect_headphones">Connect headphones</string>
+    <string name="dolby_reset_all">Reset profiles</string>
+    <string name="dolby_reset_all_message">This will reset all profiles to factory defaults.</string>
+    <string name="dolby_reset_all_toast">Succesfully reset all profiles</string>
+    <string name="dolby_hp_virtualizer_dolby_strength">Surround virtualizer Strength</string>
+    <string name="dolby_dialogue_enhancer_dolby_strength">Dialogue enhancer Strength</string>
+    <string name="dolby_notification_listener_label">Dolby Atmos Service</string>
+    <string name="loading">Loading...</string>
+
+    <!-- Dolby profiles -->
+    <string name="dolby_profile_dynamic">Dynamic</string>
+    <string name="dolby_profile_video">Movie/Video</string>
+    <string name="dolby_profile_music">Music</string>
+    <string name="dolby_profile_game">Game</string>
+    <string name="dolby_profile_work">Work</string>
+    <string name="dolby_profile_casual">Casual</string>
+    <string name="dolby_profile_mood">Mood</string>
+
+    <!-- Dolby equalizer presets -->
+    <string name="dolby_preset_default">Flat (off)</string>
+    <string name="dolby_preset_rock">Rock</string>
+    <string name="dolby_preset_jazz">Jazz</string>
+    <string name="dolby_preset_pop">Pop</string>
+    <string name="dolby_preset_classical">Classical</string>
+    <string name="dolby_preset_hiphop">Hip Hop</string>
+    <string name="dolby_preset_blues">Blues</string>
+    <string name="dolby_preset_electronic">Electronic</string>
+    <string name="dolby_preset_country">Country</string>
+    <string name="dolby_preset_dance">Dance</string>
+    <string name="dolby_preset_metal">Metal</string>
+    <string name="dolby_preset_acoustic">Acoustic</string>
+    <string name="dolby_preset_bass">Bass Boost</string>
+    <string name="dolby_preset_beats">Beats</string>
+    <string name="dolby_preset_clear">Crystal Clear</string>
+    <string name="dolby_preset_deep">Deep</string>
+    <string name="dolby_preset_dubstep">Dubstep</string>
+    <string name="dolby_preset_hardstyle">Hardstyle</string>
+    <string name="dolby_preset_movie">Movie</string>
+    <string name="dolby_preset_rb">R&amp;B</string>
+    <string name="dolby_preset_vocal">Vocal Booster</string>
+    <string name="dolby_preset_custom">Custom</string>
+    <string name="equalizer">Equalizer</string>
+    <string name="advanced">Advanced</string>
+    <string name="home">Home</string>
+
+    <!-- Dolby equalizer UI -->
+    <string name="dolby_geq_slider_label_gain">Gain</string>
+    <string name="dolby_geq_preset">Preset</string>
+    <string name="dolby_geq_preset_name">Preset name</string>
+    <string name="dolby_geq_new_preset">New preset</string>
+    <string name="dolby_geq_rename_preset">Rename preset</string>
+    <string name="dolby_geq_delete_preset">Delete preset</string>
+    <string name="dolby_geq_delete_preset_prompt">Do you want to delete this preset?</string>
+    <string name="dolby_geq_reset_gains">Reset gains</string>
+    <string name="dolby_geq_reset_gains_prompt">Do you want to reset this preset to defaults?</string>
+    <string name="dolby_geq_preset_name_exists">Preset name already exists!</string>
+    <string name="dolby_geq_preset_name_too_long">Preset name is too long!</string>
+    <string name="band_mode_mismatch">Band Mode Mismatch</string>
+    <string name="frequency_response">Frequency Response</string>
+    <string name="locked">Locked</string>
+    <string name="band_configuration">Band Configuration</string>
+    <string name="choose_equalizer_precision">Choose equalizer precision: more bands = finer control</string>
+
+    <!-- Dolby intelligent EQ -->
+    <string name="dolby_ieq">Intelligent equalizer</string>
+    <string name="dolby_balanced">Balanced</string>
+    <string name="dolby_warm">Warm</string>
+    <string name="dolby_detailed">Detailed</string>
+
+    <!-- Per-App Audio Profiles -->
+    <string name="app_profiles_title">Per-App Audio Profiles</string>
+    <string name="app_profiles_desc">Assign different audio profiles to individual apps for optimized sound based on content type</string>
+    <string name="app_profiles_search_hint">Search apps...</string>
+    <string name="app_profiles_no_apps">No apps found</string>
+    <string name="app_profiles_loading">Loading apps...</string>
+    <string name="app_profiles_clear_all">Clear All App Profiles</string>
+    <string name="app_profiles_clear_all_message">This will remove all per-app profile assignments. Apps will use the default profile.</string>
+    <string name="app_profiles_manage">Manage App Profiles</string>
+    <string name="app_profiles_default">Default</string>
+    <string name="app_profiles_assigned">Assigned: %1$s</string>
+    <string name="app_profiles_headphone_only">Headphone/BT only mode</string>
+    <string name="app_profiles_headphone_only_description">Only switch profiles when earphones or Bluetooth audio devices are connected</string>
+    <string name="app_profiles_permission_required">Permission Required</string>
+    <string name="app_profiles_permission_required_details">To automatically switch profiles based on the active app, please grant Usage Access permission in the next screen.</string>
+    <string name="app_profiles_grant_permission">Grant Permission</string>
+    <string name="app_profiles_search_placeholder">Search apps...</string>
+    <string name="app_profiles_no_apps_found">No apps found</string>
+    <string name="app_profiles_retry">Retry</string>
+    <string name="app_profiles_change">Change</string>
+    <string name="app_profiles_auto_switch">Auto-switch profiles</string>
+    <string name="app_profiles_show_toasts">Show toasts</string>
+
+    <!-- Preset Import/Export -->
+    <string name="preset_import_export">Import/Export Presets</string>
+    <string name="preset_export_single">Export Preset</string>
+    <string name="preset_import_single">Import Preset</string>
+    <string name="preset_export_batch">Export All Presets</string>
+    <string name="preset_import_batch">Import Multiple Presets</string>
+    <string name="preset_copy_clipboard">Copy to Clipboard</string>
+    <string name="preset_paste_clipboard">Paste from Clipboard</string>
+    <string name="preset_share">Share Preset</string>
+    <string name="preset_export_success">Preset exported successfully</string>
+    <string name="preset_import_success">Preset imported successfully</string>
+    <string name="preset_export_failed">Export failed</string>
+    <string name="preset_import_failed">Import failed</string>
+
+    <!-- Notification Access -->
+    <string name="notification_access_required">Notification Access Required</string>
+    <string name="notification_access_required_desc">Enable notification access to keep Dolby Atmos running in the background and allow automatic profile switching.</string>
+    <string name="enable_notification_access">Enable Notification Access</string>
+    <string name="enable_notification_access_desc">Enable notification access to keep Dolby Atmos running in the background and allow automatic profile switching.</string>
+    <string name="notification_access_permission_details">This permission allows Dolby Atmos to:\n\n• Run continuously in the background\n• Automatically switch audio profiles\n• Monitor foreground apps\n\nYour notifications will not be read or modified.</string>
+    <string name="open_settings">Open Settings</string>
+    <string name="cancel">Cancel</string>
+
+    <!--import export -->
+    <string name="import_export_presets">Import/Export Presets</string>
+    <string name="import_presets">Import Presets</string>
+    <string name="import_presets_description">Import presets from files or clipboard</string>
+    <string name="import_single_file">Single File</string>
+    <string name="import_batch">Batch</string>
+    <string name="import_from_clipboard">From Clipboard</string>
+    <string name="your_custom_presets">Your Custom Presets</string>
+    <string name="processing">Processing...</string>
+    <string name="batch_export">Batch Export</string>
+    <string name="batch_export_description">Export all %1$s custom presets to a single file?</string>
+    <string name="export_all">Export All</string>
+</resources>
