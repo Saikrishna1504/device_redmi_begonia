@@ -76,12 +76,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey
 
-# Dolby
-PRODUCT_PACKAGES += \
-    libstagefright_softomx.vendor \
-    libstagefright_softomx_plugin.vendor \
-    libsqlite.vendor
-
 # DT2W
 PRODUCT_PACKAGES += \
     DT2W-Service-Begonia
