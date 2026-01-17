@@ -84,6 +84,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     DT2W-Service-Begonia
 
+# Dolby
+PRODUCT_PACKAGES += \
+    LunarisDolby
+
 # FM Radio
 PRODUCT_PACKAGES += \
     FMRadio
