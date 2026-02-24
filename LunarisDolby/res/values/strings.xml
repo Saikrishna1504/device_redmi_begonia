@@ -166,4 +166,9 @@
     <string name="batch_export">Batch Export</string>
     <string name="batch_export_description">Export all %1$s custom presets to a single file?</string>
     <string name="export_all">Export All</string>
+
+    <!-- Dolby mid enhancer -->
+    <string name="dolby_mid_enhancer">Mid enhancer</string>
+    <string name="dolby_mid_level">Mid level</string>
+    <string name="dolby_mid_enhancer_summary">Enhances mid-frequency sounds for clearer vocals and instruments</string>
 </resources>

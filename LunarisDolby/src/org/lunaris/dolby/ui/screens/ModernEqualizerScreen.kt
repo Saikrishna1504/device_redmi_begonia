@@ -31,6 +31,7 @@ import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.layout.layout
+import androidx.compose.ui.platform.LocalLayoutDirection
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
@@ -61,6 +62,9 @@ fun ModernEqualizerScreen(
     var showResetDialog by remember { mutableStateOf(false) }
     var viewMode by remember { mutableStateOf(EqualizerViewMode.CURVE) }
     val currentRoute by navController.currentBackStackEntryFlow.collectAsState(null)
+    
+    val layoutDirection = LocalLayoutDirection.current
+    val cutoutInsets = WindowInsets.displayCutout.asPaddingValues()
 
     Scaffold(
         topBar = {
@@ -113,22 +117,9 @@ fun ModernEqualizerScreen(
                 )
             )
         },
-        bottomBar = {
-            BottomNavigationBar(
-                currentRoute = currentRoute?.destination?.route ?: Screen.Equalizer.route,
-                onNavigate = { route ->
-                    if (currentRoute?.destination?.route != route) {
-                        navController.navigate(route) {
-                            popUpTo(Screen.Settings.route) { saveState = true }
-                            launchSingleTop = true
-                            restoreState = true
-                        }
-                    }
-                }
-            )
-        },
         containerColor = MaterialTheme.colorScheme.surfaceContainer
     ) { paddingValues ->
+        Box(modifier = Modifier.fillMaxSize()) {
         when (val state = uiState) {
             is EqualizerUiState.Loading -> {
                 Box(
@@ -173,6 +164,47 @@ fun ModernEqualizerScreen(
                         )
                     }
                 }
+            }
+        }
+            
+            Box(
+                modifier = Modifier
+                    .align(Alignment.BottomCenter)
+                    .fillMaxWidth()
+                    .height(130.dp)
+                    .background(
+                        brush = Brush.verticalGradient(
+                            colors = listOf(
+                                Color.Transparent,
+                                MaterialTheme.colorScheme.surfaceContainer.copy(alpha = 0.95f)
+                            )
+                        )
+                    )
+            )
+            
+            Box(
+                modifier = Modifier
+                    .align(Alignment.BottomCenter)
+                    .fillMaxWidth()
+                    .padding(
+                        start = cutoutInsets.calculateStartPadding(layoutDirection),
+                        end = cutoutInsets.calculateEndPadding(layoutDirection),
+                        bottom = paddingValues.calculateBottomPadding()
+                    ),
+                contentAlignment = Alignment.Center
+            ) {
+                FloatingNavToolbar(
+                    currentRoute = currentRoute?.destination?.route ?: "settings",
+                    onNavigate = { route ->
+                        if (currentRoute?.destination?.route != route) {
+                            navController.navigate(route) {
+                                popUpTo("settings") { saveState = true }
+                                launchSingleTop = true
+                                restoreState = true
+                            }
+                        }
+                    }
+                )
             }
         }
     }
@@ -375,7 +407,7 @@ private fun ModernEqualizerContent(
             }
         }
         
-        Spacer(modifier = Modifier.height(80.dp))
+        Spacer(modifier = Modifier.height(70.dp))
     }
 }
 
@@ -1207,16 +1239,5 @@ private fun SavePresetDialog(
         containerColor = MaterialTheme.colorScheme.surface,
         titleContentColor = MaterialTheme.colorScheme.onSurface,
         textContentColor = MaterialTheme.colorScheme.onSurfaceVariant
-    )
-}
-
-@Composable
-private fun BottomNavigationBar(
-    currentRoute: String,
-    onNavigate: (String) -> Unit
-) {
-    EnhancedBottomNavigationBar(
-        currentRoute = currentRoute,
-        onNavigate = onNavigate
     )
 }

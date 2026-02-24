@@ -97,5 +97,11 @@
             </intent-filter>
         </service>
 
+        <service
+            android:name=".service.DolbyEffectService"
+            android:exported="false"
+            android:enabled="true"
+            android:stopWithTask="false" />
+
     </application>
 </manifest>
