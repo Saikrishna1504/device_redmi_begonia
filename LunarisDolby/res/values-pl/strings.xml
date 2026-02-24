@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2023-25 Paranoid Android
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+
+    <!-- Dolby Atmos -->
+    <string name="dolby_title">Dolby Atmos</string>
+    <string name="dolby_enable">Użyj Dolby Atmos</string>
+    <string name="dolby_profile_title">Wybierz profil</string>
+    <string name="dolby_preset">Korektor</string>
+    <string name="dolby_off">Wyłączone</string>
+    <string name="dolby_on">Włączone</string>
+    <string name="dolby_low">Niski</string>
+    <string name="dolby_medium">Średni</string>
+    <string name="dolby_high">Wysoki</string>
+    <string name="dolby_max">Maksymalny</string>
+    <string name="dolby_unknown">Nieznany</string>
+    <string name="dolby_on_with_profile">Włączone (%1$s)</string>
+    <string name="dolby_category_settings">Dostrajanie dźwięku</string>
+    <string name="dolby_category_adv_settings">Ustawienia zaawansowane</string>
+    <string name="dolby_adv_settings_footer">Wybierz inny profil, aby wyświetlić ustawienia zaawansowane.</string>
+    <string name="dolby_bass_enhancer">Wzmocnienie basu</string>
+    <string name="dolby_bass_level">Poziom basu</string>
+    <string name="dolby_bass_curve">Charakterystyka basu</string>
+    <string name="dolby_bass_curve_balanced">Zrównoważona</string>
+    <string name="dolby_bass_curve_sub_boost">Wzmocnienie subwoofera</string>
+    <string name="dolby_bass_curve_punch">Uderzenie</string>
+    <string name="dolby_treble_enhancer">Wzmocnienie wysokich tonów</string>
+    <string name="dolby_treble_level">Poziom wysokich tonów</string>
+    <string name="dolby_dialogue_enhancer">Wzmocnienie dialogów</string>
+    <string name="dolby_spk_virtualizer">Wirtualizacja dźwięku przestrzennego (głośniki)</string>
+    <string name="dolby_hp_virtualizer">Wirtualizacja dźwięku przestrzennego (słuchawki)</string>
+    <string name="dolby_volume_leveler">Wyrównanie głośności</string>
+    <string name="dolby_bass_enhancer_summary">Wzmacnia niskie częstotliwości, zapewniając głębszy bas</string>  
+    <string name="dolby_treble_enhancer_summary">Wzmacnia wysokie częstotliwości dla wyraźniejszych tonów wysokich</string>
+    <string name="dolby_dialogue_enhancer_summary">Poprawia wyrazistość głosu i mowy</string>  
+    <string name="dolby_spk_virtualizer_summary">Tworzy wirtualny dźwięk przestrzenny na głośnikach</string>  
+    <string name="dolby_hp_virtualizer_summary">Tworzy wirtualny dźwięk przestrzenny w słuchawkach</string>  
+    <string name="dolby_volume_leveler_summary">Wyrównuje poziom głośności dla spójnego odsłuchu</string>  
+    <string name="dolby_connect_headphones">Podłącz słuchawki</string>
+    <string name="dolby_reset_all">Resetuj profile</string>
+    <string name="dolby_reset_all_message">Spowoduje to przywrócenie wszystkich profili do ustawień fabrycznych.</string>
+    <string name="dolby_reset_all_toast">Pomyślnie zresetowano wszystkie profile</string>
+    <string name="dolby_hp_virtualizer_dolby_strength">Siła wirtualizacji przestrzennej</string>
+    <string name="dolby_dialogue_enhancer_dolby_strength">Siła wzmocnienia dialogów</string>
+    <string name="dolby_notification_listener_label">Usługa Dolby Atmos</string>
+    <string name="loading">Ładowanie...</string>
+
+    <!-- Dolby profiles -->
+    <string name="dolby_profile_dynamic">Dynamiczny</string>
+    <string name="dolby_profile_video">Film/Wideo</string>
+    <string name="dolby_profile_music">Muzyka</string>
+    <string name="dolby_profile_game">Gra</string>
+    <string name="dolby_profile_work">Praca</string>
+    <string name="dolby_profile_casual">Codzienny</string>
+    <string name="dolby_profile_mood">Nastrój</string>
+
+    <!-- Dolby equalizer presets -->
+    <string name="dolby_preset_default">Płaski (wyłączony)</string>
+    <string name="dolby_preset_rock">Rock</string>
+    <string name="dolby_preset_jazz">Jazz</string>
+    <string name="dolby_preset_pop">Pop</string>
+    <string name="dolby_preset_classical">Klasyczna</string>
+    <string name="dolby_preset_hiphop">Hip-Hop</string>
+    <string name="dolby_preset_blues">Blues</string>
+    <string name="dolby_preset_electronic">Elektroniczna</string>
+    <string name="dolby_preset_country">Country</string>
+    <string name="dolby_preset_dance">Dance</string>
+    <string name="dolby_preset_metal">Metal</string>
+    <string name="dolby_preset_acoustic">Akustyczna</string>
+    <string name="dolby_preset_bass">Wzmocnienie basu</string>
+    <string name="dolby_preset_beats">Beats</string>
+    <string name="dolby_preset_clear">Krystalicznie czysty</string>
+    <string name="dolby_preset_deep">Głęboki</string>
+    <string name="dolby_preset_dubstep">Dubstep</string>
+    <string name="dolby_preset_hardstyle">Hardstyle</string>
+    <string name="dolby_preset_movie">Film</string>
+    <string name="dolby_preset_rb">R&amp;B</string>
+    <string name="dolby_preset_vocal">Wzmocnienie wokalu</string>
+    <string name="dolby_preset_custom">Niestandardowy</string>
+    <string name="equalizer">Korektor</string>
+    <string name="advanced">Zaawansowane</string>
+    <string name="home">Strona główna</string>
+
+    <!-- Dolby equalizer UI -->
+    <string name="dolby_geq_slider_label_gain">Wzmocnienie</string>
+    <string name="dolby_geq_preset">Preset</string>
+    <string name="dolby_geq_preset_name">Nazwa presetu</string>
+    <string name="dolby_geq_new_preset">Nowy preset</string>
+    <string name="dolby_geq_rename_preset">Zmień nazwę presetu</string>
+    <string name="dolby_geq_delete_preset">Usuń preset</string>
+    <string name="dolby_geq_delete_preset_prompt">Czy chcesz usunąć ten preset?</string>
+    <string name="dolby_geq_reset_gains">Zresetuj wzmocnienia</string>
+    <string name="dolby_geq_reset_gains_prompt">Czy chcesz przywrócić domyślne ustawienia tego presetu?</string>
+    <string name="dolby_geq_preset_name_exists">Nazwa presetu już istnieje!</string>
+    <string name="dolby_geq_preset_name_too_long">Nazwa presetu jest za długa!</string>
+    <string name="band_mode_mismatch">Niezgodność trybu pasm</string>
+    <string name="frequency_response">Charakterystyka częstotliwościowa</string>
+    <string name="locked">Zablokowane</string>
+    <string name="band_configuration">Konfiguracja pasm</string>
+    <string name="choose_equalizer_precision">Wybierz precyzję korektora: więcej pasm = dokładniejsza kontrola</string>
+
+    <!-- Dolby intelligent EQ -->
+    <string name="dolby_ieq">Inteligentny korektor</string>
+    <string name="dolby_balanced">Zrównoważony</string>
+    <string name="dolby_warm">Ciepły</string>
+    <string name="dolby_detailed">Szczegółowy</string>
+
+    <!-- Per-App Audio Profiles -->
+    <string name="app_profiles_title">Profile dźwięku dla aplikacji</string>
+    <string name="app_profiles_desc">Przypisz różne profile dźwięku do poszczególnych aplikacji, aby zoptymalizować brzmienie w zależności od typu treści</string>
+    <string name="app_profiles_search_hint">Szukaj aplikacji...</string>
+    <string name="app_profiles_no_apps">Nie znaleziono aplikacji</string>
+    <string name="app_profiles_loading">Ładowanie aplikacji...</string>
+    <string name="app_profiles_clear_all">Wyczyść wszystkie profile aplikacji</string>
+    <string name="app_profiles_clear_all_message">Spowoduje to usunięcie wszystkich przypisań profili dla aplikacji. Aplikacje będą używać profilu domyślnego.</string>
+    <string name="app_profiles_manage">Zarządzaj profilami aplikacji</string>
+    <string name="app_profiles_default">Domyślny</string>
+    <string name="app_profiles_assigned">Przypisany: %1$s</string>
+    <string name="app_profiles_headphone_only">Tylko tryb słuchawki/BT</string>
+    <string name="app_profiles_headphone_only_description">Profile będą przełączane tylko po podłączeniu słuchawek lub urządzenia Bluetooth</string>
+    <string name="app_profiles_permission_required">Wymagane uprawnienie</string>
+    <string name="app_profiles_permission_required_details">Aby automatycznie przełączać profile w zależności od aktywnej aplikacji, przyznaj uprawnienie dostępu do danych o użyciu na następnym ekranie.</string>
+    <string name="app_profiles_grant_permission">Przyznaj uprawnienie</string>
+    <string name="app_profiles_search_placeholder">Szukaj aplikacji...</string>
+    <string name="app_profiles_no_apps_found">Nie znaleziono aplikacji</string>
+    <string name="app_profiles_retry">Spróbuj ponownie</string>
+    <string name="app_profiles_change">Zmień</string>
+    <string name="app_profiles_auto_switch">Automatyczne przełączanie profili</string>
+    <string name="app_profiles_show_toasts">Pokaż komunikaty</string>
+
+    <!-- Preset Import/Export -->
+    <string name="preset_import_export">Import/Eksport presetów</string>
+    <string name="preset_export_single">Eksportuj preset</string>
+    <string name="preset_import_single">Importuj preset</string>
+    <string name="preset_export_batch">Eksportuj wszystkie presety</string>
+    <string name="preset_import_batch">Importuj wiele presetów</string>
+    <string name="preset_copy_clipboard">Kopiuj do schowka</string>
+    <string name="preset_paste_clipboard">Wklej ze schowka</string>
+    <string name="preset_share">Udostępnij preset</string>
+    <string name="preset_export_success">Preset wyeksportowany pomyślnie</string>
+    <string name="preset_import_success">Preset zaimportowany pomyślnie</string>
+    <string name="preset_export_failed">Eksport nie powiódł się</string>
+    <string name="preset_import_failed">Import nie powiódł się</string>
+
+    <!-- Notification Access -->
+    <string name="notification_access_required">Wymagany dostęp do powiadomień</string>
+    <string name="notification_access_required_desc">Włącz dostęp do powiadomień, aby Dolby Atmos działał w tle i umożliwić automatyczne przełączanie profili.</string>
+    <string name="enable_notification_access">Włącz dostęp do powiadomień</string>
+    <string name="enable_notification_access_desc">Włącz dostęp do powiadomień, aby Dolby Atmos działał w tle i umożliwić automatyczne przełączanie profili.</string>
+    <string name="notification_access_permission_details">To uprawnienie pozwala Dolby Atmos na:\n\n• Ciągłe działanie w tle\n• Automatyczne przełączanie profili dźwięku\n• Monitorowanie aplikacji na pierwszym planie\n\nTwoje powiadomienia nie będą odczytywane ani modyfikowane.</string>
+    <string name="open_settings">Otwórz ustawienia</string>
+    <string name="cancel">Anuluj</string>
+
+    <!--import export -->
+    <string name="import_export_presets">Import/Eksport presetów</string>
+    <string name="import_presets">Importuj presety</string>
+    <string name="import_presets_description">Importuj presety z plików lub schowka</string>
+    <string name="import_single_file">Pojedynczy plik</string>
+    <string name="import_batch">Wsadowo</string>
+    <string name="import_from_clipboard">Ze schowka</string>
+    <string name="your_custom_presets">Twoje niestandardowe presety</string>
+    <string name="processing">Przetwarzanie...</string>
+    <string name="batch_export">Eksport wsadowy</string>
+    <string name="batch_export_description">Wyeksportować wszystkie %1$s niestandardowe presety do jednego pliku?</string>
+    <string name="export_all">Eksportuj wszystkie</string>
+
+    <!-- Dolby mid enhancer -->
+    <string name="dolby_mid_enhancer">Wzmocnienie średnich tonów</string>
+    <string name="dolby_mid_level">Poziom średnich tonów</string>
+    <string name="dolby_mid_enhancer_summary">Wzmacnia średnie częstotliwości dla wyraźniejszych wokali i instrumentów</string>
+</resources>
+

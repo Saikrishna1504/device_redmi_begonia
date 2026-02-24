@@ -11,6 +11,7 @@ import androidx.lifecycle.viewModelScope
 import org.lunaris.dolby.DolbyConstants
 import org.lunaris.dolby.data.DolbyRepository
 import org.lunaris.dolby.domain.models.*
+import org.lunaris.dolby.service.DolbyEffectService
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.launch
@@ -88,6 +89,7 @@ class DolbyViewModel(application: Application) : AndroidViewModel(application) {
                     dialogueEnhancerEnabled = repository.getDialogueEnhancerEnabled(profile),
                     dialogueEnhancerAmount = repository.getDialogueEnhancerAmount(profile),
                     bassLevel = repository.getBassLevel(profile),
+                    midLevel = repository.getMidLevel(profile),
                     trebleLevel = repository.getTrebleLevel(profile),
                     bassCurve = repository.getBassCurve(profile)
                 )
@@ -113,6 +115,11 @@ class DolbyViewModel(application: Application) : AndroidViewModel(application) {
         viewModelScope.launch {
             try {
                 repository.setDolbyEnabled(enabled)
+                if (enabled) {
+                    DolbyEffectService.start(getApplication())
+                } else {
+                    DolbyEffectService.stop(getApplication())
+                }
                 loadSettings()
             } catch (e: Exception) {
                 DolbyConstants.dlog(TAG, "Error setting Dolby enabled: ${e.message}")
@@ -166,6 +173,22 @@ class DolbyViewModel(application: Application) : AndroidViewModel(application) {
                 loadSettings()
             } catch (e: Exception) {
                 DolbyConstants.dlog(TAG, "Error setting bass curve: ${e.message}")
+            }
+        }
+    }
+
+    fun setMidLevel(level: Int) {
+        viewModelScope.launch {
+            try {
+                val profile = repository.getCurrentProfile()
+                repository.setMidLevel(profile, level)
+                loadSettings()
+            } catch (e: IllegalArgumentException) {
+                DolbyConstants.dlog(TAG, "Invalid mid level: ${e.message}")
+                _uiState.value = DolbyUiState.Error("Invalid mid level: ${e.message}")
+            } catch (e: Exception) {
+                DolbyConstants.dlog(TAG, "Error setting mid level: ${e.message}")
+                _uiState.value = DolbyUiState.Error("Failed to set mid level")
             }
         }
     }

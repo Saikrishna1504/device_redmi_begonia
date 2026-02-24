@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2023-25 Paranoid Android
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+
+    <!-- Dolby Atmos -->
+    <string name="dolby_title">Dolby Atmos</string>
+    <string name="dolby_enable">Gunakan Dolby Atmos</string>
+    <string name="dolby_profile_title">Pilih profil</string>
+    <string name="dolby_preset">Equalizer</string>
+    <string name="dolby_off">Nonaktif</string>
+    <string name="dolby_on">Aktif</string>
+    <string name="dolby_low">Rendah</string>
+    <string name="dolby_medium">Sedang</string>
+    <string name="dolby_high">Tinggi</string>
+    <string name="dolby_max">Maksimal</string>
+    <string name="dolby_unknown">Tidak diketahui</string>
+    <string name="dolby_on_with_profile">Aktif (%1$s)</string>
+    <string name="dolby_category_settings">Penyetelan audio</string>
+    <string name="dolby_category_adv_settings">Setelan lanjutan</string>
+    <string name="dolby_adv_settings_footer">Pilih profil lain untuk menampilkan setelan lanjutan.</string>
+    <string name="dolby_bass_enhancer">Peningkat bass</string>
+    <string name="dolby_bass_level">Tingkat bass</string>
+    <string name="dolby_bass_curve">Kurva bass</string>
+    <string name="dolby_bass_curve_balanced">Seimbang</string>
+    <string name="dolby_bass_curve_sub_boost">Sub-boost</string>
+    <string name="dolby_bass_curve_punch">Punch</string>
+    <string name="dolby_treble_enhancer">Peningkat treble</string>
+    <string name="dolby_treble_level">Tingkat treble</string>
+    <string name="dolby_dialogue_enhancer">Peningkat dialog</string>
+    <string name="dolby_spk_virtualizer">Virtualisasi surround speaker</string>
+    <string name="dolby_hp_virtualizer">Virtualisasi surround headphone</string>
+    <string name="dolby_volume_leveler">Penyeimbang volume</string>
+    <string name="dolby_bass_enhancer_summary">Meningkatkan frekuensi rendah untuk bass yang lebih dalam</string>
+    <string name="dolby_treble_enhancer_summary">Meningkatkan frekuensi tinggi untuk treble yang lebih jernih</string>
+    <string name="dolby_dialogue_enhancer_summary">Meningkatkan kejernihan suara vokal dan dialog</string>
+    <string name="dolby_spk_virtualizer_summary">Menciptakan efek surround virtual pada speaker</string>
+    <string name="dolby_hp_virtualizer_summary">Menciptakan efek surround virtual pada headphone</string>
+    <string name="dolby_volume_leveler_summary">Menyeimbangkan volume untuk pengalaman mendengarkan yang konsisten</string>
+    <string name="dolby_connect_headphones">Sambungkan headphone</string>
+    <string name="dolby_reset_all">Atur ulang profil</string>
+    <string name="dolby_reset_all_message">Semua profil akan dikembalikan ke setelan pabrik.</string>
+    <string name="dolby_reset_all_toast">Semua profil berhasil diatur ulang</string>
+    <string name="dolby_hp_virtualizer_dolby_strength">Kekuatan virtualisasi surround</string>
+    <string name="dolby_dialogue_enhancer_dolby_strength">Kekuatan peningkat dialog</string>
+    <string name="dolby_notification_listener_label">Layanan Dolby Atmos</string>
+    <string name="loading">Memuat...</string>
+
+    <!-- Dolby profiles -->
+    <string name="dolby_profile_dynamic">Dinamis</string>
+    <string name="dolby_profile_video">Film/Video</string>
+    <string name="dolby_profile_music">Musik</string>
+    <string name="dolby_profile_game">Permainan</string>
+    <string name="dolby_profile_work">Kerja</string>
+    <string name="dolby_profile_casual">Santai</string>
+    <string name="dolby_profile_mood">Suasana</string>
+
+    <!-- Dolby equalizer presets -->
+    <string name="dolby_preset_default">Datar (nonaktif)</string>
+    <string name="dolby_preset_rock">Rock</string>
+    <string name="dolby_preset_jazz">Jazz</string>
+    <string name="dolby_preset_pop">Pop</string>
+    <string name="dolby_preset_classical">Klasik</string>
+    <string name="dolby_preset_hiphop">Hip Hop</string>
+    <string name="dolby_preset_blues">Blues</string>
+    <string name="dolby_preset_electronic">Elektronik</string>
+    <string name="dolby_preset_country">Country</string>
+    <string name="dolby_preset_dance">Dance</string>
+    <string name="dolby_preset_metal">Metal</string>
+    <string name="dolby_preset_acoustic">Akustik</string>
+    <string name="dolby_preset_bass">Peningkat Bass</string>
+    <string name="dolby_preset_beats">Beats</string>
+    <string name="dolby_preset_clear">Crystal Clear</string>
+    <string name="dolby_preset_deep">Dalam</string>
+    <string name="dolby_preset_dubstep">Dubstep</string>
+    <string name="dolby_preset_hardstyle">Hardstyle</string>
+    <string name="dolby_preset_movie">Film</string>
+    <string name="dolby_preset_rb">R&amp;B</string>
+    <string name="dolby_preset_vocal">Peningkat Vokal</string>
+    <string name="dolby_preset_custom">Kustom</string>
+    <string name="equalizer">Equalizer</string>
+    <string name="advanced">Lanjutan</string>
+    <string name="home">Beranda</string>
+
+    <!-- Dolby equalizer UI -->
+    <string name="dolby_geq_slider_label_gain">Gain</string>
+    <string name="dolby_geq_preset">Preset</string>
+    <string name="dolby_geq_preset_name">Nama preset</string>
+    <string name="dolby_geq_new_preset">Preset baru</string>
+    <string name="dolby_geq_rename_preset">Ubah nama preset</string>
+    <string name="dolby_geq_delete_preset">Hapus preset</string>
+    <string name="dolby_geq_delete_preset_prompt">Apakah Anda yakin ingin menghapus preset ini?</string>
+    <string name="dolby_geq_reset_gains">Atur ulang gain</string>
+    <string name="dolby_geq_reset_gains_prompt">Apakah Anda ingin mengembalikan preset ini ke setelan awal?</string>
+    <string name="dolby_geq_preset_name_exists">Nama preset sudah ada.</string>
+    <string name="dolby_geq_preset_name_too_long">Nama preset terlalu panjang.</string>
+    <string name="band_mode_mismatch">Mode band tidak sesuai</string>
+    <string name="frequency_response">Respons frekuensi</string>
+    <string name="locked">Terkunci</string>
+    <string name="band_configuration">Konfigurasi band</string>
+    <string name="choose_equalizer_precision">Pilih presisi equalizer: semakin banyak band, semakin detail kontrol</string>
+
+    <!-- Dolby intelligent EQ -->
+    <string name="dolby_ieq">Equalizer cerdas</string>
+    <string name="dolby_balanced">Seimbang</string>
+    <string name="dolby_warm">Hangat</string>
+    <string name="dolby_detailed">Detail</string>
+
+    <!-- Per-App Audio Profiles -->
+    <string name="app_profiles_title">Profil Audio Per Aplikasi</string>
+    <string name="app_profiles_desc">Tetapkan profil audio berbeda untuk setiap aplikasi sesuai jenis konten</string>
+    <string name="app_profiles_search_hint">Cari aplikasi...</string>
+    <string name="app_profiles_no_apps">Tidak ada aplikasi</string>
+    <string name="app_profiles_loading">Memuat aplikasi...</string>
+    <string name="app_profiles_clear_all">Hapus Semua Profil Aplikasi</string>
+    <string name="app_profiles_clear_all_message">Semua pengaturan profil per aplikasi akan dihapus. Aplikasi akan menggunakan profil default.</string>
+    <string name="app_profiles_manage">Kelola Profil Aplikasi</string>
+    <string name="app_profiles_default">Default</string>
+    <string name="app_profiles_assigned">Ditetapkan: %1$s</string>
+    <string name="app_profiles_headphone_only">Mode headphone/Bluetooth saja</string>
+    <string name="app_profiles_headphone_only_description">Profil hanya akan diganti saat headphone atau perangkat audio Bluetooth tersambung</string>
+    <string name="app_profiles_permission_required">Izin diperlukan</string>
+    <string name="app_profiles_permission_required_details">Untuk mengganti profil secara otomatis berdasarkan aplikasi aktif, harap berikan izin Akses Penggunaan pada layar berikutnya.</string>
+    <string name="app_profiles_grant_permission">Berikan izin</string>
+    <string name="app_profiles_search_placeholder">Cari aplikasi...</string>
+    <string name="app_profiles_no_apps_found">Aplikasi tidak ditemukan</string>
+    <string name="app_profiles_retry">Coba lagi</string>
+    <string name="app_profiles_change">Ubah</string>
+    <string name="app_profiles_auto_switch">Ganti profil otomatis</string>
+    <string name="app_profiles_show_toasts">Tampilkan notifikasi toast</string>
+
+    <!-- Preset Import/Export -->
+    <string name="preset_import_export">Impor/Ekspor Preset</string>
+    <string name="preset_export_single">Ekspor Preset</string>
+    <string name="preset_import_single">Impor Preset</string>
+    <string name="preset_export_batch">Ekspor Semua Preset</string>
+    <string name="preset_import_batch">Impor Banyak Preset</string>
+    <string name="preset_copy_clipboard">Salin ke papan klip</string>
+    <string name="preset_paste_clipboard">Tempel dari papan klip</string>
+    <string name="preset_share">Bagikan preset</string>
+    <string name="preset_export_success">Preset berhasil diekspor</string>
+    <string name="preset_import_success">Preset berhasil diimpor</string>
+    <string name="preset_export_failed">Ekspor gagal</string>
+    <string name="preset_import_failed">Impor gagal</string>
+
+    <!-- Notification Access -->
+    <string name="notification_access_required">Akses notifikasi diperlukan</string>
+    <string name="notification_access_required_desc">Aktifkan akses notifikasi agar Dolby Atmos tetap berjalan di latar belakang dan dapat mengganti profil secara otomatis.</string>
+    <string name="enable_notification_access">Aktifkan akses notifikasi</string>
+    <string name="enable_notification_access_desc">Aktifkan akses notifikasi agar Dolby Atmos tetap berjalan di latar belakang dan dapat mengganti profil secara otomatis.</string>
+    <string name="notification_access_permission_details">Izin ini memungkinkan Dolby Atmos untuk:\n\n• Berjalan terus di latar belakang\n• Mengganti profil audio secara otomatis\n• Memantau aplikasi yang aktif\n\nNotifikasi Anda tidak akan dibaca atau diubah.</string>
+    <string name="open_settings">Buka setelan</string>
+    <string name="cancel">Batal</string>
+
+    <!--import export -->
+    <string name="import_export_presets">Impor/Ekspor Preset</string>
+    <string name="import_presets">Impor Preset</string>
+    <string name="import_presets_description">Impor preset dari berkas atau papan klip</string>
+    <string name="import_single_file">Satu berkas</string>
+    <string name="import_batch">Batch</string>
+    <string name="import_from_clipboard">Dari papan klip</string>
+    <string name="your_custom_presets">Preset kustom Anda</string>
+    <string name="processing">Memproses...</string>
+    <string name="batch_export">Ekspor batch</string>
+    <string name="batch_export_description">Ekspor semua %1$s preset kustom ke satu berkas?</string>
+    <string name="export_all">Ekspor semua</string>
+
+    <!-- Dolby mid enhancer -->
+    <string name="dolby_mid_enhancer">Peningkat mid</string>
+    <string name="dolby_mid_level">Tingkat mid</string>
+    <string name="dolby_mid_enhancer_summary">Meningkatkan frekuensi menengah untuk vokal dan instrumen yang lebih jernih</string>
+</resources>
