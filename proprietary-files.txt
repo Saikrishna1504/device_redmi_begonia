@@ -853,7 +853,7 @@ vendor/bin/ccci_rpcd
 vendor/bin/epdg_wod
 vendor/bin/gsm0710muxd
 vendor/bin/muxreport
-vendor/bin/rttv;DISABLE_CHECKELF
+vendor/bin/rttv
 vendor/bin/starter
 vendor/bin/stroke
 vendor/bin/volte_imcb
@@ -980,7 +980,7 @@ system/lib/libsource.so
 system/lib/libvcodec_cap.so
 system/lib/libvcodec_capenc.so
 system/lib/libvt_avsync.so
-system/priv-app/ImsService/ImsService.apk|68a98d2d139b044312f77acbef14c430391203cc
+system/priv-app/ImsService/ImsService.apk|73ee788f84772827e2d0d4cc27e59bf44ec899c0
 system_ext/lib/vendor.mediatek.hardware.videotelephony@1.0.so
 vendor/bin/hw/vtservice_hidl
 vendor/etc/init/init.vtservice_hidl.rc
