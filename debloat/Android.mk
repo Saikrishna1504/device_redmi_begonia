@@ -3,7 +3,7 @@ include $(CLEAR_VARS)
 LOCAL_MODULE := Debloat
 LOCAL_MODULE_CLASS := APPS
 LOCAL_MODULE_TAGS := optional
-LOCAL_OVERRIDES_PACKAGES += AmbientSensePrebuilt AppDirectedSMSService arcore
+LOCAL_OVERRIDES_PACKAGES += AmbientSensePrebuilt AppDirectedSMSService arcore Velvet Velvet-stub
 LOCAL_OVERRIDES_PACKAGES += CarrierSetup ConnMO ConnMetrics
 LOCAL_OVERRIDES_PACKAGES += DCMO  DiagnosticsToolPrebuilt DMService
 LOCAL_OVERRIDES_PACKAGES += GCS GoogleCamera GoogleTTS Jelly
