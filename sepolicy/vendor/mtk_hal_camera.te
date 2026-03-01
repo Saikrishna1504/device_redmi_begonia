@@ -1,1 +1,10 @@
 set_prop(mtk_hal_camera, vendor_mi_camera_prop)
+
+allow mtk_hal_camera persist_data_file:dir search;
+allow mtk_hal_camera vendor_data_file:dir search;
+allow mtk_hal_camera vendor_data_file:file rw_file_perms;
+
+allow mtk_hal_camera hal_neuralnetworks_hwservice:hwservice_manager find;
+
+hal_client_domain(mtk_hal_camera, hal_neuralnetworks)
+hal_client_domain(mtk_hal_camera, hal_power)
