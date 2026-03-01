@@ -8,3 +8,7 @@ allow mtk_hal_camera hal_neuralnetworks_hwservice:hwservice_manager find;
 
 hal_client_domain(mtk_hal_camera, hal_neuralnetworks)
 hal_client_domain(mtk_hal_camera, hal_power)
+
+allow mtk_hal_camera persist_data_file:file getattr;
+allow mtk_hal_camera vendor_data_file:dir { read write search add_name };
+allow mtk_hal_camera vendor_data_file:file { create rw_file_perms getattr };

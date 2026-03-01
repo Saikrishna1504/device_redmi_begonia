@@ -15,3 +15,5 @@ type sysfs_mtk_gpufreq, fs_type, sysfs_type;
 
 # PPS
 type pps_socket, file_type;
+
+allow proc_perfmgr proc:filesystem associate;

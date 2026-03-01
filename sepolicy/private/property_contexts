@@ -1,20 +1,12 @@
 # Global
-ro.boot.hwc              u:object_r:exported_default_prop:s0
-ro.build.flavor          u:object_r:exported_default_prop:s0
-ro.fota.oem              u:object_r:build_prop:s0
-ro.product.marketname    u:object_r:build_prop:s0
-ro.product.mod_device    u:object_r:build_prop:s0
-
-# IMEI
-persist.radio.imei             u:object_r:deviceid_prop:s0
-persist.radio.meid             u:object_r:deviceid_prop:s0
-ro.ril.miui.imei               u:object_r:deviceid_prop:s0
-ro.ril.oem.imei                u:object_r:deviceid_prop:s0
-ro.ril.oem.meid                u:object_r:deviceid_prop:s0
+ro.boot.hwc              u:object_r:exported_default_prop:s0 exact string
+ro.fota.oem              u:object_r:build_prop:s0 exact string
+ro.product.marketname    u:object_r:build_prop:s0 exact string
+ro.product.mod_device    u:object_r:build_prop:s0 exact string
 
 # MIUI
 ro.cust.test            u:object_r:exported_system_prop:s0
 ro.miui.                u:object_r:exported_system_prop:s0
 
 # SettingsLib
-settingsdebug.instant.packages u:object_r:settingslib_prop:s0
+settingsdebug.instant.packages u:object_r:settingslib_prop:s0 exact string
