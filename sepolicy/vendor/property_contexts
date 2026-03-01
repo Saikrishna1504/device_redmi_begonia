@@ -22,3 +22,14 @@ persist.sys.recovery_update  u:object_r:persist_recovery_update_prop:s0
 
 # Thermal
 vendor.sys.thermal.     u:object_r:vendor_thermal_engine_prop:s0
+
+audio.adm.buffering.ms u:object_r:vendor_audio_prop:s0 exact string
+persist.audio.button_jack.profile u:object_r:vendor_audio_prop:s0 exact string
+bluetooth.device_id.vendor_id u:object_r:vendor_bluetooth_prop:s0 exact string
+
+# IMEI
+persist.radio.imei             u:object_r:vendor_deviceid_prop:s0 exact string
+persist.radio.meid             u:object_r:vendor_deviceid_prop:s0 exact string
+ro.ril.miui.imei               u:object_r:vendor_deviceid_prop:s0 exact string
+ro.ril.oem.imei                u:object_r:vendor_deviceid_prop:s0 exact string
+ro.ril.oem.meid                u:object_r:vendor_deviceid_prop:s0 exact string

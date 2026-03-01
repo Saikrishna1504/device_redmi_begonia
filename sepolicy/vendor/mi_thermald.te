@@ -32,3 +32,6 @@ allow mi_thermald {
 } rw_file_perms;
 
 set_prop(mi_thermald, vendor_thermal_engine_prop)
+
+allow mi_thermald thermal_core_data_file:dir search;
+allow mi_thermald sysfs_batteryinfo:dir search;
