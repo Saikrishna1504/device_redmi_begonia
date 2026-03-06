@@ -87,6 +87,9 @@ ro.vendor.mtk_zsdhdr_support=1
 vendor.camera.mdp.cz.enable=1
 vendor.camera.mdp.dre.enable=1
 
+# Charger
+persist.vendor.quick.charge=1
+
 # Chipset
 ro.soc.manufacturer=Mediatek
 ro.soc.model=MT6785
@@ -314,6 +317,8 @@ ro.vendor.sim_me_lock_mode=3
 ro.vendor.sim_refresh_reset_by_modem=1
 telephony.active_modems.max_count=2
 telephony.lteOnCdmaDevice=1
+vendor.rild.libpath=mtk-ril.so
+vendor.rild.libargs=-d /dev/ttyC0
 
 # Shutdown
 init.userspace_reboot.is_supported=true
