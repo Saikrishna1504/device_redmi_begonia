@@ -3,9 +3,6 @@ ro.audio.silent=0
 ro.config.vc_call_vol_steps=7
 ro.config.media_vol_steps=15
 
-# Blur
-persist.sys.sf.disable_blurs=1
-
 # Brand
 Build.BRAND=MTK
 
@@ -14,22 +11,9 @@ ro.camera.sound.forced=0
 
 # Charger
 ro.charger.enable_suspend=true
-persist.vendor.quick.charge=1
-
-# Dalvik
-dalvik.vm.dex2oat64.enabled=true
-
-# Display
-debug.cpurend.vsync=false
-
-# Graphics
-ro.opengles.version=196610
 
 # Kernel
 ro.kernel.zio=38,108,105,16
-
-# Netflix
-ro.netflix.bsp_rev=MTK6785-18758-1
 
 # Perf
 ro.mtk_perf_simple_start_win=1
@@ -46,8 +30,6 @@ persist.sys.mdlog_dumpback=2
 # Radio
 persist.sys.radio.force_lte_ca=false
 persist.sys.fflag.override.settings_provider_model=false
-vendor.rild.libpath=mtk-ril.so
-vendor.rild.libargs=-d /dev/ttyC0
 
 # Sensors
 persist.radio.sar_sar_sensor=true
@@ -73,8 +55,3 @@ wifi.tethering.interface=ap0
 
 # Zygote
 ro.zygote.preload.enable=0
-
-# Zram
-ro.zram.mark_idle_delay_mins=60
-ro.zram.first_wb_delay_mins=180
-ro.zram.periodic_wb_delay_hours=24
