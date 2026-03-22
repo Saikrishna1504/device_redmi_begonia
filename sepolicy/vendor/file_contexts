@@ -5,16 +5,24 @@
 # Fingerprint
 /mnt/vendor/persist/goodix(/.*)? u:object_r:vendor_fingerprint_data_file:s0
 /mnt/vendor/persist/fpc(/.*)?    u:object_r:vendor_fingerprint_data_file:s0
+/mnt/vendor/persist/mi_fp(/.*)?  u:object_r:vendor_fingerprint_data_file:s0
+/persist/mi_fp(/.*)?             u:object_r:vendor_fingerprint_data_file:s0
 /data/vendor/fpdump(/.*)?        u:object_r:vendor_fingerprint_data_file:s0
 /data/vendor/goodix(/.*)?        u:object_r:vendor_fingerprint_data_file:s0
 /data/vendor/fpc(/.*)?           u:object_r:vendor_fingerprint_data_file:s0
+/data/vendor/misc/mi_fp(/.*)?    u:object_r:vendor_fingerprint_data_file:s0
 /data/gf_data(/.*)?              u:object_r:fingerprint_data_file:s0
+
+/sys/bus/platform/devices/fingerprint/clk_enable     u:object_r:sysfs_fingerprint:s0
+/sys/bus/platform/devices/fingerprint/wakeup_enable  u:object_r:sysfs_fingerprint:s0
+/sys/bus/platform/devices/fingerprint/irq            u:object_r:sysfs_fingerprint:s0
+/sys/bus/spi/devices/spi0.0/authen_fd/performance    u:object_r:sysfs_fingerprint:s0
 
 # FPS Info
 /sys/module/primary_display/parameters/display_framerate_main      u:object_r:sysfs_fpsinfo:s0
 
 # Hals
-/vendor/bin/hw/mfp-daemon                                               u:object_r:hal_fingerprint_default_exec:s0
+/vendor/bin/hw/android\.hardware\.biometrics\.fingerprint-service\.xiaomi u:object_r:hal_fingerprint_default_exec:s0
 
 # Mi Thermald
 /vendor/bin/mi_thermald       u:object_r:mi_thermald_exec:s0

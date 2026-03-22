@@ -55,6 +55,16 @@ on post-fs-data
     chmod 0660 /dev/spm
     chown system system /dev/spm
 
+    # Fingerprint
+    mkdir /data/vendor/misc 01771 system system
+    mkdir /data/vendor/misc/mi_fp 0770 system system
+    mkdir /persist/mi_fp 0770 system system
+    mkdir /mnt/vendor/persist/mi_fp 0770 system system
+    mkdir /data/vendor/fpc 0770 system system
+    mkdir /data/vendor/fpdump 0770 system system
+    mkdir /data/vendor/goodix 0770 system system
+    mkdir /mnt/vendor/persist/goodix 0770 system system
+
 
     #Audio TFA 98xx
     chown system system /dev/tfa_reg
@@ -67,6 +77,17 @@ on post-fs-data
     chmod 0660 /dev/tfa_rpc
     chmod 0660 /dev/tfa_control
     chmod 0660 /dev/tfa_profile
+
+on boot
+    # Fingerprint
+    chown system system /sys/bus/platform/devices/fingerprint/clk_enable
+    chmod 0660 /sys/bus/platform/devices/fingerprint/clk_enable
+    chown system system /sys/bus/platform/devices/fingerprint/wakeup_enable
+    chmod 0660 /sys/bus/platform/devices/fingerprint/wakeup_enable
+    chown system system /sys/bus/platform/devices/fingerprint/irq
+    chmod 0660 /sys/bus/platform/devices/fingerprint/irq
+    chmod 0660 /sys/bus/spi/devices/spi0.0/authen_fd/performance
+    chown system system /sys/bus/spi/devices/spi0.0/authen_fd/performance
 
 on init
     #TP Self Test

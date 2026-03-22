@@ -328,8 +328,6 @@ on post-fs-data
     #Accdet
     chown root radio /sys/devices/platform/Accdet_Driver/driver/accdet_call_state
 
-    #Fingerprint
-    chmod 0666 /dev/goodix_fp
 
     #VideoCodec
     chmod 0660 /dev/vcu

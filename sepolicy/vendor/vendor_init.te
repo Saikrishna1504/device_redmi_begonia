@@ -1,7 +1,8 @@
 get_prop(vendor_init, persist_recovery_update_prop)
 get_prop(vendor_init, vts_status_prop)
+set_prop(vendor_init, vendor_fp_prop)
 
-allow vendor_init vendor_fingerprint_data_file:dir { rw_dir_perms relabelto setattr };
+allow vendor_init vendor_fingerprint_data_file:dir { create rw_dir_perms relabelto setattr };
 allow vendor_init proc_net:file write;
 
 set_prop(vendor_init, vendor_thermal_engine_prop)
