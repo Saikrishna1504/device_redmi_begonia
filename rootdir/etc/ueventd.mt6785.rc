@@ -148,3 +148,7 @@
 
 # Charger
 /sys/class/power_supply/battery  charging_enabled    0660    system  system
+
+# Fingerprint
+/dev/goodix_fp            0660   system     system
+/dev/fpc1020              0660   system     system

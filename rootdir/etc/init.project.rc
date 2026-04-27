@@ -80,6 +80,7 @@ on post-fs-data
 
 on boot
     # Fingerprint
+    chown system system /dev/goodix_fp
     chown system system /sys/bus/platform/devices/fingerprint/clk_enable
     chmod 0660 /sys/bus/platform/devices/fingerprint/clk_enable
     chown system system /sys/bus/platform/devices/fingerprint/wakeup_enable
