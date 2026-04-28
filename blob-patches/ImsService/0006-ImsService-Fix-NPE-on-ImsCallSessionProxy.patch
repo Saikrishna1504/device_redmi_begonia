@@ -1,0 +1,54 @@
+From 408aed1c0ff8aef02588157f6193dcbc26630b14 Mon Sep 17 00:00:00 2001
+From: SamarV-121 <samarvispute121@pm.me>
+Date: Sun, 29 Jan 2023 12:38:17 +0530
+Subject: [PATCH 06/10] ImsService: Fix NPE on ImsCallSessionProxy
+
+01-29 11:52:18.220  6741  6741 E AndroidRuntime: FATAL EXCEPTION: main
+01-29 11:52:18.220  6741  6741 E AndroidRuntime: Process: com.mediatek.ims, PID: 6741
+01-29 11:52:18.220  6741  6741 E AndroidRuntime: java.lang.NullPointerException: Attempt to invoke virtual method 'void com.mediatek.ims.MtkImsCallSessionProxy.notifyCallSessionBusy()' on a null object reference
+01-29 11:52:18.220  6741  6741 E AndroidRuntime:        at com.mediatek.ims.ImsCallSessionProxy$MyHandler.updateImsReasonInfo(ImsCallSessionProxy.java:1837)
+01-29 11:52:18.220  6741  6741 E AndroidRuntime:        at com.mediatek.ims.ImsCallSessionProxy$MyHandler.handleMessage(ImsCallSessionProxy.java:2665)
+01-29 11:52:18.220  6741  6741 E AndroidRuntime:        at android.os.Handler.dispatchMessage(Handler.java:106)
+01-29 11:52:18.220  6741  6741 E AndroidRuntime:        at android.os.Looper.loopOnce(Looper.java:201)
+01-29 11:52:18.220  6741  6741 E AndroidRuntime:        at android.os.Looper.loop(Looper.java:288)
+01-29 11:52:18.220  6741  6741 E AndroidRuntime:        at android.app.ActivityThread.main(ActivityThread.java:7872)
+01-29 11:52:18.220  6741  6741 E AndroidRuntime:        at java.lang.reflect.Method.invoke(Native Method)
+01-29 11:52:18.220  6741  6741 E AndroidRuntime:        at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:548)
+01-29 11:52:18.220  6741  6741 E AndroidRuntime:        at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:936)
+
+Change-Id: I5fe3e49369eae6d8be90bbba865f67d1b8cf9a11
+Signed-off-by: Saikrishna1504 <saikrishna26918@gmail.com>
+---
+ .../com/mediatek/ims/ImsCallSessionProxy$MyHandler.smali | 9 +++++++++
+ 1 file changed, 9 insertions(+)
+
+diff --git a/smali/com/mediatek/ims/ImsCallSessionProxy$MyHandler.smali b/smali/com/mediatek/ims/ImsCallSessionProxy$MyHandler.smali
+index 5d90692..48e4546 100644
+--- a/smali/com/mediatek/ims/ImsCallSessionProxy$MyHandler.smali
++++ b/smali/com/mediatek/ims/ImsCallSessionProxy$MyHandler.smali
+@@ -4806,6 +4806,13 @@
+     .line 1828
+     invoke-static {v2, v5}, Lcom/mediatek/ims/ImsCallSessionProxy;->access$1602(Lcom/mediatek/ims/ImsCallSessionProxy;Landroid/telephony/ims/ImsReasonInfo;)Landroid/telephony/ims/ImsReasonInfo;
+ 
++    .line 1829
++    iget-object v2, p0, Lcom/mediatek/ims/ImsCallSessionProxy$MyHandler;->this$0:Lcom/mediatek/ims/ImsCallSessionProxy;
++
++    iget-object v2, v2, Lcom/mediatek/ims/ImsCallSessionProxy;->mMtkImsCallSessionProxy:Lcom/mediatek/ims/MtkImsCallSessionProxy;
++
++    if-eqz v2, :cond_5d
++
+     .line 1830
+     iget-object v2, p0, Lcom/mediatek/ims/ImsCallSessionProxy$MyHandler;->this$0:Lcom/mediatek/ims/ImsCallSessionProxy;
+ 
+@@ -4813,6 +4820,8 @@
+ 
+     invoke-virtual {v2}, Lcom/mediatek/ims/MtkImsCallSessionProxy;->notifyCallSessionBusy()V
+ 
++    :cond_5d
++
+     goto/16 :goto_0
+ 
+     .line 1722
+-- 
+2.43.0
+

@@ -1,0 +1,46 @@
+From d8bda54b64e5fca43f6e44c7aaf8daeeaf0cfb33 Mon Sep 17 00:00:00 2001
+From: bengris32 <bengris32@protonmail.ch>
+Date: Wed, 21 Sep 2022 20:12:47 +0100
+Subject: [PATCH 05/10] ImsService: Update `updateImsServiceConfig` method for
+ S
+
+Signed-off-by: bengris32 <bengris32@protonmail.ch>
+Signed-off-by: Saikrishna1504 <saikrishna26918@gmail.com>
+---
+ .../plugin/impl/ImsManagerOemPluginBase.smali    | 16 ++++++++++++----
+ 1 file changed, 12 insertions(+), 4 deletions(-)
+
+diff --git a/smali/com/mediatek/ims/plugin/impl/ImsManagerOemPluginBase.smali b/smali/com/mediatek/ims/plugin/impl/ImsManagerOemPluginBase.smali
+index 91e5da9..1a7236a 100644
+--- a/smali/com/mediatek/ims/plugin/impl/ImsManagerOemPluginBase.smali
++++ b/smali/com/mediatek/ims/plugin/impl/ImsManagerOemPluginBase.smali
+@@ -32,14 +32,22 @@
+ .end method
+ 
+ .method public updateImsServiceConfig(Landroid/content/Context;IZ)V
+-    .locals 0
++    .locals 1
+     .param p1, "context"    # Landroid/content/Context;
+     .param p2, "phoneId"    # I
++
++    # Unused parameter but kept for backwards compatibility.
+     .param p3, "force"    # Z
+ 
+-    .line 64
+-    invoke-static {p1, p2, p3}, Lcom/android/ims/ImsManager;->updateImsServiceConfig(Landroid/content/Context;IZ)V
++    invoke-static {p1, p2}, Lcom/android/ims/ImsManager;->getInstance(Landroid/content/Context;I)Lcom/android/ims/ImsManager;
++
++    move-result-object v0
++
++    .local v0, "imsManager":Lcom/android/ims/ImsManager;
++    if-eqz v0, :cond_0
++
++    invoke-virtual {v0}, Lcom/android/ims/ImsManager;->updateImsServiceConfig()V
+ 
+-    .line 65
++    :cond_0
+     return-void
+ .end method
+-- 
+2.43.0
+

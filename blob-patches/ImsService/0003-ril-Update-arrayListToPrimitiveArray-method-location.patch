@@ -1,0 +1,39 @@
+From 8f471ff91bb1d3d08bca673e29918c75cbaf56f7 Mon Sep 17 00:00:00 2001
+From: SamarV-121 <samarvispute121@pm.me>
+Date: Fri, 26 Aug 2022 19:32:45 +0530
+Subject: [PATCH 03/10] ril: Update arrayListToPrimitiveArray method location
+ for T
+
+W System.err(3757): java.lang.NoSuchMethodError: No static method arrayListToPrimitiveArray(Ljava/util/ArrayList;)[B in class Lcom/android/internal/telephony/RIL; or its super classes (declaration of 'com.android.internal.telephony.RIL' appears in /system/framework/telephony-common.jar)
+
+Change-Id: Id27e5764628b8eb4240d7a88c3167654b1b3444a
+Signed-off-by: Saikrishna1504 <saikrishna26918@gmail.com>
+---
+ smali/com/mediatek/ims/ril/ImsRadioIndication.smali | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/smali/com/mediatek/ims/ril/ImsRadioIndication.smali b/smali/com/mediatek/ims/ril/ImsRadioIndication.smali
+index ea54c9a..b38cfe9 100644
+--- a/smali/com/mediatek/ims/ril/ImsRadioIndication.smali
++++ b/smali/com/mediatek/ims/ril/ImsRadioIndication.smali
+@@ -2650,7 +2650,7 @@
+ 
+     .line 893
+     .local v0, "ret":[Ljava/lang/String;
+-    invoke-static {p2}, Lcom/android/internal/telephony/RIL;->arrayListToPrimitiveArray(Ljava/util/ArrayList;)[B
++    invoke-static {p2}, Lcom/android/internal/telephony/RILUtils;->arrayListToPrimitiveArray(Ljava/util/ArrayList;)[B
+ 
+     move-result-object v1
+ 
+@@ -2722,7 +2722,7 @@
+ 
+     .line 877
+     .local v0, "ret":[Ljava/lang/String;
+-    invoke-static {p2}, Lcom/android/internal/telephony/RIL;->arrayListToPrimitiveArray(Ljava/util/ArrayList;)[B
++    invoke-static {p2}, Lcom/android/internal/telephony/RILUtils;->arrayListToPrimitiveArray(Ljava/util/ArrayList;)[B
+ 
+     move-result-object v1
+ 
+-- 
+2.43.0
+

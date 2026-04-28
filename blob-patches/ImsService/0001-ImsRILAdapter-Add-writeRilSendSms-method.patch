@@ -1,0 +1,78 @@
+From 73d910a36c6625eecf426e33dd735459894a9c1f Mon Sep 17 00:00:00 2001
+From: ironydelerium <42721860+ironydelerium@users.noreply.github.com>
+Date: Fri, 31 Dec 2021 02:20:28 -0800
+Subject: [PATCH 01/10] ImsRILAdapter: Add writeRilSendSms method
+
+Reintroduce 'public void TelephonyMetrics.writeRilSendSms(int, int, int, int)'
+
+The MediaTek IMS package for Android Q, at the very least (likely for the rest, too)
+invoke this method in their `sendSms` method; Google, in their infinite wisdom,
+decided that this method needed a message ID passed in as well, changing the signature
+to 'public void TelephonyMetrics.writeRilSendSms(int, int, int, int, long)' and resulting
+in a MethodNotFoundException being raised in com.mediatek.ims, crashing it.
+
+Fixes https://github.com/phhusson/treble_experimentations/issues/2125.
+
+12-19 12:54:08.462 E/AndroidRuntime( 2930): FATAL EXCEPTION: Binder:2930_1
+12-19 12:54:08.462 E/AndroidRuntime( 2930): Process: com.mediatek.ims, PID: 2930
+12-19 12:54:08.462 E/AndroidRuntime( 2930): java.lang.NoSuchMethodError: No virtual method writeRilSendSms(IIII)V in class Lcom/android/internal/telephony/metrics/TelephonyMetrics; or its super classes (declaration of 'com.android.internal.telephony.metrics.TelephonyMetrics' appears in /system/framework/telephony-common.jar)
+12-19 12:54:08.462 E/AndroidRuntime( 2930):  at com.mediatek.ims.ril.ImsRILAdapter.sendSms(ImsRILAdapter.java:3741)
+12-19 12:54:08.462 E/AndroidRuntime( 2930):  at com.mediatek.ims.ImsService.sendSms(ImsService.java:3115)
+12-19 12:54:08.462 E/AndroidRuntime( 2930):  at com.mediatek.ims.feature.MtkImsSmsImpl.sendSms(MtkImsSmsImpl.java:134)
+12-19 12:54:08.462 E/AndroidRuntime( 2930):  at android.telephony.ims.feature.MmTelFeature.sendSms(MmTelFeature.java:801)
+12-19 12:54:08.462 E/AndroidRuntime( 2930):  at android.telephony.ims.feature.MmTelFeature.access$200(MmTelFeature.java:60)
+12-19 12:54:08.462 E/AndroidRuntime( 2930):  at android.telephony.ims.feature.MmTelFeature$1.sendSms(MmTelFeature.java:196)
+12-19 12:54:08.462 E/AndroidRuntime( 2930):  at android.telephony.ims.aidl.IImsMmTelFeature$Stub.onTransact(IImsMmTelFeature.java:416)
+12-19 12:54:08.462 E/AndroidRuntime( 2930):  at android.os.Binder.execTransactInternal(Binder.java:1184)
+12-19 12:54:08.462 E/AndroidRuntime( 2930):  at android.os.Binder.execTransact(Binder.java:1143)
+
+Co-authored-by: Sarah Vandomelen <sarah@sightworks.com>
+Change-Id: I37244803d31e496ce3f388c12290d1499bd115a0
+Signed-off-by: Saikrishna1504 <saikrishna26918@gmail.com>
+---
+ .../com/mediatek/ims/ril/ImsRILAdapter.smali  | 22 ++++++++++++++++++-
+ 1 file changed, 21 insertions(+), 1 deletion(-)
+
+diff --git a/smali/com/mediatek/ims/ril/ImsRILAdapter.smali b/smali/com/mediatek/ims/ril/ImsRILAdapter.smali
+index a73d6b0..6a08b20 100644
+--- a/smali/com/mediatek/ims/ril/ImsRILAdapter.smali
++++ b/smali/com/mediatek/ims/ril/ImsRILAdapter.smali
+@@ -11602,7 +11602,8 @@
+ 
+     .line 3741
+     :goto_1
+-    invoke-virtual {v9, v14, v15, v10, v11}, Lcom/android/internal/telephony/metrics/TelephonyMetrics;->writeRilSendSms(IIII)V
++    move-object/from16 v1, p0
++    invoke-direct {v1, v14, v15, v10, v11}, Lcom/mediatek/ims/ril/ImsRILAdapter;->writeRilSendSms(IIII)V
+     :try_end_0
+     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
+@@ -11667,6 +11668,25 @@
+     return-void
+ .end method
+ 
++.method private writeRilSendSms(IIII)V
++	.locals 9
++	.param p1, "i1"
++	.param p2, "i2"
++	.param p3, "i3"
++	.param p4, "i4"
++
++    move-object/from16 v1, p0
++    iget-object v3, v1, Lcom/mediatek/ims/ril/ImsRILAdapter;->mMetrics:Lcom/android/internal/telephony/metrics/TelephonyMetrics;
++    move/from16 v4, p1
++    move/from16 v5, p2
++    move/from16 v6, p3
++    move/from16 v7, p4
++    const-wide/16 v8, 0
++    invoke-virtual/range {v3 .. v9}, Lcom/android/internal/telephony/metrics/TelephonyMetrics;->writeRilSendSms(IIIIJ)V
++    return-void
++.end method
++
++
+ .method public sendUSSI(Ljava/lang/String;Landroid/os/Message;)V
+     .locals 4
+     .param p1, "ussiString"    # Ljava/lang/String;
+-- 
+2.43.0
+

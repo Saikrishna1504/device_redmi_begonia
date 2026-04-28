@@ -96,6 +96,9 @@ blob_fixups: blob_fixups_user_type = {
     'system/lib/libimsma.so': blob_fixup()
         .replace_needed('libsink.so', 'libsink-mtk.so'),
 
+    'system/priv-app/ImsService/ImsService.apk': blob_fixup()
+        .apktool_patch('blob-patches/ImsService/'),
+
     'vendor/bin/hw/mtkfusionrild': blob_fixup()
         .add_needed('libutils-v32.so'),
 
