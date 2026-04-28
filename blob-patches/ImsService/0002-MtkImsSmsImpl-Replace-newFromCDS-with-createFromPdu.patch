@@ -1,0 +1,44 @@
+From 75a6e977470e042644653446e65d8272dabb620a Mon Sep 17 00:00:00 2001
+From: SamarV-121 <samarvispute121@pm.me>
+Date: Thu, 7 Apr 2022 09:04:40 +0530
+Subject: [PATCH 02/10] MtkImsSmsImpl: Replace newFromCDS() with
+ createFromPdu()
+
+ * https://github.com/LineageOS/android_frameworks_base/commit/c483107ac7dddc987998fdb5733c6a633e514b70
+
+04-07 07:52:44.272  2200  2200 E AndroidRuntime: FATAL EXCEPTION: main
+04-07 07:52:44.272  2200  2200 E AndroidRuntime: Process: com.mediatek.ims, PID: 2200
+04-07 07:52:44.272  2200  2200 E AndroidRuntime: java.lang.NoSuchMethodError: No static method newFromCDS([B)Lcom/android/internal/telephony/gsm/SmsMessage; in class Lcom/android/internal/telephony/gsm/SmsMessage; or its super classes (declaration of 'com.android.internal.telephony.gsm.SmsMessage' appears in /system/framework/framework.jar!classes4.dex)
+04-07 07:52:44.272  2200  2200 E AndroidRuntime: 	at com.mediatek.ims.feature.MtkImsSmsImpl.newStatusReportInd(MtkImsSmsImpl.java:153)
+04-07 07:52:44.272  2200  2200 E AndroidRuntime: 	at com.mediatek.ims.feature.MtkMmTelFeature$1.newStatusReportInd(MtkMmTelFeature.java:173)
+04-07 07:52:44.272  2200  2200 E AndroidRuntime: 	at com.mediatek.ims.ImsService$MyHandler.handleMessage(ImsService.java:2606)
+04-07 07:52:44.272  2200  2200 E AndroidRuntime: 	at android.os.Handler.dispatchMessage(Handler.java:106)
+04-07 07:52:44.272  2200  2200 E AndroidRuntime: 	at android.os.Looper.loopOnce(Looper.java:201)
+04-07 07:52:44.272  2200  2200 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:288)
+04-07 07:52:44.272  2200  2200 E AndroidRuntime: 	at android.app.ActivityThread.main(ActivityThread.java:7870)
+04-07 07:52:44.272  2200  2200 E AndroidRuntime: 	at java.lang.reflect.Method.invoke(Native Method)
+04-07 07:52:44.272  2200  2200 E AndroidRuntime: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:548)
+04-07 07:52:44.272  2200  2200 E AndroidRuntime: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1003)
+
+Change-Id: Ia07b5d818821d7a148c32c1a9e22ed0d15a31da5
+Signed-off-by: Saikrishna1504 <saikrishna26918@gmail.com>
+---
+ smali/com/mediatek/ims/feature/MtkImsSmsImpl.smali | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/smali/com/mediatek/ims/feature/MtkImsSmsImpl.smali b/smali/com/mediatek/ims/feature/MtkImsSmsImpl.smali
+index 2b67146..47afad2 100644
+--- a/smali/com/mediatek/ims/feature/MtkImsSmsImpl.smali
++++ b/smali/com/mediatek/ims/feature/MtkImsSmsImpl.smali
+@@ -788,7 +788,7 @@
+     nop
+ 
+     .line 153
+-    invoke-static {p1}, Lcom/android/internal/telephony/gsm/SmsMessage;->newFromCDS([B)Lcom/android/internal/telephony/gsm/SmsMessage;
++    invoke-static {p1}, Lcom/android/internal/telephony/gsm/SmsMessage;->createFromPdu([B)Lcom/android/internal/telephony/gsm/SmsMessage;
+ 
+     move-result-object v0
+ 
+-- 
+2.43.0
+

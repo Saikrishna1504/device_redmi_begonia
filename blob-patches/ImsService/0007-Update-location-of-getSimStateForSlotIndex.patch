@@ -1,0 +1,66 @@
+From 56830bbb30042e8289759733d8aeeea04b7802ba Mon Sep 17 00:00:00 2001
+From: SamarV-121 <samar@samarv121.dev>
+Date: Thu, 3 Aug 2023 13:16:15 +0530
+Subject: [PATCH 07/10] Update location of getSimStateForSlotIndex
+
+https://android-review.googlesource.com/q/topic:%22getSimStateForSlotIndex%22
+
+Change-Id: Ib365acacce8f8bdd0e52294474157c82682a3f09
+Signed-off-by: Saikrishna1504 <saikrishna26918@gmail.com>
+---
+ smali/com/mediatek/ims/ImsService$MyHandler.smali             | 2 +-
+ smali/com/mediatek/ims/ImsService.smali                       | 2 +-
+ .../mediatek/ims/config/internal/ImsConfigEventReceiver.smali | 4 ++--
+ 3 files changed, 4 insertions(+), 4 deletions(-)
+
+diff --git a/smali/com/mediatek/ims/ImsService$MyHandler.smali b/smali/com/mediatek/ims/ImsService$MyHandler.smali
+index b483fb4..3a6308d 100644
+--- a/smali/com/mediatek/ims/ImsService$MyHandler.smali
++++ b/smali/com/mediatek/ims/ImsService$MyHandler.smali
+@@ -1689,7 +1689,7 @@
+     :goto_a
+     iget v4, v1, Lcom/mediatek/ims/ImsService$MyHandler;->mSocketId:I
+ 
+-    invoke-static {v4}, Landroid/telephony/SubscriptionManager;->getSimStateForSlotIndex(I)I
++    invoke-static {v4}, Landroid/telephony/TelephonyManager;->getSimStateForSlotIndex(I)I
+ 
+     move-result v4
+ 
+diff --git a/smali/com/mediatek/ims/ImsService.smali b/smali/com/mediatek/ims/ImsService.smali
+index 045d678..7c3e9f6 100644
+--- a/smali/com/mediatek/ims/ImsService.smali
++++ b/smali/com/mediatek/ims/ImsService.smali
+@@ -12666,7 +12666,7 @@
+ 
+     .line 1245
+     :cond_3
+-    invoke-static {p2}, Landroid/telephony/SubscriptionManager;->getSimStateForSlotIndex(I)I
++    invoke-static {p2}, Landroid/telephony/TelephonyManager;->getSimStateForSlotIndex(I)I
+ 
+     move-result v3
+ 
+diff --git a/smali/com/mediatek/ims/config/internal/ImsConfigEventReceiver.smali b/smali/com/mediatek/ims/config/internal/ImsConfigEventReceiver.smali
+index b0c3323..cb9f1ae 100644
+--- a/smali/com/mediatek/ims/config/internal/ImsConfigEventReceiver.smali
++++ b/smali/com/mediatek/ims/config/internal/ImsConfigEventReceiver.smali
+@@ -160,7 +160,7 @@
+ 
+     .line 244
+     :cond_0
+-    invoke-static {v1}, Landroid/telephony/SubscriptionManager;->getSimStateForSlotIndex(I)I
++    invoke-static {v1}, Landroid/telephony/TelephonyManager;->getSimStateForSlotIndex(I)I
+ 
+     move-result v1
+ 
+@@ -1022,7 +1022,7 @@
+     .line 118
+     iget v1, p0, Lcom/mediatek/ims/config/internal/ImsConfigEventReceiver;->mPhoneId:I
+ 
+-    invoke-static {v1}, Landroid/telephony/SubscriptionManager;->getSimStateForSlotIndex(I)I
++    invoke-static {v1}, Landroid/telephony/TelephonyManager;->getSimStateForSlotIndex(I)I
+ 
+     move-result v1
+ 
+-- 
+2.43.0
+

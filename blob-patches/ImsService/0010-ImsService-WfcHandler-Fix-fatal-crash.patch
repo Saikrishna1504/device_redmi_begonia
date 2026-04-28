@@ -1,0 +1,43 @@
+From 5c02fff4747d303d78e83d781a077e2700b88b62 Mon Sep 17 00:00:00 2001
+From: MrErenK <akbaseren4751@gmail.com>
+Date: Fri, 3 Feb 2023 10:00:59 +0000
+Subject: [PATCH 10/10] ImsService: WfcHandler: Fix fatal crash
+
+* 02-02 19:18:48.766  2373  2413 E AndroidRuntime: FATAL EXCEPTION: MwiServiceHandlerThread
+02-02 19:18:48.766  2373  2413 E AndroidRuntime: Process: com.mediatek.ims, PID: 2373
+02-02 19:18:48.766  2373  2413 E AndroidRuntime: java.lang.ClassCastException: com.android.ims.ImsManager cannot be cast to com.mediatek.ims.internal.MtkImsManager
+02-02 19:18:48.766  2373  2413 E AndroidRuntime:   at com.mediatek.wfo.impl.WfcHandler.onWfcPdnError(WfcHandler.java:576)
+02-02 19:18:48.766  2373  2413 E AndroidRuntime:   at com.mediatek.wfo.impl.WfcHandler.handleMessage(WfcHandler.java:231)
+02-02 19:18:48.766  2373  2413 E AndroidRuntime:   at android.os.Handler.dispatchMessage(Handler.java:106)
+02-02 19:18:48.766  2373  2413 E AndroidRuntime:   at android.os.Looper.loopOnce(Looper.java:201)
+02-02 19:18:48.766  2373  2413 E AndroidRuntime:   at android.os.Looper.loop(Looper.java:288)
+
+Signed-off-by: MrErenK <akbaseren4751@gmail.com>
+Signed-off-by: DarkJoker360 <simoespo159@gmail.com>
+Signed-off-by: Saikrishna1504 <saikrishna26918@gmail.com>
+---
+ smali/com/mediatek/wfo/impl/WfcHandler.smali | 8 --------
+ 1 file changed, 8 deletions(-)
+
+diff --git a/smali/com/mediatek/wfo/impl/WfcHandler.smali b/smali/com/mediatek/wfo/impl/WfcHandler.smali
+index c5cf169..f191492 100644
+--- a/smali/com/mediatek/wfo/impl/WfcHandler.smali
++++ b/smali/com/mediatek/wfo/impl/WfcHandler.smali
+@@ -2232,14 +2232,6 @@
+ 
+     move-result-object v11
+ 
+-    .line 576
+-    .local v11, "mgr":Lcom/android/ims/ImsManager;
+-    move-object v12, v11
+-
+-    check-cast v12, Lcom/mediatek/ims/internal/MtkImsManager;
+-
+-    invoke-virtual {v12, v7}, Lcom/mediatek/ims/internal/MtkImsManager;->setWfcRegErrorCode(I)V
+-
+     .line 579
+     new-instance v12, Landroid/content/Intent;
+ 
+-- 
+2.43.0
+
