@@ -89,10 +89,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     LunarisDolby
 
-# Fingerprint
-PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint-service.xiaomi
-
 # FM Radio
 PRODUCT_PACKAGES += \
     FMRadio

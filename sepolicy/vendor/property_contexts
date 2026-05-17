@@ -10,7 +10,6 @@ persist.vendor.sys.fp.uid  u:object_r:vendor_fp_prop:s0
 persist.sys.fp.goodix.     u:object_r:vendor_fp_prop:s0
 persist.vendor.sys.fp.     u:object_r:vendor_fp_prop:s0
 persist.vendor.goodix.     u:object_r:vendor_fp_prop:s0
-persist.vendor.fingerprint. u:object_r:vendor_fp_prop:s0
 persist.vendor.fpc.        u:object_r:vendor_fp_prop:s0
 ro.hardware.fp             u:object_r:vendor_fp_prop:s0
 vendor.fps_hal.            u:object_r:vendor_fp_prop:s0
