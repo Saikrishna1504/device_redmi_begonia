@@ -1,3 +1,4 @@
+BUILD_BROKEN_DUP_RULES := true
 #
 # Copyright (C) 2019-2021 Potato Open Sauce Project
 #
