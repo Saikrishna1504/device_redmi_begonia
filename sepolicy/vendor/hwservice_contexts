@@ -12,3 +12,8 @@ vendor.synaptics.fingerprints.interfaces.extensions::IFpCollection            u:
 vendor.xiaomi.hardware.fingerprintextension::IXiaomiFingerprint               u:object_r:hal_fingerprint_hwservice:s0
 vendor.mediatek.hardware.power::IPower                   u:object_r:hal_power_hwservice:s0
 vendor.dolby.hardware.dms::IDms                          u:object_r:hal_dms_hwservice:s0
+
+# NFC
+vendor.nxp.hardware.nfc::INqNfc                                               u:object_r:nxpnfc_hwservice:s0
+vendor.nxp.nxpese::INxpEse                                                    u:object_r:nxpnfc_hwservice:s0
+vendor.nxp.nxpnfc::INxpNfc                                                    u:object_r:nxpnfc_hwservice:s0

@@ -19,5 +19,11 @@
 # Mi Thermald
 /vendor/bin/mi_thermald       u:object_r:mi_thermald_exec:s0
 
+# NFC
+/dev/nq-nci              u:object_r:nfc_device:s0
+/(system\/vendor|vendor)/bin/hw/android\.hardware\.nfc@1\.1-service                                       u:object_r:hal_nfc_default_exec:s0
+/(system\/vendor|vendor)/bin/hw/android\.hardware\.nfc@1\.2-service                                       u:object_r:hal_nfc_default_exec:s0
+/(system\/vendor|vendor)/bin/hw/android\.hardware\.secure_element@1\.0-service\.st54spi         u:object_r:st54spi_hal_secure_element_exec:s0
+
 # Power
 /(vendor|system/vendor)/bin/hw/android\.hardware\.power-service\.begonia-libperfmgr                      u:object_r:hal_power_default_exec:s0
