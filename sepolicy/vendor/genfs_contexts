@@ -11,6 +11,9 @@ genfscon sysfs /devices/platform/flashlights_mt6360/torchbrightness             
 
 # Power supply
 genfscon sysfs /devices/platform/1101b000.i2c8/i2c-8/8-001d/power_supply                                                        u:object_r:sysfs_batteryinfo:s0
+
+# USB
+genfscon sysfs /devices/platform/usb0                                                                                           u:object_r:sysfs_usb_nonplat:s0
 # Wakeup (4.19 sysfs)
 genfscon sysfs /devices/platform/1000d000.pwrap/1000d000.pwrap:mt6359-pmic/mt6359-rtc/rtc/rtc0/wakeup                           u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/1000d000.pwrap/1000d000.pwrap:mt6359-pmic/mt6359-rtc/wakeup                                    u:object_r:sysfs_wakeup:s0

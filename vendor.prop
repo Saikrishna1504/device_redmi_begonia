@@ -339,6 +339,9 @@ ro.vendor.mtk_tee_gp_support=1
 # Thermal
 vendor.sys.thermal.data.path=/data/vendor/thermal/
 
+# USB
+vendor.usb.controller=usb0
+
 # WiFi
 persist.vendor.connsys.chipid=-1
 persist.vendor.connsys.dynamic.dump=0

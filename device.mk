@@ -255,7 +255,6 @@ PRODUCT_PACKAGES += \
     init.connectivity.rc \
     init.modem.rc \
     init.mt6785.rc \
-    init.mt6785.usb.rc \
     init.project.rc \
     init.sensor_1_0.rc \
     fstab.mt6785 \
@@ -298,7 +297,8 @@ PRODUCT_SOONG_NAMESPACES += bootable/deprecated-ota
 # USB
 PRODUCT_PACKAGES += \
     android.hardware.usb-service.mediatek \
-    android.hardware.usb.gadget-service.mediatek
+    android.hardware.usb.gadget-service.mediatek \
+    init.mt6785.usb.rc
 
 # Vibrator
 PRODUCT_PACKAGES += \
