@@ -70,9 +70,6 @@ blob_fixups: blob_fixups_user_type = {
      'vendor/lib/libMtkOmxVdecEx.so'): blob_fixup()
         .add_needed('libui_shim.so'),
 
-    'system/lib64/libem_support_jni.so': blob_fixup()
-        .add_needed('libjni_shim.so'),
-
     ('vendor/lib/libwvhidl.so',
      'vendor/lib/mediadrm/libwvdrmengine.so'): blob_fixup()
         .replace_needed('libcrypto.so', 'libcrypto-v33.so'),

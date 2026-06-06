@@ -50,6 +50,8 @@ vendor/etc/init/init.batteryd.rc
 vendor/lib64/libbluetooth_mtk.so
 vendor/lib64/libbluetooth_mtk_pure.so
 vendor/lib64/libbt-vendor.so
+vendor/lib64/libbluetooth_relayer.so
+vendor/lib64/libbluetoothem_mtk.so
 
 # Bluetooth (A2DP)
 vendor/lib/vendor.mediatek.hardware.bluetooth.audio@2.1.so
@@ -635,18 +637,16 @@ vendor/lib/liboemcrypto.so
 vendor/lib/libtlcWidevineModularDrm.so
 vendor/lib/libwvhidl.so
 
-# Engineering Mode
-system/lib/libem_support_jni.so;DISABLE_CHECKELF
-system/lib64/libem_support_jni.so;DISABLE_CHECKELF
-system/priv-app/EngineerMode/EngineerMode.apk
-vendor/bin/em_hidl
-vendor/etc/init/em_hidl_user.rc
-vendor/lib64/libbluetooth_relayer.so
-vendor/lib64/libbluetoothem_mtk.so
-vendor/lib64/vendor.mediatek.hardware.engineermode@1.0.so
-vendor/lib64/vendor.mediatek.hardware.engineermode@1.1.so
-vendor/lib64/vendor.mediatek.hardware.engineermode@1.2.so
-vendor/lib64/vendor.mediatek.hardware.engineermode@1.3.so
+# Engineering Mode from TECNO-U-64-ARMV82-230626V601DevT
+system_ext/lib/libem_support_jni.so:system/lib/libem_support_jni.so|afab3ca5e5bdf8619e66606652a39fac5692d99b
+system_ext/lib64/libem_support_jni.so:system/lib64/libem_support_jni.so|21dddde25b7134b186e68052910adf2b4dba8b86
+system_ext/priv-app/EngineerMode/EngineerMode.apk:system/priv-app/EngineerMode/EngineerMode.apk|77874e73774b0aa902c1bfed7162f6a190770f71
+vendor/bin/em_hidl|bf23d25f7bd6af4bfd9f34c64609e469b8b1d4b2
+vendor/etc/init/em_hidl_user.rc|bdb5893df3e78d2d2adaf72bc7e56dfeee0be308
+vendor/lib64/vendor.mediatek.hardware.engineermode@1.0.so|444376addf581bfc66409ad39a73ffe498e4142e
+vendor/lib64/vendor.mediatek.hardware.engineermode@1.1.so|a13d422113c5bde4dc8a36336a6436e09cb37b86
+vendor/lib64/vendor.mediatek.hardware.engineermode@1.2.so|6cdc256e6559cba5f47b4aa1382d13790e91773c
+vendor/lib64/vendor.mediatek.hardware.engineermode@1.3.so|1c170c8e48c5cd52fd0bc903758be03c16e90091
 
 # Fingerprint
 vendor/bin/hw/mfp-daemon
