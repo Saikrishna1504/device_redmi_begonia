@@ -48,8 +48,6 @@ on charger
     # Turn backlight on and switch to backlight trigger
     write /sys/class/leds/lcd-backlight/brightness "1000"
     write /sys/class/leds/lcd-backlight/trigger "backlight"
-    chown system graphics /dev/graphics/fb0
-    chmod 0660 /dev/graphics/fb0
 
     exec /system/bin/e2fsck -f -p /dev/block/platform/bootdevice/by-name/cache
     mount ext4 /dev/block/platform/bootdevice/by-name/cache /cache rw wait
@@ -939,14 +937,6 @@ on property:vendor.mtk.md1.status=reset
 
 on init
     symlink /dev/block/platform/bootdevice /dev/block/bootdevice
-
-# Offline Charger
-service charger /system/bin/charger
-    class charger
-    user system
-    group system graphics input wakelock
-    capabilities SYS_BOOT
-    seclabel u:r:charger:s0
 
 # MI Thermald
 service mi_thermald /vendor/bin/mi_thermald

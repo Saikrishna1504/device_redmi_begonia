@@ -10,9 +10,6 @@ Build.BRAND=MTK
 ro.camera.sound.forced=0
 ro.product.mod_device=begonia_global
 
-# Charger
-ro.charger.enable_suspend=true
-
 # Kernel
 ro.kernel.zio=38,108,105,16
 
