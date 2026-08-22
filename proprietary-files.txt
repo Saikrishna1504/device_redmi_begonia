@@ -610,10 +610,6 @@ vendor/lib64/hw/dfps.mt6785.so
 vendor/lib64/hw/vendor.mediatek.hardware.dfps@1.0-impl.so
 vendor/lib64/vendor.mediatek.hardware.dfps@1.0.so
 
-# Display (Thread unwinding)
-vendor/lib/libladder.so
-vendor/lib64/libladder.so
-
 # Dolby
 vendor/bin/hw/vendor.dolby.hardware.dms@2.0-service|2412363dfaeded2fd363457421a1931a7b8417ff
 vendor/etc/dolby/dax-default.xml|d9e6c5995eb6bf903333c7d6362ecd159cc9a2af
