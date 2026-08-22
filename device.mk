@@ -312,7 +312,8 @@ PRODUCT_PACKAGES += \
     hostapd \
     wpa_supplicant \
     libwifi-hal-wrapper \
-    WifiResOverlay
+    WifiResOverlay \
+    wlan_assistant
 
 PRODUCT_PACKAGES += \
     android.hardware.wifi-service-lazy

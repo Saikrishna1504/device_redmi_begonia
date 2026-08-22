@@ -1310,11 +1310,9 @@ vendor/thh/ta/fc32e4da17d342449b01c992d56d71bf.ta
 
 # WiFi
 vendor/bin/wfca
-vendor/bin/wlan_assistant
 vendor/bin/wmt_launcher
 vendor/bin/wmt_loader
 vendor/etc/init/init.wfca.rc
 vendor/etc/init/init.wlan_drv.rc
 vendor/etc/init/init_connectivity.rc
-vendor/etc/init/wlan_assistant.rc
 vendor/lib64/libwifi-hal.so:vendor/lib64/libwifi-hal-mtk.so;FIX_SONAME
