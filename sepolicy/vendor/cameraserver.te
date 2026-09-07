@@ -6,3 +6,6 @@ get_prop(cameraserver, vendor_mtk_camera_prop)
 get_prop(cameraserver, exported_default_prop)
 get_prop(cameraserver, vendor_mtk_audio_prop)
 set_prop(cameraserver, system_prop)
+
+# Torch
+allow cameraserver vendor_torch_sysfs:file rw_file_perms;

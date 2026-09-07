@@ -16,4 +16,7 @@ type sysfs_mtk_gpufreq, fs_type, sysfs_type;
 # PPS
 type pps_socket, file_type;
 
+# Torch
+type vendor_torch_sysfs, fs_type, sysfs_type;
+
 allow proc_perfmgr proc:filesystem associate;

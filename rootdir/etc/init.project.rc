@@ -75,6 +75,8 @@ on init
     #Torch_light
     chown system system /sys/devices/platform/flashlights_mt6360/leds/torch-light0/brightness
     chown system system /sys/devices/platform/flashlights_mt6360/leds/torch-light1/brightness
+    chown system cameraserver /sys/devices/platform/flashlights_mt6360/torchbrightness
+    chmod 0666 /sys/devices/platform/flashlights_mt6360/torchbrightness
 
 service panel-info-sh /vendor/bin/init.panel_info.sh
     class core

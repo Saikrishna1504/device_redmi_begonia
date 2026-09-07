@@ -1,0 +1,13 @@
+//
+// Copyright (C) 2026 The LibreMobileOS Foundation
+//
+// SPDX-License-Identifier: Apache-2.0
+//
+
+cc_library_static {
+    name: "libcameraservice_extension.begonia",
+    srcs: ["CameraProviderExtension.cpp"],
+    include_dirs: [
+        "frameworks/av/services/camera/libcameraservice/common",
+    ],
+}

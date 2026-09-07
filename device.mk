@@ -85,6 +85,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     DT2W-Service-Begonia
 
+# Camera
+$(call soong_config_set,libcameraservice,ext_lib,//$(DEVICE_PATH):libcameraservice_extension.begonia)
+
 # Dolby
 PRODUCT_PACKAGES += \
     LunarisDolby
