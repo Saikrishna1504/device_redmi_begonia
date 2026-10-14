@@ -229,6 +229,8 @@ ro.lmk.thrashing_limit=30
 ro.lmk.thrashing_limit_decay=2
 
 # Media
+debug.stagefright.ccodec=4
+debug.stagefright.omx_default_rank=1000
 media.stagefright.thumbnail.prefer_hw_codecs=true
 ro.vendor.mtk_config_max_dram_size=0x800000000
 ro.vendor.pref_scale_enable_cfg=1

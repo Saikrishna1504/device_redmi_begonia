@@ -21,13 +21,6 @@ prebuilt_hidl_interfaces {
 }
 
 prebuilt_hidl_interfaces {
-    name: "hidl_mtkcodecservice_interface",
-    interfaces: [
-        "vendor.mediatek.hardware.mtkcodecservice@1.1::IMtkCodecService",
-    ],
-}
-
-prebuilt_hidl_interfaces {
     name: "hidl_supplicant_interface",
     interfaces: [
         "vendor.mediatek.hardware.wifi.supplicant@2.0::ISupplicant",

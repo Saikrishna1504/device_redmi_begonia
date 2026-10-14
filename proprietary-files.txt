@@ -733,30 +733,55 @@ vendor/etc/init/microtrust.bp_kmsetkey_ca.rc
 vendor/lib64/hw/kmsetkey.beanpod.so
 
 # Media
-vendor/bin/vpud
 vendor/etc/init/vpud.rc
 vendor/lib/AVCSecureVdecCA.so
 vendor/lib/VP9SecureVdecCA.so
 vendor/lib/libHEVCdec_sa.ca7.android.so;DISABLE_CHECKELF
 vendor/lib/libh264dec_customize.so
 vendor/lib/libh264dec_sa.ca7.so;DISABLE_CHECKELF
-vendor/lib/libh264enc_sa.ca7.so;DISABLE_CHECKELF
-vendor/lib/libmp4enc_sa.ca7.so;DISABLE_CHECKELF
 vendor/lib/libvc1dec_sa.ca7.so;DISABLE_CHECKELF
-vendor/lib/libvcodec_oal.so;DISABLE_CHECKELF
-vendor/lib/libvcodec_utility.so
-vendor/lib/libvcodecdrv.so
-vendor/lib/libvp8dec_sa.ca7.so;DISABLE_CHECKELF
 vendor/lib/libvp8enc_sa.ca7.so;DISABLE_CHECKELF
 vendor/lib/libvp9dec_sa.ca7.so;DISABLE_CHECKELF
-vendor/lib/libvpu.so
-vendor/lib/libvpud_vcodec.so
 
-# Media (Codec Service)
-vendor/bin/hw/vendor.mediatek.hardware.mtkcodecservice@1.1-service
-vendor/etc/init/vendor.mediatek.hardware.mtkcodecservice@1.1-service.rc
-vendor/lib/hw/vendor.mediatek.hardware.mtkcodecservice@1.1-impl.so
-vendor/lib/vendor.mediatek.hardware.mtkcodecservice@1.1.so
+# Media - from rosemary-user 12 SP1A.210812.016 V14.0.17.0.TFFMIXM release-keys
+vendor/bin/vpud|a722cf108e5911642f73da57469257231c788f62
+vendor/etc/mtk_platform_codecs_config.xml|637554eaf8302eda615f8e1837374eb1a803b6de
+vendor/lib/libh264dec_sd.ca7.so;DISABLE_CHECKELF|725143c8122a3be0e1c8c95d632082ba7bb93227
+vendor/lib/libh264dec_se.ca7.so;DISABLE_CHECKELF|c35f68c1c30c0f58f8bfb18b6b659b77aad7a747
+vendor/lib/libh264enc_sa.ca7.so;DISABLE_CHECKELF|b0d84268ac514f7a6acee48915eb907cf2b3d6c0
+vendor/lib/libhevce_sb.ca7.android.so;DISABLE_CHECKELF|3448542ca4ce04a8c1146a69dce4d7aa465de917
+vendor/lib/libmp4enc_sa.ca7.so;DISABLE_CHECKELF|4a95f12169f551fa07a9485dfd5b843a9a82e1da
+vendor/lib/libmp4enc_xa.ca7.so;DISABLE_CHECKELF|241ebc3dca5bec2e1fc307cb3f151d22cdc31223
+vendor/lib/libvcodec_oal.so;DISABLE_CHECKELF|ca61fa2c20c1e2d2a2a76fd5dce5f0e994ab0f75
+vendor/lib/libvcodec_utility.so|4aef07d9173e2ca88c9555f5787095484adc37b7
+vendor/lib/libvcodecdrv.so|e630cfc52ea1e0a35eb4c3da19c6774c6209cd1c
+vendor/lib/libvp8dec_sa.ca7.so;DISABLE_CHECKELF|0283ee50aabc1230f55188cfa0ef8ed47e7f89f8
+vendor/lib/libvpu.so|8121d4622c1efbd37f61b3223dbb5b9646d92961
+vendor/lib/libvpud_vcodec.so|37b5dcb7de5b28fccc43003535426aff1d7ae0b8
+vendor/lib64/AVCSecureVdecCA.so|0e356cf45cc42e35e349c928480495f66545f835
+vendor/lib64/VP9SecureVdecCA.so|ba9e1bc56915c9f97b4bb4962d04dd13ed30ed71
+vendor/lib64/libhevce_sb.ca7.android.so;DISABLE_CHECKELF|4b82fecf4b7ea1d51f4681709e2dd1e7bfef5268
+vendor/lib64/libvcodec_oal.so|da1998afa24673382dfe93dbce139d332f6fc1d2
+vendor/lib64/libvcodecdrv_header_stub.so|ff059fd6537fe1bc27de361953d08d905a5896c2
+
+# Media (Codec2) - from rosemary-user 12 SP1A.210812.016 V14.0.17.0.TFFMIXM release-keys
+system/lib64/libstagefright_bufferqueue_helper.so:vendor/lib64/libstagefright_bufferqueue_helper-v33.so;FIX_SONAME|bb06d6b33d5f7772374a4d365f56fb63043a1eab
+vendor/bin/hw/android.hardware.media.c2@1.2-mediatek-64b;SYMLINK=vendor/bin/hw/android.hardware.media.c2@1.2-mediatek|5d392e2563e47783d74a4860229674fa95a4acec
+vendor/etc/init/android.hardware.media.c2@1.2-mediatek.rc|e09ad9455fc75875f6ccef32572bfc0894c98ab5
+vendor/etc/vintf/manifest/manifest_media_c2_V1_1_default.xml:vendor/etc/vintf/manifest/manifest_media_c2_V1_2_default.xml|622d0480a3af7a162e37c56e0770213d8027000d
+vendor/lib64/libcodec2_hidl@1.0.so:vendor/lib64/libcodec2_hidl@1.0-v31.so;FIX_SONAME|3df6765e88c1595a2710f2187c06f5c2592dd8f9
+vendor/lib64/libcodec2_hidl@1.1.so:vendor/lib64/libcodec2_hidl@1.1-v31.so;FIX_SONAME|273c6f90e02e7402df18d481d270bb29fb4bd3d3
+vendor/lib64/libcodec2_hidl@1.2.so:vendor/lib64/libcodec2_hidl@1.2-v31.so;FIX_SONAME|19f758134593613735168f6a9ea169e62ab72cfc
+vendor/lib64/libcodec2_hidl_plugin.so:vendor/lib64/libcodec2_hidl_plugin-v31.so;FIX_SONAME|0d3071578e7852fe57593d715a823e736ff6440f
+vendor/lib64/libcodec2_mtk_c2store.so|d7b8b233ec701f824befacc2b6f53712c980da21
+vendor/lib64/libcodec2_mtk_vdec.so|720a38dca06a6d0be4ab9eaa5f35d5a39bc14732
+vendor/lib64/libcodec2_mtk_venc.so|eab09a81107cb37f8ebdd1f899336fb8e79e5a0e
+vendor/lib64/libcodec2_soft_common.so:vendor/lib64/libcodec2_soft_common-v31.so;FIX_SONAME|7d72cae54d6340919f2791bb2fc0f0fb831f7294
+vendor/lib64/libcodec2_vndk.so:vendor/lib64/libcodec2_vndk-v31.so;FIX_SONAME|0c2c3da4bcca06750fc1ae27fd298ac12e338636
+vendor/lib64/libcodec2_vpp_qt_plugin.so|d17a6af0fdc87e619543912e209042d96badc208
+vendor/lib64/libcodec2_vpp_rs_plugin.so|a0c369a4aeb4766d2372e00c79fdd2b5e7125441
+vendor/lib64/libformatter.so:vendor/lib64/libformatter_mtk.so;FIX_SONAME|c32f5fc075a4cfa034aeb7f8d2c71305e3181aef
+vendor/lib64/libsfplugin_ccodec_utils.so:vendor/lib64/libsfplugin_ccodec_utils-v31.so;FIX_SONAME|d4df8e8dcb2a32c9421fb5523ef9ee3e628722ef
 
 # Media (MMS)
 vendor/bin/hw/vendor.mediatek.hardware.mms@1.5-service

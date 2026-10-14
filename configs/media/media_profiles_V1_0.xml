@@ -273,17 +273,6 @@
                    sampleRate="48000"
                    channels="1" />
         </EncoderProfile>
-        <EncoderProfile quality="timelapsehigh" fileFormat="mp4" duration="30">
-            <Video codec="h264"
-                   bitRate="43000000"
-                   width="3840"
-                   height="2160"
-                   frameRate="30" />
-            <Audio codec="aac"
-                   bitRate="128000"
-                   sampleRate="48000"
-                   channels="1" />
-        </EncoderProfile>
         <EncoderProfile quality="highspeedlow" fileFormat="mp4" duration="30">
             <Video codec="h264"
                    bitRate="9000000"
@@ -527,17 +516,6 @@
                    sampleRate="48000"
                    channels="1" />
         </EncoderProfile>
-        <EncoderProfile quality="high" fileFormat="mp4" duration="30">
-            <Video codec="h264"
-                   bitRate="50000000"
-                   width="3840"
-                   height="2160"
-                   frameRate="30" />
-            <Audio codec="aac"
-                   bitRate="128000"
-                   sampleRate="48000"
-                   channels="1" />
-        </EncoderProfile>
         <EncoderProfile quality="qcif" fileFormat="mp4" duration="30">
             <Video codec="h263"
                    bitRate="192000"
@@ -715,17 +693,6 @@
                    channels="1" />
         </EncoderProfile>
         <EncoderProfile quality="timelapse2160p" fileFormat="mp4" duration="30">
-            <Video codec="hevc"
-                   bitRate="50000000"
-                   width="3840"
-                   height="2160"
-                   frameRate="30" />
-            <Audio codec="aac"
-                   bitRate="128000"
-                   sampleRate="48000"
-                   channels="1" />
-        </EncoderProfile>
-        <EncoderProfile quality="timelapsehigh" fileFormat="mp4" duration="30">
             <Video codec="hevc"
                    bitRate="50000000"
                    width="3840"

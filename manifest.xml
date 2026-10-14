@@ -288,16 +288,6 @@
         <fqname>@1.5::IMms/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>vendor.mediatek.hardware.mtkcodecservice</name>
-        <transport>hwbinder</transport>
-        <version>1.1</version>
-        <interface>
-            <name>IMtkCodecService</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.1::IMtkCodecService/default</fqname>
-    </hal>
-    <hal format="hidl">
         <name>vendor.mediatek.hardware.mtkpower</name>
         <transport>hwbinder</transport>
         <version>1.2</version>

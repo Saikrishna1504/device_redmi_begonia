@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright (C) 2014 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<MediaCodecs>
+    <Settings>
+        <!-- disable TV and telephony domains by default. These must be opted in by OEMs -->
+        <Domain name="telephony" enabled="false" />
+        <Domain name="tv" enabled="false" />
+    </Settings>
+    <Decoders>
+        <MediaCodec name="c2.mtk.hevc.decoder" type="video/hevc" >
+            <Alias name="OMX.MTK.VIDEO.DECODER.HEVC" />
+            <Limit name="size" min="16x16" max="3840x2176" />
+            <Feature name="adaptive-playback"/>
+            <Limit name="concurrent-instances" max="32" />
+            <Limit name="performance-point-3840x2160" value="30" />
+        </MediaCodec>
+        <MediaCodec name="c2.mtk.mpeg4.decoder" type="video/mp4v-es" >
+            <Alias name="OMX.MTK.VIDEO.DECODER.MPEG4" />
+            <Limit name="size" min="16x16" max="2048x1088" />
+            <Feature name="adaptive-playback"/>
+            <Limit name="concurrent-instances" max="32" />
+            <Limit name="performance-point-1920x1080" value="30" />
+        </MediaCodec>
+        <MediaCodec name="c2.mtk.h263.decoder" type="video/3gpp" >
+            <Alias name="OMX.MTK.VIDEO.DECODER.H263" />
+            <Limit name="size" min="128x96" max="1408x1152" />
+            <Feature name="adaptive-playback"/>
+            <Limit name="concurrent-instances" max="32" />
+            <Limit name="performance-point-1280x720" value="30" />
+        </MediaCodec>
+        <MediaCodec name="c2.mtk.avc.decoder" type="video/avc" >
+            <Alias name="OMX.MTK.VIDEO.DECODER.AVC" />
+            <Limit name="size" min="64x64" max="3840x2176" />
+            <Quirk name="wants-NAL-fragments" />
+            <Feature name="adaptive-playback"/>
+            <Limit name="concurrent-instances" max="32" />
+            <Limit name="performance-point-3840x2160" value="30" />
+        </MediaCodec>
+        <MediaCodec name="c2.mtk.avc.decoder.secure" type="video/avc" >
+            <Alias name="OMX.MTK.VIDEO.DECODER.AVC.secure" />
+            <Limit name="size" min="64x64" max="3840x2176" />
+            <Quirk name="wants-NAL-fragments" />
+            <Feature name="secure-playback" required="true" />
+            <Feature name="adaptive-playback"/>
+            <Limit name="concurrent-instances" max="32" />
+            <Limit name="performance-point-3840x2160" value="30" />
+        </MediaCodec>
+        <MediaCodec name="c2.mtk.heif.decoder" type="image/vnd.android.heic" >
+            <Alias name="OMX.MTK.VIDEO.DECODER.HEIF" />
+            <Limit name="size" min="16x16" max="16383x16383" />
+            <Feature name="adaptive-playback"/>
+            <Limit name="concurrent-instances" max="16" />
+            <Limit name="performance-point-3840x2160" value="30" />
+        </MediaCodec>
+        <MediaCodec name="c2.mtk.vpx.decoder" type="video/x-vnd.on2.vp8" >
+            <Alias name="OMX.MTK.VIDEO.DECODER.VPX" />
+            <Limit name="size" min="16x16" max="2048x1088" />
+            <Feature name="adaptive-playback"/>
+            <Limit name="concurrent-instances" max="32" />
+            <Limit name="performance-point-1920x1080" value="30" />
+        </MediaCodec>
+        <MediaCodec name="c2.mtk.vp9.decoder" type="video/x-vnd.on2.vp9" >
+            <Alias name="OMX.MTK.VIDEO.DECODER.VP9" />
+            <Limit name="size" min="16x16" max="3840x2176" />
+            <Feature name="adaptive-playback"/>
+            <Limit name="concurrent-instances" max="32" />
+            <Limit name="performance-point-3840x2160" value="30" />
+        </MediaCodec>
+        <MediaCodec name="c2.mtk.vp9.decoder.secure" type="video/x-vnd.on2.vp9" >
+            <Alias name="OMX.MTK.VIDEO.DECODER.VP9.secure" />
+            <Limit name="size" min="16x16" max="1920x1088" />
+            <Quirk name="wants-NAL-fragments" />
+            <Feature name="secure-playback" required="true" />
+            <Feature name="adaptive-playback"/>
+            <Limit name="concurrent-instances" max="32" />
+            <Limit name="performance-point-1920x1088" value="30" />
+        </MediaCodec>
+        <MediaCodec name="c2.mtk.mpeg2.decoder" type="video/mpeg2" >
+            <Alias name="OMX.MTK.VIDEO.DECODER.MPEG2" />
+            <Limit name="size" min="16x16" max="2048x1088" />
+            <Feature name="adaptive-playback"/>
+            <Limit name="concurrent-instances" max="18" />
+            <Limit name="performance-point-1920x1088" value="30" />
+        </MediaCodec>
+        <MediaCodec name="c2.mtk.vc1.decoder" type="video/x-ms-wmv" >
+            <Alias name="OMX.MTK.VIDEO.DECODER.VC1" />
+            <Limit name="size" min="16x16" max="1920x1088" />
+            <Limit name="concurrent-instances" max="32" />
+            <Limit name="performance-point-1920x1088" value="30" />
+        </MediaCodec>
+    </Decoders>
+    <Encoders>
+        <MediaCodec name="c2.mtk.mpeg4.encoder" type="video/mp4v-es" >
+            <Alias name="OMX.MTK.VIDEO.ENCODER.MPEG4" />
+            <Limit name="size" min="176x144" max="720x480" />
+            <Limit name="alignment" value="16x16" />
+            <Limit name="block-size" value="16x16" />
+            <Limit name="concurrent-instances" max="10" />
+            <Limit name="performance-point-720x480" value="30" />
+        </MediaCodec>
+        <MediaCodec name="c2.mtk.h263.encoder" type="video/3gpp" >
+            <Alias name="OMX.MTK.VIDEO.ENCODER.H263" />
+            <Limit name="size" min="176x144" max="176x144" />
+            <Limit name="alignment" value="16x16" />
+            <Limit name="block-size" value="16x16" />
+            <Limit name="concurrent-instances" max="10" />
+            <Limit name="performance-point-640x480" value="30" />
+        </MediaCodec>
+        <MediaCodec name="c2.mtk.avc.encoder" type="video/avc" >
+            <Alias name="OMX.MTK.VIDEO.ENCODER.AVC" />
+            <Limit name="size" min="160x160" max="3840x2176" />
+            <Limit name="alignment" value="16x16" />
+            <Limit name="block-size" value="16x16" />
+            <Feature name="can-swap-width-height" />
+            <Limit name="concurrent-instances" max="10" />
+            <Limit name="performance-point-3840x2160" value="30" />
+        </MediaCodec>
+        <MediaCodec name="c2.mtk.hevc.encoder" type="video/hevc" >
+            <Alias name="OMX.MTK.VIDEO.ENCODER.HEVC" />
+            <Limit name="size" min="160x128" max="3840x2176" />
+            <Limit name="alignment" value="16x16" />
+            <Limit name="block-size" value="16x16" />
+            <Limit name="quality" range="0-100" default="50" />
+            <Limit name="concurrent-instances" max="10" />
+            <Feature name="bitrate-modes" value="VBR,CBR,CQ" />
+            <Limit name="performance-point-3840x2160" value="30" />
+        </MediaCodec>
+        <MediaCodec name="c2.mtk.heif.encoder" type="image/vnd.android.heic" >
+            <Alias name="OMX.MTK.VIDEO.ENCODER.HEIF" />
+            <Limit name="size" min="168x128" max="16383x16383" />
+            <Limit name="alignment" value="16x16" />
+            <Limit name="block-size" value="16x16" />
+            <Limit name="quality" range="0-100" default="50" />
+            <Limit name="concurrent-instances" max="2" />
+            <Feature name="bitrate-modes" value="VBR,CBR,CQ" />
+            <Limit name="performance-point-3840x2160" value="30" />
+        </MediaCodec>
+    </Encoders>
+</MediaCodecs>
