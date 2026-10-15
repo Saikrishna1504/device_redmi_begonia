@@ -173,9 +173,10 @@ debug.sf.enable_egl_image_tracker=0
 debug.sf.enable_gl_backpressure=false
 debug.sf.enable_hwc_vds=0
 debug.sf.predict_hwc_composition_strategy=0
-persist.sys.sf.color_saturation=1.1
+debug.sf.treat_170m_as_sRGB=1
+persist.sys.sf.color_saturation=1.0
 persist.sys.sf.color_mode=0
-persist.sys.sf.native_mode=2
+persist.sys.sf.native_mode=0
 ro.opengles.version=196610
 ro.sf.lcd_density=440
 ro.hwui.render_ahead=2
@@ -256,7 +257,7 @@ ro.vendor.mtk_exchange_support=1
 
 # PQ
 persist.vendor.sys.pq.adl.idx=0
-persist.vendor.sys.pq.hdr.en=0
+persist.vendor.sys.pq.hdr.en=1
 persist.vendor.sys.pq.hfg.en=0
 persist.vendor.sys.pq.iso.shp.en=0
 persist.vendor.sys.pq.mdp.color.dbg=0
