@@ -1,3 +1,11 @@
 get_prop(rild, system_boot_reason_prop)
 
 set_prop(rild, vendor_deviceid_prop)
+
+# VoWiFi / ePDG / IPsec
+domain_auto_trans(ipsec_mon, netutils_wrapper_exec, netutils_wrapper)
+allow netutils_wrapper ipsec_mon:unix_stream_socket { read write };
+allow netutils_wrapper ipsec_mon:fifo_file rw_file_perms;
+allow netutils_wrapper epdg_wod:fifo_file rw_file_perms;
+allow ipsec vendor_configs_file:dir r_dir_perms;
+allow ipsec vendor_configs_file:file r_file_perms;
