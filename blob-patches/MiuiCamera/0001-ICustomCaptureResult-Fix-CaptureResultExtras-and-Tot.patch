@@ -1,0 +1,95 @@
+From cc2101e9e3229d274b4053dfe1e412bdc9851875 Mon Sep 17 00:00:00 2001
+From: Saikrishna1504 <saikrishna26918@gmail.com>
+Date: Thu, 15 Oct 2026 11:47:37 +0000
+Subject: [PATCH 1/4] ICustomCaptureResult: Fix CaptureResultExtras and
+ TotalCaptureResult constructors
+
+Change-Id: Ib55606954da320211f94cadce6b0a4f1851d5442
+---
+ .../protocol/ICustomCaptureResult.smali       | 32 ++++++++-----------
+ 1 file changed, 13 insertions(+), 19 deletions(-)
+
+diff --git a/smali_classes2/com/xiaomi/protocol/ICustomCaptureResult.smali b/smali_classes2/com/xiaomi/protocol/ICustomCaptureResult.smali
+index d2a9f2d..7608a16 100644
+--- a/smali_classes2/com/xiaomi/protocol/ICustomCaptureResult.smali
++++ b/smali_classes2/com/xiaomi/protocol/ICustomCaptureResult.smali
+@@ -476,25 +476,17 @@
+
+     aput-object v17, v6, v10
+
+-    const/16 v18, -0x1
++    const-wide/16 v17, -0x1
+
+-    invoke-static/range {v18 .. v18}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
++    invoke-static/range {v17 .. v18}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+     move-result-object v21
+
+     aput-object v21, v6, v9
+
+-    invoke-static/range {v18 .. v18}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+-
+-    move-result-object v21
+-
+     aput-object v21, v6, v19
+
+-    invoke-static/range {v18 .. v18}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+-
+-    move-result-object v18
+-
+-    aput-object v18, v6, v20
++    aput-object v21, v6, v20
+
+     .line 11
+     invoke-virtual {v7, v6}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
+@@ -825,7 +817,7 @@
+
+     array-length v6, v6
+
+-    if-le v6, v15, :cond_2
++    if-ne v6, v10, :cond_2
+
+     move-object v7, v5
+
+@@ -951,30 +943,32 @@
+
+     move-result-object v3
+
+-    new-array v4, v11, [Ljava/lang/Object;
++    new-array v4, v10, [Ljava/lang/Object;
++    const-string v5, "0"
+
+-    aput-object v1, v4, v2
++    aput-object v5, v4, v2
++    aput-object v1, v4, v16
+
+     .line 44
+     invoke-virtual/range {p0 .. p0}, Lcom/xiaomi/protocol/ICustomCaptureResult;->getRequest()Landroid/hardware/camera2/CaptureRequest;
+
+     move-result-object v1
+
+-    aput-object v1, v4, v16
++    aput-object v1, v4, v15
+
+-    aput-object v0, v4, v15
++    aput-object v0, v4, v14
+
+     const/4 v1, 0x0
+
+-    aput-object v1, v4, v14
++    aput-object v1, v4, v13
+
+     invoke-static/range {p1 .. p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+     move-result-object v0
+
+-    aput-object v0, v4, v13
++    aput-object v0, v4, v12
+
+-    aput-object v3, v4, v12
++    aput-object v3, v4, v11
+
+     .line 45
+     invoke-virtual {v7, v4}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
+--
+2.43.0

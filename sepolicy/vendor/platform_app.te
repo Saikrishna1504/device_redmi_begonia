@@ -1,3 +1,8 @@
 allow platform_app sysfs_fpsinfo:file rw_file_perms;
 allow platform_app sysfs_thermal:dir r_dir_perms;
 allow platform_app sysfs_thermal:file r_file_perms;
+
+hal_client_domain(platform_app, hal_mtk_mms)
+allow platform_app vendor_camera_dump_file:dir r_dir_perms;
+allow platform_app vendor_configs_file:dir r_dir_perms;
+allow platform_app vendor_configs_file:file r_file_perms;

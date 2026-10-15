@@ -25,3 +25,8 @@ libneuron_runtime.so 64
 android.hidl.allocator@1.0.so 64
 vendor.mediatek.hardware.apuware.utils@1.0.so 64
 vendor.mediatek.hardware.apuware.xrp@1.0.so 64
+libVDSuperPhotoAPI.so 64
+libmibokeh_mt6785.so 64
+libmialgo_sd.so 64
+libalLDC.so 64
+libc++_shared.so 64

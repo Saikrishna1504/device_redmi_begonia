@@ -1,0 +1,27 @@
+From 5815ab1505638f76ef0abc6f279d372cdcf7ad7b Mon Sep 17 00:00:00 2001
+From: Saikrishna1504 <saikrishna26918@gmail.com>
+Date: Thu, 15 Oct 2026 11:47:37 +0000
+Subject: [PATCH 3/4] Start gallery as a new task
+
+Change-Id: Id77626be2dc2b781a927e58ebf9586165ee2678d
+---
+ smali/com/android/camera/ActivityBase.smali | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+diff --git a/smali/com/android/camera/ActivityBase.smali b/smali/com/android/camera/ActivityBase.smali
+index 2721220..13c5822 100644
+--- a/smali/com/android/camera/ActivityBase.smali
++++ b/smali/com/android/camera/ActivityBase.smali
+@@ -1298,6 +1298,10 @@
+
+     .line 20
+     :goto_1
++    const v6, 0x10000000
++
++    invoke-virtual {v2, v6}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
++
+     invoke-static {}, LOooO0O0/OooO0o0/OooO00o/OooO0OO;->OooO00o()Z
+
+     move-result v6
+--
+2.43.0

@@ -1,3 +1,16 @@
 get_prop(priv_app, vendor_fp_prop)
 
 allow priv_app sysfs_thermal:dir r_dir_perms;
+
+hal_client_domain(priv_app, hal_mtk_bgs)
+hal_client_domain(priv_app, hal_mtk_mms)
+binder_call(priv_app, mtk_hal_camera)
+binder_call(mtk_hal_camera, priv_app)
+binder_call(priv_app, mtk_hal_mms)
+binder_call(mtk_hal_mms, priv_app)
+allow priv_app mtk_hal_neuralnetworks:binder { call transfer };
+allow priv_app mdla_device:chr_file rw_file_perms;
+allow priv_app vpu_device:chr_file rw_file_perms;
+allow priv_app vendor_camera_dump_file:dir r_dir_perms;
+allow priv_app vendor_configs_file:dir r_dir_perms;
+allow priv_app vendor_configs_file:file r_file_perms;

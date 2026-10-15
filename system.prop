@@ -8,6 +8,7 @@ Build.BRAND=MTK
 
 # Camera
 ro.camera.sound.forced=0
+ro.product.mod_device=begonia_global
 
 # Charger
 ro.charger.enable_suspend=true

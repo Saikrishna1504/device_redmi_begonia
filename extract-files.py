@@ -5,6 +5,8 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+import struct
+
 from extract_utils.file import File
 from extract_utils.fixups_blob import (
     BlobFixupCtx,
@@ -33,9 +35,40 @@ def lib_fixup_vendor_suffix(lib: str, partition: str, *args, **kwargs):
     return f'{lib}-{partition}' if partition == 'vendor' else None
 
 
+def blob_fixup_symbolic(
+    ctx: BlobFixupCtx,
+    file: File,
+    file_path: str,
+    *args,
+    **kwargs,
+):
+    with open(file_path, 'rb') as f:
+        data = bytearray(f.read())
+    e_phoff = struct.unpack_from('<Q', data, 32)[0]
+    e_phentsize, e_phnum = struct.unpack_from('<HH', data, 54)
+    for i in range(e_phnum):
+        p_off = e_phoff + i * e_phentsize
+        p_type = struct.unpack_from('<I', data, p_off)[0]
+        if p_type == 2:  # PT_DYNAMIC
+            dyn_off, _, dyn_filesz = struct.unpack_from('<QQQ', data, p_off + 8)
+            for pos in range(dyn_off, dyn_off + dyn_filesz, 16):
+                d_tag, d_val = struct.unpack_from('<Qq', data, pos)
+                if d_tag == 0:
+                    break
+                if d_tag in (15, 29):  # DT_RPATH, DT_RUNPATH -> DT_SYMBOLIC
+                    struct.pack_into('<Qq', data, pos, 16, 0)
+                elif d_tag == 30:  # DT_FLAGS |= DF_SYMBOLIC
+                    struct.pack_into('<Qq', data, pos, 30, d_val | 0x2)
+    with open(file_path, 'wb') as f:
+        f.write(data)
+
+
 lib_fixups: lib_fixups_user_type = {
     **lib_fixups,
     ('libarmnn',
+     'vendor.mediatek.hardware.camera.postproc@1.0',
+     'vendor.mediatek.hardware.mms@1.0',
+     'vendor.mediatek.hardware.mms@1.1',
      'vendor.mediatek.hardware.videotelephony@1.0',): lib_fixup_vendor_suffix,
 }
 
@@ -167,6 +200,26 @@ blob_fixups: blob_fixups_user_type = {
 
      'vendor/bin/hw/vendor.dolby.hardware.dms@2.0-service': blob_fixup()
         .add_needed('libstagefright_foundation-v33.so'),
+
+    ('vendor/lib64/libalCFR.so',
+     'vendor/lib64/libalLDC.so',
+     'vendor/lib64/libalhLDC.so',
+     'vendor/lib64/libapu-platform.so',
+     'vendor/lib64/libneuron_platform.so'): blob_fixup()
+        .call(blob_fixup_symbolic),
+
+    ('system/lib64/libcamera_algoup_jni.xiaomi.so',
+     'system/lib64/libcamera_mianode_jni.xiaomi.so'): blob_fixup()
+        .binary_regex_replace(b'\x08\x9d\x40\xf9', b'\x08\x99\x40\xf9'),
+
+    'system/lib64/libcamera_imagecodec_jni.xiaomi.so': blob_fixup()
+        .add_needed('libui_shim.so'),
+
+    'system/lib64/libcamera_chroma_nr.xiaomi.so': blob_fixup()
+        .binary_regex_replace(b'\x01\x06\x80\x52', b'\x61\x00\x80\x52'),
+
+    'system/priv-app/MiuiCamera/MiuiCamera.apk': blob_fixup()
+        .apktool_patch('blob-patches/MiuiCamera/'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(

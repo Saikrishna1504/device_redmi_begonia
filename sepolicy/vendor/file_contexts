@@ -25,3 +25,44 @@
 
 # Power
 /(vendor|system/vendor)/bin/hw/android\.hardware\.power-service\.begonia-libperfmgr                      u:object_r:hal_power_default_exec:s0
+
+# Camera & APU Same-Process HALs
+/vendor/etc/nhw                                                u:object_r:same_process_hal_file:s0
+/vendor/etc/armnn_app\.config                                  u:object_r:same_process_hal_file:s0
+/vendor/etc/camera(/.*)?                                       u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libnir_neon_driver_ndk\.mtk\.so               u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libcmdl_ndk\.mtk\.so                          u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libarmnn_ndk\.mtk\.so                         u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libapusys\.so                                 u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libmpbase\.so                                 u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libmialgoengine\.so                           u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libmialgo_sd\.so                              u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libmialgo_utils\.so                           u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libVDDualCameraBlurless\.so                   u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libVDDClearShot\.so                           u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libVDDualCameraClearShot\.so                  u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libVDSuperPhotoAPI\.so                        u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libVDHexagonSuperPhoto_skel\.so               u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libarcsoft_beautyshot\.so                     u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libarcsoft_dualcam_refocus\.so                u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libarcsoft_portrait_lighting\.so              u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libarcsoft_portrait_lighting_c\.so            u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libarcsoft_high_dynamic_range\.so             u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libarcsoft_low_light_hdr\.so                  u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libarcsoft_preview_deflicker\.so              u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libmibokeh_mt6785\.so                         u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libalCFR\.so                                  u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libalLDC\.so                                  u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libalhLDC\.so                                 u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libapu-platform\.so                           u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libapu-frontend\.so                           u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libapu-apuwarexrp\.mtk\.so                    u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libapu-apuwareutils\.mtk\.so                  u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libfmq\.so                                    u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/android\.hidl\.allocator@1\.0\.so             u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/vendor\.mediatek\.hardware\.apuware\.utils@1\.0\.so u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/vendor\.mediatek\.hardware\.apuware\.xrp@1\.0\.so   u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libc\+\+_shared\.so                           u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/vendor\.mediatek\.hardware\.camera\.isphal@1\.0\.so u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libmtkisp_metadata\.so                        u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libneuron_runtime\.so                         u:object_r:same_process_hal_file:s0

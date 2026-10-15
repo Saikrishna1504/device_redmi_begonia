@@ -1,0 +1,46 @@
+From 7044519027804c19e35f2ec937a6d22e560a40f2 Mon Sep 17 00:00:00 2001
+From: Saikrishna1504 <saikrishna26918@gmail.com>
+Date: Thu, 15 Oct 2026 11:47:37 +0000
+Subject: [PATCH 2/4] Support third party galleries
+
+Change-Id: I98f0b613c1682efdbee4a3392b51425e4f63222a
+---
+ smali/com/android/camera/ActivityBase.smali | 8 +++-----
+ 1 file changed, 3 insertions(+), 5 deletions(-)
+
+diff --git a/smali/com/android/camera/ActivityBase.smali b/smali/com/android/camera/ActivityBase.smali
+index c483654..2721220 100644
+--- a/smali/com/android/camera/ActivityBase.smali
++++ b/smali/com/android/camera/ActivityBase.smali
+@@ -1228,7 +1228,7 @@
+     :try_end_0
+     .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
+
+-    const-string v5, "com.miui.gallery"
++    const-string v5, "android.intent.category.APP_GALLERY"
+
+     const-string v6, "com.android.camera.action.REVIEW"
+
+@@ -1242,10 +1242,8 @@
+
+     invoke-direct {v2, v6, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
+
+-    const-string v6, "com.google.android.apps.photos"
+-
+     .line 11
+-    invoke-virtual {v2, v6}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
++    invoke-virtual {v2, v5}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
+
+     goto :goto_1
+
+@@ -1291,7 +1289,7 @@
+
+     .line 18
+     :goto_0
+-    invoke-virtual {v2, v5}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
++    invoke-virtual {v2, v5}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
+
+     const-string v6, "from_MiuiCamera"
+
+--
+2.43.0
