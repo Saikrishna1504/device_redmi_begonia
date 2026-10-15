@@ -266,10 +266,11 @@ blob_fixups: blob_fixups_user_type = {
 
     ('system/lib64/libcamera_algoup_jni.xiaomi.so',
      'system/lib64/libcamera_mianode_jni.xiaomi.so'): blob_fixup()
-        .binary_regex_replace(b'\x08\x9d\x40\xf9', b'\x08\x99\x40\xf9'),
+        .binary_regex_replace(b'\x08\x9d\x40\xf9', b'\x08\x65\x40\xf9'),
 
     'system/lib64/libcamera_imagecodec_jni.xiaomi.so': blob_fixup()
-        .add_needed('libui_shim.so'),
+        .add_needed('libui_shim.so')
+        .binary_regex_replace(b'\x08\x99\x40\xf9', b'\x08\x65\x40\xf9'),
 
     'system/lib64/libcamera_chroma_nr.xiaomi.so': blob_fixup()
         .binary_regex_replace(b'\x01\x06\x80\x52', b'\x61\x00\x80\x52'),

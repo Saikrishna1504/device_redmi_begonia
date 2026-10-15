@@ -494,13 +494,13 @@ vendor/etc/default_pd_calibration.bin
 # MiuiCamera
 system/etc/device_features/begonia.xml
 system/framework/cloud-common.jar|506c7a5e06003242aeb3eedaf27324d76625097d
-system/lib64/libcamera_algoup_jni.xiaomi.so
-system/lib64/libcamera_chroma_nr.xiaomi.so
-system/lib64/libcamera_imagecodec_jni.xiaomi.so
-system/lib64/libcamera_mianode_jni.xiaomi.so
-system/system_ext/lib64/vendor.mediatek.hardware.camera.postproc@1.0.so:system/lib64/vendor.mediatek.hardware.camera.postproc@1.0.so
-system/system_ext/lib64/vendor.mediatek.hardware.mms@1.0.so:system/lib64/vendor.mediatek.hardware.mms@1.0.so
-system/system_ext/lib64/vendor.mediatek.hardware.mms@1.1.so:system/lib64/vendor.mediatek.hardware.mms@1.1.so
+system/lib64/libcamera_algoup_jni.xiaomi.so;DISABLE_CHECKELF
+system/lib64/libcamera_chroma_nr.xiaomi.so;DISABLE_CHECKELF
+system/lib64/libcamera_imagecodec_jni.xiaomi.so;DISABLE_CHECKELF
+system/lib64/libcamera_mianode_jni.xiaomi.so;DISABLE_CHECKELF
+system_ext/lib64/vendor.mediatek.hardware.camera.postproc@1.0.so:system/lib64/vendor.mediatek.hardware.camera.postproc@1.0.so
+system/lib64/vendor.mediatek.hardware.mms@1.0.so
+system/lib64/vendor.mediatek.hardware.mms@1.1.so
 system/priv-app/MiuiCamera/MiuiCamera.apk;OVERRIDES=Aperture,Camera2,Snap,SnapdragonCamera
 
 # Consumerir
@@ -1001,7 +1001,7 @@ system_ext/lib64/libimsma.so:system/lib64/libimsma.so|932cbe88083fae23b159bf0e3f
 system_ext/lib64/libimsma_adapt.so:system/lib64/libimsma_adapt.so|754ad1c39fb4dba9d3eb69ac00112e7600d68580
 system_ext/lib64/libimsma_rtp.so:system/lib64/libimsma_rtp.so|20ee91f090661fb26e6625ad2fef828441956b82
 system_ext/lib64/libimsma_socketwrapper.so:system/lib64/libimsma_socketwrapper.so|1f9b83322c41e5b0a7b3130f74a38ddb14f578d8
-system_ext/lib64/libmtk_vt_service.so:system/lib64/libmtk_vt_service.so|302d3ab3c5b3fa0107520fe36098b32cd0a8dd96
+system_ext/lib64/libmtk_vt_service.so:system/lib64/libmtk_vt_service.so|302d3ab3c5b3fa0107520fe36098b32cd0a8dd96|f23f0ccdbc9f89bc3a7af47e26fe2faae9a57c0b
 system_ext/lib64/libmtk_vt_wrapper.so:system/lib64/libmtk_vt_wrapper.so|af4d486c516c920ea99c362aebbf04180e96035c
 system_ext/lib64/libsignal.so:system/lib64/libsignal.so|0f55bb64c660fe4cda2b695121580b054f026e73
 system_ext/lib64/libsink.so:system/lib64/libsink-mtk.so;FIX_SONAME|6bd8c55847116a9a37e223ea2a6e5ce1379e53f7|e4c6bf7dca30d5de2a4f7521a97aca51c0f85cfe

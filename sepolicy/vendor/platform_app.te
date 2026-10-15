@@ -6,3 +6,7 @@ hal_client_domain(platform_app, hal_mtk_mms)
 allow platform_app vendor_camera_dump_file:dir r_dir_perms;
 allow platform_app vendor_configs_file:dir r_dir_perms;
 allow platform_app vendor_configs_file:file r_file_perms;
+get_prop(platform_app, vendor_mi_camera_prop)
+get_prop(platform_app, vendor_fp_prop)
+allow platform_app sysfs_therm:dir r_dir_perms;
+allow platform_app sysfs_therm:file r_file_perms;
