@@ -136,7 +136,8 @@
       "Path": "/dev/stune/top-app/schedtune.boost",
       "Values": [
         "40",
-        "10"
+        "10",
+        "0"
       ],
       "ResetOnInit": true
     },
@@ -317,6 +318,7 @@
         "75",
         "50",
         "25",
+        "15",
         "0"
       ],
       "ResetOnInit": true
@@ -329,6 +331,7 @@
         "75",
         "50",
         "25",
+        "15",
         "0"
       ],
       "ResetOnInit": true
@@ -399,128 +402,85 @@
     {
       "PowerHint": "INTERACTION",
       "Node": "CPULittleClusterMinFreq",
-      "Duration": 0,
+      "Duration": 58,
       "Value": "1275000"
     },
     {
       "PowerHint": "INTERACTION",
       "Node": "CPUBigClusterMinFreq",
-      "Duration": 0,
-      "Value": "1419000"
-    },
-    {
-      "PowerHint": "INTERACTION",
-      "Node": "CPULittleClusterMaxFreq",
-      "Duration": 0,
-      "Value": "1666000"
-    },
-    {
-      "PowerHint": "INTERACTION",
-      "Node": "CPUBigClusterMaxFreq",
-      "Duration": 0,
-      "Value": "2050000"
+      "Duration": 58,
+      "Value": "1169000"
     },
     {
       "PowerHint": "INTERACTION",
       "Node": "TASchedtuneBoost",
-      "Duration": 0,
-      "Value": "40"
-    },
-    {
-      "PowerHint": "INTERACTION",
-      "Node": "DRAMOppMin",
-      "Duration": 0,
-      "Value": "0"
-    },
-    {
-      "PowerHint": "INTERACTION",
-      "Node": "FBTBHROPP",
-      "Duration": 0,
-      "Value": "15"
-    },
-    {
-      "PowerHint": "INTERACTION",
-      "Node": "CCIFreqMode",
-      "Duration": 0,
-      "Value": "1"
-    },
-    {
-      "PowerHint": "INTERACTION",
-      "Node": "FGBoostPerf",
-      "Duration": 0,
-      "Value": "50"
-    },
-    {
-      "PowerHint": "INTERACTION",
-      "Node": "UclampMin",
-      "Duration": 0,
-      "Value": "50"
+      "Duration": 58,
+      "Value": "10"
     },
     {
       "PowerHint": "INTERACTION",
       "Node": "FGUclampMin",
-      "Duration": 0,
-      "Value": "50"
+      "Duration": 58,
+      "Value": "15"
     },
     {
       "PowerHint": "INTERACTION",
       "Node": "TAUclampMin",
-      "Duration": 0,
-      "Value": "50"
+      "Duration": 58,
+      "Value": "15"
     },
     {
       "PowerHint": "LAUNCH",
       "Node": "FBTBoostTA",
-      "Duration": 3000,
+      "Duration": 1500,
       "Value": "1"
     },
     {
       "PowerHint": "LAUNCH",
       "Node": "CPUBigClusterMaxFreq",
-      "Duration": 3000,
+      "Duration": 1500,
       "Value": "2050000"
     },
     {
       "PowerHint": "LAUNCH",
       "Node": "CPUBigClusterMinFreq",
-      "Duration": 3000,
+      "Duration": 1500,
       "Value": "2050000"
     },
     {
       "PowerHint": "LAUNCH",
       "Node": "CPULittleClusterMinFreq",
-      "Duration": 3000,
+      "Duration": 1500,
       "Value": "2000000"
     },
     {
       "PowerHint": "LAUNCH",
       "Node": "TAUclampMin",
-      "Duration": 3000,
+      "Duration": 1500,
       "Value": "100"
-    },
-    {
-      "PowerHint": "LAUNCH",
-      "Node": "UclampMin",
-      "Duration": 3000,
-      "Value": "100"
-    },
-    {
-      "PowerHint": "LAUNCH",
-      "Node": "GPUBlockBoost",
-      "Duration": 3000,
-      "Value": "101"
     },
     {
       "PowerHint": "LAUNCH",
       "Node": "DRAMOppMin",
-      "Duration": 3000,
-      "Value": "1"
+      "Duration": 1500,
+      "Value": "0"
+    },
+    {
+      "PowerHint": "EXPENSIVE_RENDERING",
+      "Type": "EndHint",
+      "Value": "INTERACTION"
     },
     {
       "PowerHint": "EXPENSIVE_RENDERING",
       "Node": "PowerHALRenderingState",
       "Duration": 0,
       "Value": "EXPENSIVE_RENDERING"
+    },
+    {
+      "PowerHint": "EXPENSIVE_RENDERING",
+      "Node": "GPUSchedPeriod",
+      "Duration": 0,
+      "Value": "100"
     },
     {
       "PowerHint": "EXPENSIVE_RENDERING",
@@ -533,12 +493,6 @@
       "Node": "GPUSchedMode",
       "Duration": 0,
       "Value": "1"
-    },
-    {
-      "PowerHint": "EXPENSIVE_RENDERING",
-      "Node": "GPUBlockBoost",
-      "Duration": 0,
-      "Value": "50"
     }
   ]
 }

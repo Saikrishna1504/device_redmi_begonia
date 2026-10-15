@@ -1,7 +1,7 @@
 typeattribute hal_power_default mlstrustedsubject;
 
 allow hal_power_default sysfs_devices_system_cpu:file rw_file_perms;
-allow hal_power_default cgroup:file r_file_perms;
+allow hal_power_default cgroup:file rw_file_perms;
 
 # To get/set powerhal state property
 set_prop(hal_power_default, vendor_power_prop)
@@ -26,6 +26,7 @@ allow hal_power_default sysfs_gpu:file rw_file_perms;
 
 # Set perfmgr nodes
 allow hal_power_default proc_perfmgr:dir r_dir_perms;
+allow hal_power_default proc_perfmgr:file rw_file_perms;
 allow hal_power_default sysfs_fpsgo:file w_file_perms;
 allow hal_power_default proc_ppm:dir r_dir_perms;
 allow hal_power_default proc_ppm:file rw_file_perms;

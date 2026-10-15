@@ -319,9 +319,6 @@ on post-fs-data
     chown audioserver audio /sys/bus/platform/devices/rt5509_param.1/prop_param
     chown audioserver audio /sys/bus/platform/devices/mt6660-param.0/prop_params
 
-    #AAudio Boost
-    write /dev/stune/rt/schedtune.boost 30
-
     #Make MTU adjusting
     write /proc/sys/net/ipv4/tcp_mtu_probing 1
 
@@ -885,7 +882,7 @@ on property:sys.boot_completed=1
 # start EAS+
 on property:sys.boot_completed=1
 
-    write /sys/devices/system/cpu/eas/enable 1
+    write /sys/devices/system/cpu/eas/enable 2
     write /proc/cpufreq/cpufreq_sched_disable 0
     chown system system /dev/stune/foreground/schedtune.prefer_idle
     chown system system /dev/stune/top-app/schedtune.prefer_idle
@@ -893,7 +890,7 @@ on property:sys.boot_completed=1
     write /dev/stune/foreground/schedtune.prefer_idle 0
     write /dev/stune/top-app/schedtune.prefer_idle 0
     write /dev/stune/rt/schedtune.prefer_idle 0
-    write /dev/stune/top-app/schedtune.boost 1
+    write /dev/stune/top-app/schedtune.boost 0
     write /proc/sys/kernel/sched_migration_cost_ns 200000
 
     # restore perf. parameters
@@ -915,6 +912,12 @@ on property:sys.boot_completed=1
     
     chown system system /sys/devices/system/cpu/cpufreq/mtk/lcluster_min_freq
     chmod 0664 /sys/devices/system/cpu/cpufreq/mtk/lcluster_min_freq
+    chown system system /sys/devices/system/cpu/cpufreq/mtk/lcluster_max_freq
+    chmod 0664 /sys/devices/system/cpu/cpufreq/mtk/lcluster_max_freq
+    chown system system /sys/devices/system/cpu/cpufreq/mtk/bcluster_min_freq
+    chmod 0664 /sys/devices/system/cpu/cpufreq/mtk/bcluster_min_freq
+    chown system system /sys/devices/system/cpu/cpufreq/mtk/bcluster_max_freq
+    chmod 0664 /sys/devices/system/cpu/cpufreq/mtk/bcluster_max_freq
 
 # reset mdmode when modem crash happens in ATM
 on property:vendor.mtk.md1.status=reset
