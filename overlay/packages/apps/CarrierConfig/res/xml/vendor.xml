@@ -35,8 +35,9 @@
     </carrier_config>
 
     <carrier_config>
-        <!-- Allow VoLTE and WFC by default -->
+        <!-- Allow VoLTE, VT, and WFC by default -->
         <boolean name="carrier_volte_available_bool" value="true" />
+        <boolean name="carrier_vt_available_bool" value="true" />
         <boolean name="carrier_wfc_ims_available_bool" value="true" />
 
         <!-- Config to show LTE+ icon if available -->

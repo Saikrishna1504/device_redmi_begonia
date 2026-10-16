@@ -141,7 +141,8 @@ PRODUCT_PACKAGES += \
 
 # MTK In-Call volumes adjusting service
 PRODUCT_PACKAGES += \
-    MtkInCallService
+    MtkInCallService \
+    libshim_vtservice
 
 # NFC
 PRODUCT_COPY_FILES += \

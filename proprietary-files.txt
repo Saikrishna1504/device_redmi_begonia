@@ -886,6 +886,7 @@ vendor/lib64/vendor.mediatek.hardware.power@2.0.so
 
 # Radio
 vendor/bin/hw/mtkfusionrild
+vendor/bin/hw/vtservice_hidl
 vendor/bin/ccci_fsd
 vendor/bin/ccci_mdinit
 vendor/bin/ccci_rpcd
@@ -912,6 +913,7 @@ vendor/etc/init/init.volte_imsm_93.rc
 vendor/etc/init/init.volte_md_status.rc
 vendor/etc/init/init.volte_stack.rc
 vendor/etc/init/init.volte_ua.rc
+vendor/etc/init/init.vtservice_hidl.rc
 vendor/etc/init/init.wod.rc
 vendor/etc/init/init.xcap.rc
 vendor/etc/init/ipsec_mon.rc
@@ -1092,6 +1094,7 @@ vendor/etc/virtual-spn-conf-by-efpnn.xml
 vendor/etc/virtual-spn-conf-by-efspn.xml
 vendor/etc/virtual-spn-conf-by-imsi.xml
 vendor/lib/libcapctrl.so
+vendor/lib/hw/vendor.mediatek.hardware.videotelephony@1.0-impl.so
 vendor/lib/libcares_naptr.so
 vendor/lib/libcarrierconfig.so
 vendor/lib/libccci_util.so
@@ -1122,6 +1125,8 @@ vendor/lib/libvolte_xdmc_shr.so
 vendor/lib/libvt_custom.so
 vendor/lib/libwapi.so
 vendor/lib/libwo.so
+vendor/lib/vendor.mediatek.hardware.videotelephony@1.0.so;MODULE_SUFFIX=-vendor
+vendor/lib64/hw/vendor.mediatek.hardware.videotelephony@1.0-impl.so
 vendor/lib64/libcapctrl.so
 vendor/lib64/libcares_naptr.so
 vendor/lib64/libcarrierconfig.so
@@ -1160,10 +1165,11 @@ vendor/lib64/libvia-ril.so
 vendor/lib64/libwapi.so
 vendor/lib64/libwo.so
 vendor/lib64/vendor.mediatek.hardware.mtkradioex@2.0.so
+vendor/lib64/vendor.mediatek.hardware.videotelephony@1.0.so;MODULE_SUFFIX=-vendor
 
 # IMS - from TECNO-U-64-ARMV82-230626V601DevT
 system_ext/bin/vtservice:system/bin/vtservice|59adc81ee1ad1f3fb4942cd6e8e7100325002eb2
-system_ext/etc/init/init.vtservice.rc:system/etc/init/init.vtservice.rc|50a2249906edc06059b443513db47a2ddc0490dc
+system_ext/etc/init/init.vtservice.rc:system/etc/init/init.vtservice.rc|50a2249906edc06059b443513db47a2ddc0490dc|6468e341287e3d1a56574f7018a76bae6ffc6902
 system_ext/lib64/libcomutils.so:system/lib64/libcomutils.so|6d9cd979f33ef01cb26861a38a59e76e1c2a3acb
 system_ext/lib64/libimsma.so:system/lib64/libimsma.so|932cbe88083fae23b159bf0e3fe17d7efb93495b|981ade90e42a9945390dbef0b68daa85357253ae
 system_ext/lib64/libimsma_adapt.so:system/lib64/libimsma_adapt.so|754ad1c39fb4dba9d3eb69ac00112e7600d68580
