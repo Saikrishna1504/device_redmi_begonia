@@ -21,6 +21,7 @@ from extract_utils.main import (
     ExtractUtils,
     ExtractUtilsModule,
 )
+from extract_utils.utils import run_cmd
 
 namespace_imports = [
     'device/redmi/begonia',
@@ -281,7 +282,8 @@ blob_fixups: blob_fixups_user_type = {
         .binary_regex_replace(b'\x01\x06\x80\x52', b'\x61\x00\x80\x52'),
 
     'system/priv-app/MiuiCamera/MiuiCamera.apk': blob_fixup()
-        .apktool_patch('blob-patches/MiuiCamera/'),
+        .apktool_patch('blob-patches/MiuiCamera/')
+        .call(lambda ctx, file, file_path, *args, **kwargs: run_cmd(['split', '--bytes=20M', '-d', file_path, f'{file_path}.part'])),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
