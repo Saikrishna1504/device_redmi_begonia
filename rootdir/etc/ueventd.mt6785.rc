@@ -121,6 +121,10 @@
 /sys/class/leds/red   delay_off      0664  system   system
 /sys/class/leds/blue   delay_on      0664  system   system
 /sys/class/leds/blue   delay_off      0664  system   system
+/sys/devices/platform/11016000.i2c5/i2c-5/5-0034/mt6360_pmu_rgbled.4.auto/leds/white   delay_on      0664  system   system
+/sys/devices/platform/11016000.i2c5/i2c-5/5-0034/mt6360_pmu_rgbled.4.auto/leds/white   delay_off      0664  system   system
+/sys/class/leds/white   delay_on      0664  system   system
+/sys/class/leds/white   delay_off      0664  system   system
 
 # GPIO
 /dev/mtgpio               0600   radio      root
