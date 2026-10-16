@@ -36,3 +36,10 @@ persist.radio.meid             u:object_r:vendor_deviceid_prop:s0 exact string
 ro.ril.miui.imei               u:object_r:vendor_deviceid_prop:s0 exact string
 ro.ril.oem.imei                u:object_r:vendor_deviceid_prop:s0 exact string
 ro.ril.oem.meid                u:object_r:vendor_deviceid_prop:s0 exact string
+
+# ViLTE / VTService
+persist.vendor.radio.sim.opid u:object_r:vendor_mtk_vendor_vt_prop:s0
+ro.vendor.mtk_data_config     u:object_r:vendor_mtk_vendor_vt_prop:s0
+vendor.mtk.ext.venc.          u:object_r:vendor_mtk_vendor_vt_prop:s0
+vendor.mtk.venc.              u:object_r:vendor_mtk_vendor_vt_prop:s0
+vendor.source.test            u:object_r:vendor_mtk_vendor_vt_prop:s0

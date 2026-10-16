@@ -1,0 +1,11 @@
+cc_library_shared {
+    name: "libshim_vtservice",
+    srcs: ["libshim_vtservice.cpp"],
+    shared_libs: [
+        "libbinder",
+        "libgui",
+        "libui",
+        "libutils",
+    ],
+    compile_multilib: "64",
+}

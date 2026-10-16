@@ -97,6 +97,7 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('libshim_beanpod.so'),
 
     'system/lib64/libsource.so': blob_fixup()
+        .add_needed('libshim_vtservice.so')
         .add_needed('libui_shim.so'),
 
     'vendor/bin/hw/android.hardware.media.c2@1.2-mediatek-64b': blob_fixup()
@@ -179,7 +180,11 @@ blob_fixups: blob_fixups_user_type = {
     'vendor/lib/libmnl.so': blob_fixup()
         .add_needed('libcutils.so'),
 
+    'system/etc/init/init.vtservice.rc': blob_fixup()
+        .regex_replace('/system_ext/bin/vtservice', '/system/bin/vtservice'),
+
     'system/lib64/libmtk_vt_service.so': blob_fixup()
+        .add_needed('libshim_vtservice.so')
         .add_needed('libgui_shim.so'),
 
     'system/lib64/libimsma.so': blob_fixup()
