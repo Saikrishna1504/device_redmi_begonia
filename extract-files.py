@@ -198,11 +198,17 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('libutils-v32.so'),
 
     ('vendor/lib64/libalRnBRT_GL_GBWRAPPER.so',
-     'vendor/lib64/libcam.hal3a.v3.so',
      'vendor/lib64/libeffecthal.base.so',
      'vendor/lib64/libmtkcam_grallocutils.so',
      'vendor/lib64/libmtkcam_3rdparty.vidhance.so'): blob_fixup()
         .replace_needed('libui.so', 'libui-v34.so'),
+
+    'vendor/lib64/libcam.hal3a.v3.so': blob_fixup()
+        .replace_needed('libui.so', 'libui-v34.so')
+        .binary_regex_replace(
+            b'\x68\x6b\x47\xb9\x68\x32\x00\xb9\x68\x6f\x47\xb9',
+            b'\xa8\xfa\x4b\xb9\x68\x32\x00\xb9\x05\x00\x00\x14',
+        ),
 
      'vendor/bin/hw/vendor.dolby.hardware.dms@2.0-service': blob_fixup()
         .add_needed('libstagefright_foundation-v33.so'),
@@ -273,13 +279,23 @@ blob_fixups: blob_fixups_user_type = {
     'vendor/lib64/libmialgoengine.so': blob_fixup()
         .add_needed('libshim_camera.so'),
 
+
+    'vendor/lib64/libmtkcam_3rdparty.customer.so': blob_fixup()
+        .binary_regex_replace(b'\\\x3f\x91\\\x24\x71\x1a\x01\x89\x1a', b'\x29\x7d\x00\x11\x3a\x69\x1b\x12'),
     ('system/lib64/libcamera_algoup_jni.xiaomi.so',
      'system/lib64/libcamera_mianode_jni.xiaomi.so'): blob_fixup()
-        .binary_regex_replace(b'\x08\x9d\x40\xf9', b'\x08\x65\x40\xf9'),
+        .binary_regex_replace(
+            b'\xe2\x03\x00\x91\xe0\x03\x13\xaa\x41\x00\x80\x52',
+            b'\x60\x42\x00\x91\xa1\x01\x80\x52\x42\x00\x80\x52',
+        )
+        .binary_regex_replace(b'\x08\x9d\x40\xf9', b'\x68\x56\x40\xf9'),
 
     'system/lib64/libcamera_imagecodec_jni.xiaomi.so': blob_fixup()
         .add_needed('libui_shim.so')
-        .binary_regex_replace(b'\x08\x99\x40\xf9', b'\x08\x65\x40\xf9'),
+        .binary_regex_replace(
+            b'\xe2\x23\x00\x91\xe0\x03\x16\xaa\x81\x00\x80\x52\x08\x99\x40\xf9',
+            b'\xc0\x42\x00\x91\xa1\x01\x80\x52\x82\x00\x80\x52\xc8\x56\x40\xf9',
+        ),
 
     'system/lib64/libcamera_chroma_nr.xiaomi.so': blob_fixup()
         .binary_regex_replace(b'\x01\x06\x80\x52', b'\x61\x00\x80\x52'),

@@ -472,7 +472,7 @@ vendor/lib64/vendor.mediatek.hardware.camera.postproc@1.0.so;MODULE_SUFFIX=-vend
 vendor/lib64/vendor.mediatek.hardware.camera.security@1.0.so
 
 # Camera Buffer Fix
-vendor/lib64/libmtkcam_3rdparty.customer.so|cf7f79d0e8a1de1fc818b948553c261e1d35e1fc
+vendor/lib64/libmtkcam_3rdparty.customer.so|cf7f79d0e8a1de1fc818b948553c261e1d35e1fc|3bc524572230e46c93dd6ef4054763d7aebb5ca6
 vendor/lib64/libmtkcam_featurepolicy.so|c1679591ed745f785ee2429ad448d4de0fcd07d0
 
 # Camera Configs
