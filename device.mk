@@ -142,6 +142,7 @@ PRODUCT_PACKAGES += \
 # MTK In-Call volumes adjusting service
 PRODUCT_PACKAGES += \
     MtkInCallService \
+    libshim_camera \
     libshim_vtservice
 
 # NFC

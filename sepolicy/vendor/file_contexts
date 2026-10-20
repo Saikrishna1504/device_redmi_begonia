@@ -36,6 +36,7 @@
 /vendor/lib(64)?/libapusys\.so                                 u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/libmpbase\.so                                 u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/libmialgoengine\.so                           u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libshim_camera\.so                            u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/libmialgo_sd\.so                              u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/libmialgo_utils\.so                           u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/libVDDualCameraBlurless\.so                   u:object_r:same_process_hal_file:s0

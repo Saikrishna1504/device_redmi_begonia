@@ -1,0 +1,7 @@
+cc_library_shared {
+    name: "libshim_camera",
+    srcs: ["libshim_camera.cpp"],
+    shared_libs: ["libutils"],
+    vendor: true,
+    compile_multilib: "64",
+}

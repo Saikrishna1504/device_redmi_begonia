@@ -521,7 +521,7 @@ on post-fs-data
     chmod 0660 /dev/MAIN2AF
     chmod 0660 /dev/SUBAF
     chmod 0660 /dev/SUB2AF
-    chmod 0660 /dev/vpu
+    chmod 0666 /dev/vpu
 
     chown system camera /dev/camera-sysram
     chown system camera /dev/camera-isp

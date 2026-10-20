@@ -270,6 +270,9 @@ blob_fixups: blob_fixups_user_type = {
      'vendor/lib64/libneuron_platform.so'): blob_fixup()
         .call(blob_fixup_symbolic),
 
+    'vendor/lib64/libmialgoengine.so': blob_fixup()
+        .add_needed('libshim_camera.so'),
+
     ('system/lib64/libcamera_algoup_jni.xiaomi.so',
      'system/lib64/libcamera_mianode_jni.xiaomi.so'): blob_fixup()
         .binary_regex_replace(b'\x08\x9d\x40\xf9', b'\x08\x65\x40\xf9'),
