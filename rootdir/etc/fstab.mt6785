@@ -13,6 +13,8 @@
 /dev/block/platform/bootdevice/by-name/cache      /cache                ext4    noatime,nosuid,nodev,noauto_da_alloc,discard                           wait,check,formattable
 /dev/block/platform/bootdevice/by-name/recovery   /recovery             emmc    defaults                                                               first_stage_mount,nofail
 /dev/block/platform/bootdevice/by-name/boot       /boot                 emmc    defaults                                                               first_stage_mount,nofail
+/dev/block/platform/bootdevice/by-name/vbmeta     /vbmeta               emmc    defaults                                                               defaults
+/dev/block/platform/bootdevice/by-name/dtbo       /dtbo                 emmc    defaults                                                               defaults
 /dev/block/platform/bootdevice/by-name/misc       /misc                 emmc    defaults                                                               defaults
 /dev/block/platform/bootdevice/by-name/audio_dsp  /audio_dsp            emmc    defaults                                                               defaults
 /dev/block/platform/bootdevice/by-name/persist    /mnt/vendor/persist   ext4    noatime,nosuid,nodev,noauto_da_alloc,commit=1,nodelalloc               wait,check,formattable
