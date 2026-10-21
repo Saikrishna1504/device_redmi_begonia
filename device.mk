@@ -8,6 +8,7 @@ DEVICE_PATH := device/redmi/begonia
 
 # Installs gsi keys into ramdisk, to boot a developer GSI with verified boot.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/developer_gsi_keys.mk)
+$(call soong_config_set_bool,fastbootd,bypass_lock_state,true)
 
 # A/B
 $(call inherit-product, $(SRC_TARGET_DIR)/product/non_ab_device.mk)
