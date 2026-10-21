@@ -224,6 +224,7 @@
       "Name": "FBTBHROPP",
       "Path": "/sys/module/fbt_cpu/parameters/bhr_opp",
       "Values": [
+        "0",
         "1",
         "3",
         "6",
@@ -464,11 +465,6 @@
       "Node": "DRAMOppMin",
       "Duration": 1500,
       "Value": "0"
-    },
-    {
-      "PowerHint": "EXPENSIVE_RENDERING",
-      "Type": "EndHint",
-      "Value": "INTERACTION"
     },
     {
       "PowerHint": "EXPENSIVE_RENDERING",
