@@ -102,6 +102,7 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('libui_shim.so'),
 
     'vendor/bin/hw/android.hardware.media.c2@1.2-mediatek-64b': blob_fixup()
+        .add_needed('libshim_c2.so')
         .replace_needed('libavservices_minijail_vendor.so', 'libavservices_minijail.so')
         .replace_needed('libcodec2_hidl@1.0.so', 'libcodec2_hidl@1.0-v31.so')
         .replace_needed('libcodec2_hidl@1.1.so', 'libcodec2_hidl@1.1-v31.so')
@@ -159,7 +160,8 @@ blob_fixups: blob_fixups_user_type = {
 
     'vendor/lib64/libcodec2_vndk-v31.so': blob_fixup()
         .replace_needed('libui.so', 'libui-v34.so')
-        .replace_needed('libstagefright_foundation.so', 'libstagefright_foundation-v33.so'),
+        .replace_needed('libstagefright_foundation.so', 'libstagefright_foundation-v33.so')
+        .add_needed('libshim_c2.so'),
 
     'vendor/lib64/libsfplugin_ccodec_utils-v31.so': blob_fixup()
         .replace_needed('libcodec2_vndk.so', 'libcodec2_vndk-v31.so'),

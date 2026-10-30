@@ -1,0 +1,7 @@
+cc_library_shared {
+    name: "libshim_c2",
+    srcs: ["libshim_c2.cpp"],
+    shared_libs: ["libsync"],
+    vendor: true,
+    compile_multilib: "64",
+}
