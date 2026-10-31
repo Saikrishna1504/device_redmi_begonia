@@ -1,6 +1,30 @@
 {
   "Nodes": [
     {
+      "Name": "CPULittleClusterMinFreq",
+      "Path": "/sys/devices/system/cpu/cpufreq/mtk/lcluster_min_freq",
+      "Values": [
+        "2000000",
+        "1933000",
+        "1866000",
+        "1800000",
+        "1733000",
+        "1666000",
+        "1618000",
+        "1500000",
+        "1375000",
+        "1275000",
+        "1175000",
+        "1075000",
+        "975000",
+        "875000",
+        "774000",
+        "500000",
+        "-1"
+      ],
+      "ResetOnInit": true
+    },
+    {
       "Name": "CPULittleClusterMaxFreq",
       "Path": "/sys/devices/system/cpu/cpufreq/mtk/lcluster_max_freq",
       "Values": [
@@ -26,25 +50,25 @@
       "ResetOnInit": true
     },
     {
-      "Name": "CPULittleClusterMinFreq",
-      "Path": "/sys/devices/system/cpu/cpufreq/mtk/lcluster_min_freq",
+      "Name": "CPUBigClusterMinFreq",
+      "Path": "/sys/devices/system/cpu/cpufreq/mtk/bcluster_min_freq",
       "Values": [
-        "2000000",
-        "1933000",
-        "1866000",
-        "1800000",
+        "2050000",
+        "1986000",
+        "1923000",
+        "1860000",
+        "1796000",
         "1733000",
-        "1666000",
-        "1618000",
-        "1500000",
-        "1375000",
-        "1275000",
-        "1175000",
-        "1075000",
-        "975000",
-        "875000",
+        "1670000",
+        "1530000",
+        "1419000",
+        "1308000",
+        "1169000",
+        "1085000",
+        "1002000",
+        "919000",
+        "835000",
         "774000",
-        "500000",
         "-1"
       ],
       "ResetOnInit": true
@@ -72,30 +96,6 @@
         "774000"
       ],
       "DefaultIndex": 0,
-      "ResetOnInit": true
-    },
-    {
-      "Name": "CPUBigClusterMinFreq",
-      "Path": "/sys/devices/system/cpu/cpufreq/mtk/bcluster_min_freq",
-      "Values": [
-        "2050000",
-        "1986000",
-        "1923000",
-        "1860000",
-        "1796000",
-        "1733000",
-        "1670000",
-        "1530000",
-        "1419000",
-        "1308000",
-        "1169000",
-        "1085000",
-        "1002000",
-        "919000",
-        "835000",
-        "774000",        
-        "-1"
-      ],
       "ResetOnInit": true
     },
     {
