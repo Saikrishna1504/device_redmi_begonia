@@ -18,10 +18,23 @@ on init
     write /proc/sys/net/core/wmem_max 8388608
     write /proc/sys/net/core/rmem_max 8388608
 
+    # Configure governor settings for little cluster
+    write /sys/devices/system/cpu/cpufreq/policy0/scaling_governor "schedutil"
+
+    # Configure governor settings for big cluster
+    write /sys/devices/system/cpu/cpufreq/policy6/scaling_governor "schedutil"
+
+    # Configure scheduler up/down_rate_limit_us
+    write /sys/devices/system/cpu/cpufreq/policy0/schedutil/up_rate_limit_us 500
+    write /sys/devices/system/cpu/cpufreq/policy0/schedutil/down_rate_limit_us 20000
+    write /sys/devices/system/cpu/cpufreq/policy6/schedutil/up_rate_limit_us 1000
+    write /sys/devices/system/cpu/cpufreq/policy6/schedutil/down_rate_limit_us 10000
+
     # update cpus for cpuset cgroup
-    write /dev/cpuset/foreground/cpus 0-7
-    write /dev/cpuset/background/cpus 0-3
-    write /dev/cpuset/system-background/cpus 0-3
+    write /dev/cpuset/foreground/cpus 0-2,4-7
+    write /dev/cpuset/foreground/boost/cpus 0-7
+    write /dev/cpuset/background/cpus 0-1
+    write /dev/cpuset/system-background/cpus 0-2
     write /dev/cpuset/top-app/cpus 0-7
     write /dev/cpuset/restricted/cpus 0-3
     write /dev/cpuset/camera-daemon/cpus 0-7
@@ -109,7 +122,6 @@ on post-fs
     write /proc/perfmgr/boost_ctrl/eas_ctrl/boot_boost "1 100"
     write /proc/perfmgr/boost_ctrl/eas_ctrl/boot_boost "2 100"
     write /proc/perfmgr/boost_ctrl/eas_ctrl/boot_boost "3 100"
-    write /proc/sys/kernel/sched_stune_task_threshold 0
 
     #change permissions for mediaserver
     chown root media /proc/clkmgr/mipi_test
@@ -883,46 +895,61 @@ on property:sys.boot_completed=1
     write /sys/block/sdc/queue/iostats 0
     write /sys/block/sdc/queue/nr_requests 128
 
-# start EAS+
+# start EAS+ / UCLAMP
 on property:sys.boot_completed=1
-
-    write /sys/devices/system/cpu/eas/enable 2
     write /proc/cpufreq/cpufreq_sched_disable 0
-    chown system system /dev/stune/foreground/schedtune.prefer_idle
-    chown system system /dev/stune/top-app/schedtune.prefer_idle
-    chown system system /dev/stune/rt/schedtune.prefer_idle
-    write /dev/stune/foreground/schedtune.prefer_idle 0
-    write /dev/stune/top-app/schedtune.prefer_idle 0
-    write /dev/stune/rt/schedtune.prefer_idle 0
-    write /dev/stune/top-app/schedtune.boost 0
     write /proc/sys/kernel/sched_migration_cost_ns 200000
+
+    # Enable big task rotation
+    write /proc/perfmgr/boost_ctrl/eas_ctrl/sched_big_task_rotation 1
+
+    # Configure DVFS
+    write /sys/kernel/ged/hal/dvfs_margin_value 10
+    write /sys/kernel/ged/hal/loading_base_dvfs_step 4
+
+    # Configure clamps for standard task groups.
+    write /dev/cpuctl/system-background/cpu.uclamp.max 40
+    write /dev/cpuctl/system-background/cpu.uclamp.min 0
+    write /dev/cpuctl/system-background/cpu.uclamp.latency_sensitive 0
+
+    write /dev/cpuctl/foreground/cpu.uclamp.max max
+    write /dev/cpuctl/foreground/cpu.uclamp.min 10
+    write /dev/cpuctl/foreground/cpu.uclamp.latency_sensitive 0
+
+    write /dev/cpuctl/top-app/cpu.uclamp.max max
+    write /dev/cpuctl/top-app/cpu.uclamp.min 0
+    write /dev/cpuctl/top-app/cpu.uclamp.latency_sensitive 0
+
+    write /dev/cpuctl/background/cpu.uclamp.max 50
+    write /dev/cpuctl/background/cpu.uclamp.min 0
+    write /dev/cpuctl/background/cpu.uclamp.latency_sensitive 0
+
+    write /dev/cpuctl/nnapi-hal/cpu.uclamp.max max
+    write /dev/cpuctl/nnapi-hal/cpu.uclamp.min 75
+    write /dev/cpuctl/nnapi-hal/cpu.uclamp.latency_sensitive 1
+
+    write /dev/cpuctl/camera-daemon/cpu.uclamp.max max
+    write /dev/cpuctl/camera-daemon/cpu.uclamp.min 0
+    write /dev/cpuctl/camera-daemon/cpu.uclamp.latency_sensitive 1
+
+    # Uclamp tuning
+    write /proc/sys/kernel/sched_util_clamp_min_rt_default 96
+    write /proc/sys/kernel/sched_util_clamp_min 128
 
     # restore perf. parameters
     write /proc/perfmgr/boost_ctrl/eas_ctrl/boot_boost "0 0"
     write /proc/perfmgr/boost_ctrl/eas_ctrl/boot_boost "1 0"
     write /proc/perfmgr/boost_ctrl/eas_ctrl/boot_boost "2 0"
     write /proc/perfmgr/boost_ctrl/eas_ctrl/boot_boost "3 0"
-    write /proc/sys/kernel/sched_stune_task_threshold -1
     write /proc/perfmgr/boost_ctrl/cpu_ctrl/boot_freq "-1 -1 -1 -1"
     write /sys/devices/platform/10012000.dvfsrc/helio-dvfsrc/dvfsrc_req_ddr_opp -1
 
-    # switch to sched-dvfs
-    write /sys/devices/system/cpu/cpufreq/policy0/scaling_governor "schedplus"
-    write /sys/devices/system/cpu/cpufreq/policy6/scaling_governor "schedplus"
+    # switch to schedutil
+    write /sys/devices/system/cpu/cpufreq/policy0/scaling_governor "schedutil"
+    write /sys/devices/system/cpu/cpufreq/policy6/scaling_governor "schedutil"
 
-# initialize powerHAL when boot is completed
-on property:sys.boot_completed=1
+    # initialize powerHAL when boot is completed
     setprop vendor.powerhal.init 1
-    
-    chown system system /sys/devices/system/cpu/cpufreq/mtk/lcluster_min_freq
-    chmod 0664 /sys/devices/system/cpu/cpufreq/mtk/lcluster_min_freq
-    chown system system /sys/devices/system/cpu/cpufreq/mtk/lcluster_max_freq
-    chmod 0664 /sys/devices/system/cpu/cpufreq/mtk/lcluster_max_freq
-    chown system system /sys/devices/system/cpu/cpufreq/mtk/bcluster_min_freq
-    chmod 0664 /sys/devices/system/cpu/cpufreq/mtk/bcluster_min_freq
-    chown system system /sys/devices/system/cpu/cpufreq/mtk/bcluster_max_freq
-    chmod 0664 /sys/devices/system/cpu/cpufreq/mtk/bcluster_max_freq
-
 # reset mdmode when modem crash happens in ATM
 on property:vendor.mtk.md1.status=reset
     setprop persist.vendor.atm.mdmode normal

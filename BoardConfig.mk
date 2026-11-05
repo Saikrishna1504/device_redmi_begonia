@@ -54,7 +54,7 @@ BOARD_DTB_OFFSET := 0x0bc08000
 BOARD_KERNEL_IMAGE_NAME := Image.gz
 BOARD_BOOTIMG_HEADER_VERSION := 2
 TARGET_KERNEL_SOURCE := kernel/xiaomi/mt6785
-TARGET_KERNEL_CONFIG := begonia_user_defconfig
+TARGET_KERNEL_CONFIG := begonia_defconfig
 KERNEL_LD := LD=ld.lld
 TARGET_KERNEL_ADDITIONAL_FLAGS := LLVM=1 LLVM_IAS=1 AS=llvm-as AR=llvm-ar NM=llvm-nm OBJCOPY=llvm-objcopy OBJDUMP=llvm-objdump STRIP=llvm-strip HOSTCFLAGS="-fuse-ld=lld -Wno-unused-command-line-argument"
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset $(BOARD_RAMDISK_OFFSET)

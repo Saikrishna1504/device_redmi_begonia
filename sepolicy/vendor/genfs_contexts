@@ -1,12 +1,31 @@
-# Graphics
+# Graphics / GPU
 genfscon sysfs /devices/platform/13040000.mali                                                                                  u:object_r:sysfs_gpu:s0
 
 # Leds
-genfscon sysfs /devices/platform/11016000.i2c5/i2c-5/5-0034/mt6360_pmu_rgbled.4.auto/leds u:object_r:sysfs_leds:s0
-
-# Performance
-genfscon sysfs /devices/system/cpu/cpufreq/mtk/.cluster_(min|max)_freq                                                          u:object_r:sysfs_mtk_cpufreq:s0
-genfscon sysfs /kernel/gpu/gpu_(min|max)_clock                                                                                  u:object_r:sysfs_mtk_gpufreq:s0
+genfscon sysfs /devices/platform/11016000.i2c5/i2c-5/5-0034/mt6360_pmu_rgbled.4.auto/leds                                       u:object_r:sysfs_leds:s0
+genfscon sysfs /devices/platform/leds-mt65xx/leds/lcd-backlight                                                                 u:object_r:sysfs_leds:s0
 
 # Torch
 genfscon sysfs /devices/platform/flashlights_mt6360/torchbrightness                                                             u:object_r:vendor_torch_sysfs:s0
+
+# Wakeup (4.19 sysfs)
+genfscon sysfs /devices/platform/1000d000.pwrap/1000d000.pwrap:mt6359-pmic/mt6359-rtc/rtc/rtc0/wakeup                           u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/1000d000.pwrap/1000d000.pwrap:mt6359-pmic/mt6359-rtc/wakeup                                    u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/1000d000.pwrap/1000d000.pwrap:mt6359-pmic/mt635x-auxadc/wakeup                                 u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/10228000.gce/wakeup                                                                            u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/10600000.adsp_core0/wakeup                                                                     u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/1100a000.spi0/spi_master/spi0/spi0.0/wakeup                                                    u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/11016000.i2c5/i2c-5/5-0034/mt6360_pmu_chg.2.auto/wakeup                                        u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/11016000.i2c5/i2c-5/5-004e/tcpc/type_c_port0/dual-role-type_c_port0/wakeup                     u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/15020000.imgsys_config/wakeup                                                                  u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/15028000.dpe/wakeup                                                                            u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/1502a000.wpe_a/wakeup                                                                          u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/1502e000.mfb/wakeup                                                                            u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/1a000000.camsysisp/wakeup                                                                      u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/battery/power_supply/bms/wakeup                                                                u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/mt_charger/power_supply/main/wakeup                                                            u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/usb0/wakeup                                                                                    u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/1100f000.i2c3/i2c-3/3-0028/wakeup                                                             u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/1101b000.i2c8/i2c-8/8-001d/power_supply/parallel/wakeup                                        u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/1101b000.i2c8/i2c-8/8-001d/power_supply/wireless/wakeup                                        u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/fingerprint/wakeup                                                                             u:object_r:sysfs_wakeup:s0
