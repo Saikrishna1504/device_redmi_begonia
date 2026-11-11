@@ -6,7 +6,8 @@ MKDTBOIMG := $(HOST_OUT_EXECUTABLES)/mkdtboimg$(HOST_EXECUTABLE_SUFFIX)
 $(BOARD_PREBUILT_DTBOIMAGE): $(DTC) $(MKDTIMG) $(MKDTBOIMG)
 $(BOARD_PREBUILT_DTBOIMAGE):
 	@echo "Building dtbo.img"
-	$(call make-dtbo-target,$(KERNEL_DEFCONFIG))
+	mkdir -p $(DTBO_OUT)
+	$(call make-kernel-config,$(DTBO_OUT),$(ALL_KERNEL_DEFCONFIG_SRCS))
 	$(call make-dtbo-target,dtbs)
 	$(MKDTBOIMG) cfg_create $@ $(BOARD_DTBO_CFG) -d $(DTBO_OUT)/arch/$(KERNEL_ARCH)/boot/dts
 	$(APPEND_CERTS) --alignment 16 --cert1 $(DEVICE_PATH)/dtbo/cert1.der --cert2 $(DEVICE_PATH)/dtbo/cert2.der --dtbo $(BOARD_PREBUILT_DTBOIMAGE)
