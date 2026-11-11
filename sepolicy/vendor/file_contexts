@@ -20,11 +20,7 @@
 /vendor/bin/mi_thermald       u:object_r:mi_thermald_exec:s0
 
 # NFC
-/(system\/vendor|vendor)/bin/hw/android\.hardware\.nfc@1\.1-service                                       u:object_r:hal_nfc_default_exec:s0
 /(system\/vendor|vendor)/bin/hw/android\.hardware\.nfc@1\.2-service                                       u:object_r:hal_nfc_default_exec:s0
-
-# Power
-/(vendor|system/vendor)/bin/hw/android\.hardware\.power-service\.begonia-libperfmgr                      u:object_r:hal_power_default_exec:s0
 
 # Camera & APU Same-Process HALs
 /vendor/etc/nhw                                                u:object_r:same_process_hal_file:s0
@@ -43,7 +39,6 @@
 /vendor/lib(64)?/libVDDClearShot\.so                           u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/libVDDualCameraClearShot\.so                  u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/libVDSuperPhotoAPI\.so                        u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/libVDHexagonSuperPhoto_skel\.so               u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/libarcsoft_beautyshot\.so                     u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/libarcsoft_dualcam_refocus\.so                u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/libarcsoft_portrait_lighting\.so              u:object_r:same_process_hal_file:s0
