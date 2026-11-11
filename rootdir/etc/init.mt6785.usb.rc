@@ -98,7 +98,7 @@ on charger
     mount functionfs adb /dev/usb-ffs/adb uid=2000,gid=2000
     setprop sys.usb.configfs 1
     setprop sys.usb.ffs.aio_compat 1
-    setprop vendor.usb.controller "musb-hdrc"
+    setprop vendor.usb.controller "11201000.usb0"
     setprop vendor.usb.acm_cnt 0
     setprop vendor.usb.acm_port0 ""
     setprop vendor.usb.acm_port1 ""
@@ -110,7 +110,7 @@ on property:sys.usb.config=none && property:sys.usb.configfs=1
     write /config/usb_gadget/g1/idVendor ${vendor.usb.vid}
     rm /config/usb_gadget/g1/configs/b.1/f4
     rm /config/usb_gadget/g1/configs/b.1/f5
-    write /sys/class/udc/musb-hdrc/device/saving 0
+    write /sys/class/udc/${vendor.usb.controller}/device/saving 0
 
 # HID for KPOC
 on property:sys.usb.config=hid && property:sys.usb.configfs=1
