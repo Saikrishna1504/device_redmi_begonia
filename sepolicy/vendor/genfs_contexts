@@ -1,3 +1,12 @@
+# Fingerprint
+genfscon sysfs /devices/platform/fingerprint/clk_enable                                                                         u:object_r:sysfs_fingerprint:s0
+genfscon sysfs /devices/platform/fingerprint/wakeup_enable                                                                      u:object_r:sysfs_fingerprint:s0
+genfscon sysfs /devices/platform/fingerprint/irq                                                                                u:object_r:sysfs_fingerprint:s0
+genfscon sysfs /devices/platform/fingerprint/hw_reset                                                                           u:object_r:sysfs_fingerprint:s0
+genfscon sysfs /devices/platform/fingerprint/do_wakeup                                                                          u:object_r:sysfs_fingerprint:s0
+genfscon sysfs /devices/platform/fingerprint/fpid_get                                                                           u:object_r:sysfs_fingerprint:s0
+genfscon sysfs /devices/platform/1100a000.spi0/spi_master/spi0/spi0.0/authen_fd/performance                                     u:object_r:sysfs_fingerprint:s0
+
 # Graphics / GPU
 genfscon sysfs /devices/platform/13040000.mali                                                                                  u:object_r:sysfs_gpu:s0
 

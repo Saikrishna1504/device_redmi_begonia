@@ -93,6 +93,10 @@ $(call soong_config_set,libcameraservice,ext_lib,//$(DEVICE_PATH):libcameraservi
 PRODUCT_PACKAGES += \
     LunarisDolby
 
+# Fingerprint
+PRODUCT_PACKAGES += \
+    android.hardware.biometrics.fingerprint-service.xiaomi
+
 # FM Radio
 PRODUCT_PACKAGES += \
     FMRadio
